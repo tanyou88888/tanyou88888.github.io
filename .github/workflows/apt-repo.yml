@@ -37,6 +37,12 @@ jobs:
 
           gzip -c Packages > Packages.gz
 
+      - name: Enrich index (Icon / SileoDepiction / Changelog)
+        run: |
+          cd sileo
+          python3 scripts/enrich-index.py
+          gzip -c Packages > Packages.gz
+
       - name: Show package index
         run: |
           echo "===== Package index ====="
