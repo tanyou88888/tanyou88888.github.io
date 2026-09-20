@@ -83,6 +83,10 @@ def main():
         if os.path.isfile(os.path.join(BASE, "depictions", pkg + ".json")):
             v = DEPICTION_VERSIONS.get(pkg, 1)
             fields["SileoDepiction"] = "%s/depictions/%s.json?v=%d" % (REPO_URL, pkg, v)
+        # roothide 专区标记：Filename 位于 debs/roothide/ 的包在 Section 上标注
+        if "/roothide/" in fields.get("Filename", "") and "roothide" not in fields.get("Section", ""):
+            fields["Section"] = (fields.get("Section", "Tweaks") + " (roothide)").strip()
+
         # 删除废弃的小写 Sileodepiction 字段（Sileo 会误读为 depiction 地址）
         fields.pop("Sileodepiction", None)
         out.append(render(fields, multi))
