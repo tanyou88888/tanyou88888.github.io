@@ -1,3 +1,34 @@
+Package: cn.llld.hideallbar
+Name: 隐藏底部横条-roothide
+Version: 1.0
+Architecture: iphoneos-arm64e
+Maintainer: 来了老弟
+Depends: mobilesubstrate,oldabi
+Filename: debs/roothide/隐藏底部横条-roothide.deb
+Size: 4080
+MD5sum: 92eccc8828dd16e7733ca3a8ae60b6dc
+SHA1: 1a23cb6355d74b69d0d50dbe4a1e6b676496ca6b
+SHA256: 6a660e9f4981fce885766bd012ae1d5142bc7cdfd0e10837be9706f4b3a5d61b
+Section: roothide隐藏专区
+Description: Hide home bar隐藏底部横条，需要安装Legacy arm64e Support，介意卸载---roothide
+Author: netskao
+
+Package: cn.llld.ycxbt
+Name: HideNoHomeBar-roothide
+Version: 0.0.1
+Architecture: iphoneos-arm64e
+Maintainer: 来了老弟
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/roothide/隐藏底部小白条-roothide.deb
+Size: 2960
+MD5sum: 098255a102c57d9080ac920b65bd320c
+SHA1: 0d703b1d17f2fa04bc8e5862ae3d7b7a1eed6ec9
+SHA256: fda4ea360b7c11faaac7f2ca68076405101de280a420e9e252101388a4eceabe
+Section: roothide隐藏专区
+Description: HideNoHomeBar隐藏底部小白条-roothide
+Author: 来了老弟 h_h_x_t
+
 Package: com.charlieleung.trollopenjb
 Name: TrollOpen 分屏
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenjb.png
@@ -8,7 +39,7 @@ Maintainer: Charlie Leung
 Installed-Size: 4460
 Pre-Depends: rootless-compat (>= 0.9)
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist
-Filename: debs/TrollOpen 分屏_1.3.7_iphoneos-arm64e.deb
+Filename: debs/rootless/TrollOpen 分屏_1.3.7_iphoneos-arm64e.deb
 Size: 1129572
 MD5sum: 466d02b02397c7f551b9a6398dc49bb5
 SHA1: 4fc38c1e160217872dabef1b125995d69d90adb8
@@ -26,7 +57,7 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1680
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/com.charlieleung.trollopenreborn_0.6.15_iphoneos-arm64e.deb
+Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.15_iphoneos-arm64e.deb
 Size: 404946
 MD5sum: 7bdbd1ccf566aa408bd6fc4a40265795
 SHA1: d83028cf35f5015f81872f2669c67d7d773c5e19
@@ -44,7 +75,7 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1684
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/com.charlieleung.trollopenreborn_0.6.15-489-1_iphoneos-arm64e.deb
+Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.15-489-1_iphoneos-arm64e.deb
 Size: 405572
 MD5sum: 6ba1baf9dfef5bd4941e8e06fe4ae92f
 SHA1: a5c6cf356496942b0c0d6a65b31bc1e9a6b86bb1
@@ -62,7 +93,7 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1684
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/com.charlieleung.trollopenreborn_0.6.15-499-1_iphoneos-arm64e.deb
+Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.15-499-1_iphoneos-arm64e.deb
 Size: 406844
 MD5sum: 4fbc896e71e77536e9266d5fd50915e2
 SHA1: aa84caa7564f827ed72e1bdd7d8306c124283c3f
@@ -86,7 +117,7 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1684
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/com.charlieleung.trollopenreborn_0.6.19_iphoneos-arm64e.deb
+Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.19_iphoneos-arm64e.deb
 Size: 407194
 MD5sum: 78fc726a68ce9f448768f04c102174fb
 SHA1: 86362062a586f814a8b296a39e885069eae4fe9b
