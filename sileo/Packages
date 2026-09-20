@@ -13,7 +13,7 @@ SHA256: cf76e591d80f0e1a18308f6e88cbc3c21d762b4c430dfc2f8416fd5079cb0401
 Section: 分屏插件
 Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开版，无后续更新，不需要反馈 bug。QQ 群：1094778353，后续付费更新联系群主或群管理。小黑子闭嘴吧，看看什么是最强分屏！
 Author: Charlie Leung
-Icon: https://tanyou88888.github.io/sileo/icons/trollopen.png
+Icon: https://tanyou88888.github.io/sileo/icons/trollopen-v2.png
 Name: TrollOpen 分屏
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/trollopenjb/js.json
 
@@ -50,7 +50,7 @@ Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icon.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json?v=2
 
 Package: com.charlieleung.trollopenreborn
 Version: 0.6.15-499-1
@@ -74,5 +74,5 @@ Changelog: 0.6.15-499-1
  miniMode 机制复刻：轻点恢复 + 拖动手势，hitTest/pointInside 命中逻辑与原版一致。
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icon.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json?v=2
 
