@@ -1,7 +1,7 @@
 Package: com.charlieleung.trollopenjb
 Name: TrollOpen 分屏
 Icon: https://axs66.github.io/pro/icon/trollopen.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=1
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=2
 Version: 1.3.7
 Architecture: iphoneos-arm64e
 Maintainer: Charlie Leung
