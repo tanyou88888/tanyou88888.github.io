@@ -32,6 +32,7 @@ Section: Tweaks
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icon.png
 
 Package: com.charlieleung.trollopenreborn
 Version: 0.6.15-489-1
@@ -48,6 +49,8 @@ Section: Tweaks
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icon.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json
 
 Package: com.charlieleung.trollopenreborn
 Version: 0.6.15-499-1
@@ -70,4 +73,6 @@ Changelog: 0.6.15-499-1
  012 容器复刻落地：启动封面、触摸结构、350 约束网、miniMode 遮罩层、旋转链均已完成。
  miniMode 机制复刻：轻点恢复 + 拖动手势，hitTest/pointInside 命中逻辑与原版一致。
 Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icon.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json
 
