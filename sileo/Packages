@@ -85,9 +85,6 @@ SHA256: cf76e591d80f0e1a18308f6e88cbc3c21d762b4c430dfc2f8416fd5079cb0401
 Section: roothide 插件
 Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开版，无后续更新，不需要反馈 bug。QQ 群：1094778353，后续付费更新联系群主或群管理。小黑子闭嘴吧，看看什么是最强分屏！
 Author: Charlie Leung
-<<<<<<< HEAD: 
-=======: 
->>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
@@ -106,9 +103,6 @@ SHA256: 09d2e2d29851ac0fd71831d3a98d6b901b41ebb72206448a87cebe1056ed0b97
 Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
-<<<<<<< HEAD: 
-=======: 
->>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
@@ -127,9 +121,6 @@ SHA256: be6e296eca324bc2135e4572335879ae6c208d5184cc8c3b2debe47dfca97041
 Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
-<<<<<<< HEAD: 
-=======: 
->>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
@@ -148,9 +139,6 @@ SHA256: 023d6eaa77493025c4aa615e95edb614a9cdc8922f8d9bd4950cf6324e19b113
 Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
-<<<<<<< HEAD: 
-=======: 
->>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 Changelog: 0.6.15-499-1
  悬浮分屏完整复刻：补齐 scene→handle 绑定（_setScene:/_didCreateScene:），浮窗内容正常显示，layerManager 正确接收图层。
  完整链路贯通：synchronizeChanges 及重试 → launchIntent（进程 Running）→ updateTx commit → 场景绑定 → modifyPresentationContext 内容渲染。
@@ -175,9 +163,6 @@ SHA256: f940b50cb6c16a0e3a5456b33f42866d5e4f511669a122669da3b0d40b699611
 Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.19)
 Author: TrollOpenReborn
-<<<<<<< HEAD: 
-=======: 
->>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 Changelog: 0.6.19 正式版（2026-09-23）
  修复：从 Spotlight 等方式跳转分屏时，系统 App（如「设置」）被错误跳过变为全屏打开。
  移除 TOJumpSplitAllowed 中两条原版不存在的自造跳过规则（systemSkip 列表、hasPrefix:@"com.apple." 全跳过）。
