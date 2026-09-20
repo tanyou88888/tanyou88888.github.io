@@ -1,1 +1,16 @@
+Package: com.charlieleung.trollopenreborn
+Version: 0.6.15-489-1
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1680
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/com.charlieleung.trollopenreborn_0.6.15-489-1_iphoneos-arm64e.deb
+Size: 405178
+MD5sum: 4ebecb09a8c5429f9c06bcffafefbb0e
+SHA1: d4600569ea3339df56efc7430b70646c54658750
+SHA256: aea76e1bf0a70c12993c34eb9b96c1c2a6315718205af434ae6793119f2842b2
+Section: Tweaks
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
+Author: TrollOpenReborn
+Name: JBOpenReborn
 
