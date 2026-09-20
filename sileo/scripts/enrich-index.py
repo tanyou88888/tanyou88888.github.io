@@ -22,7 +22,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # depiction URL 缓存版本号：改了 depiction 内容后在这里 +1
 DEPICTION_VERSIONS = {
-    "com.charlieleung.trollopenreborn": 5,
+    "com.charlieleung.trollopenreborn": 6,
     "com.charlieleung.trollopenjb": 1,
 }
 
