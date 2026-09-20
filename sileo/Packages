@@ -16,7 +16,6 @@ SHA256: cf76e591d80f0e1a18308f6e88cbc3c21d762b4c430dfc2f8416fd5079cb0401
 Section: 分屏插件
 Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开版，无后续更新，不需要反馈 bug。QQ 群：1094778353，后续付费更新联系群主或群管理。小黑子闭嘴吧，看看什么是最强分屏！
 Author: Charlie Leung
-Sileodepiction: https://axs66.github.io/pro/sileodepiction/trollopenjb/js.json
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn

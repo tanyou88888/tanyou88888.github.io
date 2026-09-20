@@ -83,6 +83,8 @@ def main():
         if os.path.isfile(os.path.join(BASE, "depictions", pkg + ".json")):
             v = DEPICTION_VERSIONS.get(pkg, 1)
             fields["SileoDepiction"] = "%s/depictions/%s.json?v=%d" % (REPO_URL, pkg, v)
+        # 删除废弃的小写 Sileodepiction 字段（Sileo 会误读为 depiction 地址）
+        fields.pop("Sileodepiction", None)
         out.append(render(fields, multi))
     open(path, "w", encoding="utf-8").write("\n\n".join(out) + "\n")
     print("enriched %d stanzas" % len(out))
