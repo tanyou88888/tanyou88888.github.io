@@ -32,6 +32,7 @@ Section: Tweaks
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icon.png
 
 Package: com.charlieleung.trollopenreborn
 Version: 0.6.15-489-1
@@ -48,5 +49,6 @@ Section: Tweaks
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icon.png
 SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json
 
