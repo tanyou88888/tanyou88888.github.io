@@ -60,6 +60,16 @@
                     "useBottomMargin": false
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-21",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#999999",
+                    "alignment": 0,
+                    "useBottomMargin": false
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 悬浮分屏完整复刻：补齐 scene→handle 绑定（_setScene: / _didCreateScene:），浮窗内容正常显示",
                     "useSpacing": false
@@ -94,6 +104,16 @@
                     "useBottomMargin": false
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-20",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#999999",
+                    "alignment": 0,
+                    "useBottomMargin": false
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 悬浮分屏 scene→handle 绑定链路贯通",
                     "useSpacing": false
@@ -118,6 +138,16 @@
                     "useBottomMargin": false
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-20",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#999999",
+                    "alignment": 0,
+                    "useBottomMargin": false
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 正式发布 0.6.15",
                     "useSpacing": false
@@ -134,5 +164,7 @@
                 }
             ]
         }
-    ]
+    ],
+    "headerImage": "https://tanyou88888.github.io/sileo/banners/trollopenreborn.png",
+    "tintColor": "#7b5cff"
 }
