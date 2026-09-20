@@ -5,6 +5,10 @@ on:
     paths:
       - "sileo/debs/**/*.deb"
       - "sileo/debs/*.deb"
+      - "sileo/debs/rootless/**"
+      - "sileo/debs/roothide/**"
+      - "sileo/depictions/**"
+      - "sileo/scripts/enrich-index.py"
   workflow_dispatch:
 
 permissions:
