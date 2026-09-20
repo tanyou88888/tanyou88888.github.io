@@ -1,0 +1,82 @@
+{
+    "class": "DepictionTabView",
+    "minVersion": "0.1",
+    "tintColor": "#5eb7ff",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "控制中心五行排列设定。",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "Package Info"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Author",
+                    "text": "4nni3"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "1.0~beta4"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Requires",
+                    "text": "iOS 14.0+ · rootless"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Section",
+                    "text": "rootless修复插件"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "tanyou88888 源主页",
+                    "action": "https://tanyou88888.github.io/",
+                    "openExternal": true
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "1.0~beta4"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "rootless 专区",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 控制中心五列排列",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "class": "DepictionTabView",
+    "minVersion": "0.1",
+    "tintColor": "#5eb7ff",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "最近通话列表增加具体时间显示。",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "Package Info"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Author",
+                    "text": "来了老弟"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "0.1-1"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Requires",
+                    "text": "iOS 9.0+ · rootless"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Section",
+                    "text": "rootless应用插件"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "tanyou88888 源主页",
+                    "action": "https://tanyou88888.github.io/",
+                    "openExternal": true
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.1-1"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "rootless 专区",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 最近通话显示具体时间",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                }
+            ]
+        }
+    ]
+}

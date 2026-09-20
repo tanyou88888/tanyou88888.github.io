@@ -1,0 +1,82 @@
+{
+    "class": "DepictionTabView",
+    "minVersion": "0.1",
+    "tintColor": "#5eb7ff",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "在任意密码框允许第三方输入法输入（银行等特制键盘除外）。",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "Package Info"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Author",
+                    "text": "来了老弟"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "2.0"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Requires",
+                    "text": "iOS 14.0+ · rootless"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Section",
+                    "text": "rootless插件"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "tanyou88888 源主页",
+                    "action": "https://tanyou88888.github.io/",
+                    "openExternal": true
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "2.0"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "rootless 专区",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 允许任意密码框使用第三方输入法",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                }
+            ]
+        }
+    ]
+}
