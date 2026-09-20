@@ -1,0 +1,24 @@
+{
+    "class": "DepictionTabView",
+    "minVersion": "0.3",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "### JBOpenReborn\n\nTrollOpenJB behavior-equivalent rebuild."
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "更新日志"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "#### 0.6.15-489-1\n\n- 正式发布 0.6.15。\n- 持续复刻 TrollOpenJB 行为。\n- 完善触发器和窗口行为。"
+                }
+            ]
+        }
+    ]
+}
