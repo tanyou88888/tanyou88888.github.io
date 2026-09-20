@@ -77,12 +77,12 @@ Maintainer: Charlie Leung
 Installed-Size: 4460
 Pre-Depends: rootless-compat (>= 0.9)
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist
-Filename: debs/rootless/TrollOpen 分屏_1.3.7_iphoneos-arm64e.deb
+Filename: debs/roothide/TrollOpen 分屏_1.3.7_iphoneos-arm64e.deb
 Size: 1129572
 MD5sum: 466d02b02397c7f551b9a6398dc49bb5
 SHA1: 4fc38c1e160217872dabef1b125995d69d90adb8
 SHA256: cf76e591d80f0e1a18308f6e88cbc3c21d762b4c430dfc2f8416fd5079cb0401
-Section: 分屏插件
+Section: 分屏插件 (roothide)
 Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开版，无后续更新，不需要反馈 bug。QQ 群：1094778353，后续付费更新联系群主或群管理。小黑子闭嘴吧，看看什么是最强分屏！
 Author: Charlie Leung
 
@@ -95,12 +95,12 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1680
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.15_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.15_iphoneos-arm64e.deb
 Size: 404946
 MD5sum: 7bdbd1ccf566aa408bd6fc4a40265795
 SHA1: d83028cf35f5015f81872f2669c67d7d773c5e19
 SHA256: 09d2e2d29851ac0fd71831d3a98d6b901b41ebb72206448a87cebe1056ed0b97
-Section: Tweaks
+Section: Tweaks (roothide)
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 
@@ -113,12 +113,12 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1684
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.15-489-1_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.15-489-1_iphoneos-arm64e.deb
 Size: 405572
 MD5sum: 6ba1baf9dfef5bd4941e8e06fe4ae92f
 SHA1: a5c6cf356496942b0c0d6a65b31bc1e9a6b86bb1
 SHA256: be6e296eca324bc2135e4572335879ae6c208d5184cc8c3b2debe47dfca97041
-Section: Tweaks
+Section: Tweaks (roothide)
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 
@@ -131,12 +131,12 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1684
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.15-499-1_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.15-499-1_iphoneos-arm64e.deb
 Size: 406844
 MD5sum: 4fbc896e71e77536e9266d5fd50915e2
 SHA1: aa84caa7564f827ed72e1bdd7d8306c124283c3f
 SHA256: 023d6eaa77493025c4aa615e95edb614a9cdc8922f8d9bd4950cf6324e19b113
-Section: Tweaks
+Section: Tweaks (roothide)
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Changelog: 0.6.15-499-1
@@ -155,12 +155,12 @@ Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1684
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.19_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.19_iphoneos-arm64e.deb
 Size: 407194
 MD5sum: 78fc726a68ce9f448768f04c102174fb
 SHA1: 86362062a586f814a8b296a39e885069eae4fe9b
 SHA256: f940b50cb6c16a0e3a5456b33f42866d5e4f511669a122669da3b0d40b699611
-Section: Tweaks
+Section: Tweaks (roothide)
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.19)
 Author: TrollOpenReborn
 Changelog: 0.6.19 正式版（2026-09-23）
