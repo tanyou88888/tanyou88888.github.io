@@ -18,6 +18,22 @@ Name: TrollOpen 分屏
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/trollopenjb/js.json
 
 Package: com.charlieleung.trollopenreborn
+Version: 0.6.15
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1680
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/com.charlieleung.trollopenreborn_0.6.15_iphoneos-arm64e.deb
+Size: 404946
+MD5sum: 7bdbd1ccf566aa408bd6fc4a40265795
+SHA1: d83028cf35f5015f81872f2669c67d7d773c5e19
+SHA256: 09d2e2d29851ac0fd71831d3a98d6b901b41ebb72206448a87cebe1056ed0b97
+Section: Tweaks
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
+Author: TrollOpenReborn
+Name: JBOpenReborn
+
+Package: com.charlieleung.trollopenreborn
 Version: 0.6.15-489-1
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
