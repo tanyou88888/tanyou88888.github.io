@@ -32,7 +32,6 @@ Section: Tweaks
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icon.png
 
 Package: com.charlieleung.trollopenreborn
 Version: 0.6.15-489-1
@@ -49,12 +48,20 @@ Section: Tweaks
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
 Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icon.png
-Changelog: 0.6.15-489-1
- 悬浮分屏完整复刻：补齐 scene→handle 绑定（_setScene:/_didCreateScene:），浮窗内容正常显示，layerManager 正确接收图层。
- 完整链路贯通：synchronizeChanges 及重试 → launchIntent（进程 Running）→ updateTx commit → 场景绑定 → modifyPresentationContext 内容渲染。
- 扇形菜单复刻完成：菜单轨迹与原版同构，首次构建与缓存复用路径一致，手势分发/镜像开关/去抖逻辑逐行对应。
- 012 容器复刻落地：启动封面、触摸结构、350 约束网、miniMode 遮罩层、旋转链均已完成。
- miniMode 机制复刻：轻点恢复 + 拖动手势，hitTest/pointInside 命中逻辑与原版一致。
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn/depiction.json
+
+Package: com.charlieleung.trollopenreborn
+Version: 0.6.15-499-1
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1684
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/com.charlieleung.trollopenreborn_0.6.15-499-1_iphoneos-arm64e.deb
+Size: 405966
+MD5sum: 6c65bffb3f714c2c4a6efed747f1dec6
+SHA1: f826a4ecada3610891cac566d131f123a6ab0077
+SHA256: 30f30dd983b202feb9aff98b09665f9a1b006618d8c22ce400b8d580328e61cf
+Section: Tweaks
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
+Author: TrollOpenReborn
+Name: JBOpenReborn
 
