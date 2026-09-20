@@ -1,7 +1,7 @@
 Package: com.charlieleung.trollopenjb
 Name: TrollOpen 分屏
-Icon: https://axs66.github.io/pro/icon/trollopen.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=2
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenjb.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=3
 Version: 1.3.7
 Architecture: iphoneos-arm64e
 Maintainer: Charlie Leung
@@ -21,7 +21,7 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/trollopenjb/js.json
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=6
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7
 Version: 0.6.15
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -39,7 +39,7 @@ Author: TrollOpenReborn
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=6
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7
 Version: 0.6.15-489-1
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -57,7 +57,7 @@ Author: TrollOpenReborn
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=6
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7
 Version: 0.6.15-499-1
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -81,7 +81,7 @@ Changelog: 0.6.15-499-1
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=6
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7
 Version: 0.6.19
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn

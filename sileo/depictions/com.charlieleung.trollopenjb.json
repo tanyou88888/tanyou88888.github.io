@@ -56,35 +56,36 @@
             "tabname": "Changelog",
             "views": [
                 {
-                    "class": "DepictionSubheaderView",
-                    "title": "Version 1.3.7",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "class": "DepictionHeaderView",
+                    "title": "1.3.7"
                 },
                 {
                     "class": "DepictionLabelView",
-                    "text": "免费公开版 · 无后续更新",
+                    "text": "公开版",
                     "fontSize": 12,
                     "useSpacing": false,
                     "usePadding": false,
-                    "textColor": "#999999",
+                    "textColor": "#8E8E93",
                     "alignment": 0,
-                    "useBottomMargin": false
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
                 },
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 支持 iOS 16 及以上",
-                    "useSpacing": false
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 悬浮分屏完整功能",
-                    "useSpacing": false
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 免费公开版",
-                    "useSpacing": false
+                    "class": "DepictionSeparatorView"
                 }
             ]
         }

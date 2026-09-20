@@ -54,147 +54,153 @@
             "tabname": "Changelog",
             "views": [
                 {
-                    "class": "DepictionSubheaderView",
-                    "title": "Version 0.6.19 · 2026-09-23 正式版",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.19 · 正式版"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "2026-09-23",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 修复：从 Spotlight 等方式跳转分屏时，系统 App（如「设置」）被错误跳过变为全屏打开",
-                    "useSpacing": false
+                    "markdown": "• 修复 Spotlight 跳转分屏时系统 App（如「设置」）被跳过变全屏",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 移除 TOJumpSplitAllowed 中两条原版不存在的自造跳过规则（systemSkip 列表、hasPrefix:@\"com.apple.\" 全跳过）",
-                    "useSpacing": false
+                    "markdown": "• 移除 TOJumpSplitAllowed 两条自造跳过规则，对齐原版 sub_5E078",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐原版 sub_5E078 逐行证据：仅保留 InCallService / decar / 用户排除列表三个否决条件",
-                    "useSpacing": false
+                    "markdown": "• 全仓自造规则普查：空实现 0 处，白名单均有原版背书",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 全仓自造规则与占位函数专项普查：空实现 0 处，硬编码白名单均有原版背书",
-                    "useSpacing": false
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 真机验收 A 级：Spotlight 打开「设置」正常浮窗；门禁 classes=39 missing=0",
-                    "useSpacing": false
+                    "markdown": "• 真机验收 A 级：Spotlight 打开「设置」正常浮窗",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionSeparatorView"
                 },
                 {
-                    "class": "DepictionSubheaderView",
-                    "title": "Version 0.6.15-499-1",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.15-499-1"
                 },
                 {
                     "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-21",
+                    "text": "2026-09-21",
                     "fontSize": 12,
                     "useSpacing": false,
                     "usePadding": false,
-                    "textColor": "#999999",
+                    "textColor": "#8E8E93",
                     "alignment": 0,
-                    "useBottomMargin": false
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 悬浮分屏完整复刻：补齐 scene→handle 绑定（_setScene: / _didCreateScene:），浮窗内容正常显示",
-                    "useSpacing": false
+                    "markdown": "• 悬浮分屏完整复刻：scene→handle 绑定贯通",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 完整链路贯通：synchronizeChanges → launchIntent → updateTx commit → 场景绑定 → 内容渲染",
-                    "useSpacing": false
+                    "markdown": "• 渲染链路全通：launchIntent → updateTx → 内容渲染",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 扇形菜单复刻完成，轨迹与原版同构",
-                    "useSpacing": false
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 012 容器复刻落地：启动封面、触摸结构、350 约束网、miniMode 遮罩层、旋转链",
-                    "useSpacing": false
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• miniMode 轻点恢复与拖动手势命中逻辑与原版一致",
-                    "useSpacing": false
+                    "markdown": "• 扇形菜单、012 容器、miniMode 机制复刻完成",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionSeparatorView"
                 },
                 {
-                    "class": "DepictionSubheaderView",
-                    "title": "Version 0.6.15-489-1",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.15-489-1"
                 },
                 {
                     "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-20",
+                    "text": "2026-09-20",
                     "fontSize": 12,
                     "useSpacing": false,
                     "usePadding": false,
-                    "textColor": "#999999",
+                    "textColor": "#8E8E93",
                     "alignment": 0,
-                    "useBottomMargin": false
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
                 },
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 悬浮分屏 scene→handle 绑定链路贯通",
-                    "useSpacing": false
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
-                    "markdown": "• 扇形菜单复刻完成：Changed/Ended 手势分发、镜像开关、去抖逻辑逐行对应",
-                    "useSpacing": false
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 012 容器复刻落地",
-                    "useSpacing": false
+                    "markdown": "• 扇形菜单复刻完成，手势分发逐行对应",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionSeparatorView"
                 },
                 {
-                    "class": "DepictionSubheaderView",
-                    "title": "Version 0.6.15",
-                    "useBoldText": true,
-                    "useBottomMargin": false
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.15"
                 },
                 {
                     "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-20",
+                    "text": "2026-09-20",
                     "fontSize": 12,
                     "useSpacing": false,
                     "usePadding": false,
-                    "textColor": "#999999",
+                    "textColor": "#8E8E93",
                     "alignment": 0,
-                    "useBottomMargin": false
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
                 },
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 正式发布 0.6.15",
-                    "useSpacing": false
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 持续复刻 TrollOpenJB 行为",
-                    "useSpacing": false
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
                 },
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 完善触发器和窗口行为",
-                    "useSpacing": false
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
                 }
             ]
         }

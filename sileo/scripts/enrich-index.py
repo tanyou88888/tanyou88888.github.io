@@ -22,8 +22,8 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # depiction URL 缓存版本号：改了 depiction 内容后在这里 +1
 DEPICTION_VERSIONS = {
-    "com.charlieleung.trollopenreborn": 6,
-    "com.charlieleung.trollopenjb": 2,
+    "com.charlieleung.trollopenreborn": 7,
+    "com.charlieleung.trollopenjb": 3,
 }
 
 FIELD_ORDER = [
@@ -77,10 +77,10 @@ def main():
     for fields, multi in parse(text):
         pkg = fields.get("Package", "")
         # Icon：优先使用仓库内每包图标
-        if not fields.get("Icon") and os.path.isfile(os.path.join(BASE, "icons", pkg + ".png")):
+        if os.path.isfile(os.path.join(BASE, "icons", pkg + ".png")):
             fields["Icon"] = "%s/icons/%s.png" % (REPO_URL, pkg)
         # SileoDepiction：仅当扁平 depiction 文件存在
-        if not fields.get("SileoDepiction") and os.path.isfile(os.path.join(BASE, "depictions", pkg + ".json")):
+        if os.path.isfile(os.path.join(BASE, "depictions", pkg + ".json")):
             v = DEPICTION_VERSIONS.get(pkg, 1)
             fields["SileoDepiction"] = "%s/depictions/%s.json?v=%d" % (REPO_URL, pkg, v)
         out.append(render(fields, multi))
