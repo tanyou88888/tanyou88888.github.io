@@ -3,7 +3,7 @@ Label: tanyou88888
 Suite: stable
 Codename: stable
 Version: 1.0
-Architectures: iphoneos-arm64
+Architectures: iphoneos-arm64 arm64 arm64e
 Components: main
 Description: tanyou88888 iOS Jailbreak Repository
 Icon: https://tanyou88888.github.io/sileo/icon.png
