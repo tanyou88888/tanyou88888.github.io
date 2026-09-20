@@ -1,6 +1,6 @@
 {
     "class": "DepictionTabView",
-    "minVersion": "0.3",
+    "minVersion": "0.7",
     "tabs": [
         {
             "class": "DepictionStackView",
