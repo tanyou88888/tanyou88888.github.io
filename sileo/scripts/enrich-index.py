@@ -96,3 +96,5 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+# rebuild trigger: depictions for cn.llld.* now exist
