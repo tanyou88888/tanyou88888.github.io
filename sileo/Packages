@@ -11,7 +11,7 @@ Size: 5320
 MD5sum: 19116d0a1dbf60f79e04a261aef51efd
 SHA1: 83d77e7b8177202b035a7d3a1b5c1999eb5511d7
 SHA256: 32e1fa8c90010ec88172169a1bad2bd01dbe79d00c8f5e2f2c436b2c80ca0387
-Section: rootless修复插件
+Section: rootless 插件
 Description: Five rows of settings arranged in the control center。控制中心排列五行设定。
 Author: 4nni3 <4nni3.14@gmail.com>
 
@@ -28,7 +28,7 @@ Size: 4080
 MD5sum: 92eccc8828dd16e7733ca3a8ae60b6dc
 SHA1: 1a23cb6355d74b69d0d50dbe4a1e6b676496ca6b
 SHA256: 6a660e9f4981fce885766bd012ae1d5142bc7cdfd0e10837be9706f4b3a5d61b
-Section: roothide隐藏专区
+Section: roothide 插件
 Description: Hide home bar隐藏底部横条，需要安装Legacy arm64e Support，介意卸载---roothide
 Author: netskao
 
@@ -45,7 +45,7 @@ Size: 5608
 MD5sum: 34cb58f2bffa47db97af0f9c6c6b34a8
 SHA1: 47cc9f246b9075f96a461b84b314569e6a996099
 SHA256: 333e4d315f1ef96adad404447e08bb8d2a2fb9afc3f83efcb2d81fe470d38a5f
-Section: rootless应用插件
+Section: rootless 插件
 Description: The specific time of the recent call has been increased.最近通话增加具体时间
 Author: 来了老弟
 
@@ -63,7 +63,7 @@ Size: 2960
 MD5sum: 098255a102c57d9080ac920b65bd320c
 SHA1: 0d703b1d17f2fa04bc8e5862ae3d7b7a1eed6ec9
 SHA256: fda4ea360b7c11faaac7f2ca68076405101de280a420e9e252101388a4eceabe
-Section: roothide隐藏专区
+Section: roothide 插件
 Description: HideNoHomeBar隐藏底部小白条-roothide
 Author: 来了老弟 h_h_x_t
 
@@ -82,9 +82,12 @@ Size: 1129572
 MD5sum: 466d02b02397c7f551b9a6398dc49bb5
 SHA1: 4fc38c1e160217872dabef1b125995d69d90adb8
 SHA256: cf76e591d80f0e1a18308f6e88cbc3c21d762b4c430dfc2f8416fd5079cb0401
-Section: 分屏插件 (roothide)
+Section: roothide 插件
 Description: TrollOpen 的越狱版本，支持 ios16 及以上，免费公开版，无后续更新，不需要反馈 bug。QQ 群：1094778353，后续付费更新联系群主或群管理。小黑子闭嘴吧，看看什么是最强分屏！
 Author: Charlie Leung
+<<<<<<< HEAD: 
+=======: 
+>>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
@@ -100,9 +103,12 @@ Size: 404946
 MD5sum: 7bdbd1ccf566aa408bd6fc4a40265795
 SHA1: d83028cf35f5015f81872f2669c67d7d773c5e19
 SHA256: 09d2e2d29851ac0fd71831d3a98d6b901b41ebb72206448a87cebe1056ed0b97
-Section: Tweaks (roothide)
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
+<<<<<<< HEAD: 
+=======: 
+>>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
@@ -118,9 +124,12 @@ Size: 405572
 MD5sum: 6ba1baf9dfef5bd4941e8e06fe4ae92f
 SHA1: a5c6cf356496942b0c0d6a65b31bc1e9a6b86bb1
 SHA256: be6e296eca324bc2135e4572335879ae6c208d5184cc8c3b2debe47dfca97041
-Section: Tweaks (roothide)
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
+<<<<<<< HEAD: 
+=======: 
+>>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
@@ -136,9 +145,12 @@ Size: 406844
 MD5sum: 4fbc896e71e77536e9266d5fd50915e2
 SHA1: aa84caa7564f827ed72e1bdd7d8306c124283c3f
 SHA256: 023d6eaa77493025c4aa615e95edb614a9cdc8922f8d9bd4950cf6324e19b113
-Section: Tweaks (roothide)
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
 Author: TrollOpenReborn
+<<<<<<< HEAD: 
+=======: 
+>>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 Changelog: 0.6.15-499-1
  悬浮分屏完整复刻：补齐 scene→handle 绑定（_setScene:/_didCreateScene:），浮窗内容正常显示，layerManager 正确接收图层。
  完整链路贯通：synchronizeChanges 及重试 → launchIntent（进程 Running）→ updateTx commit → 场景绑定 → modifyPresentationContext 内容渲染。
@@ -160,9 +172,12 @@ Size: 407194
 MD5sum: 78fc726a68ce9f448768f04c102174fb
 SHA1: 86362062a586f814a8b296a39e885069eae4fe9b
 SHA256: f940b50cb6c16a0e3a5456b33f42866d5e4f511669a122669da3b0d40b699611
-Section: Tweaks (roothide)
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.19)
 Author: TrollOpenReborn
+<<<<<<< HEAD: 
+=======: 
+>>>>>>> 7f8f6df (分类归一：Section 按目录统一为「rootless 插件 / roothide 插件」两类，替代碎片化分类): 
 Changelog: 0.6.19 正式版（2026-09-23）
  修复：从 Spotlight 等方式跳转分屏时，系统 App（如「设置」）被错误跳过变为全屏打开。
  移除 TOJumpSplitAllowed 中两条原版不存在的自造跳过规则（systemSkip 列表、hasPrefix:@"com.apple." 全跳过）。
@@ -184,6 +199,6 @@ Size: 4164
 MD5sum: 0353977b8885498f3e6a4fc569042061
 SHA1: 16f563bd168032a9a381043be00103506f48b36a
 SHA256: cc385c8732dbe808973ccd1bdda70d0732ae4440a8fbc71dc79d5caa475de984
-Section: rootless插件
+Section: rootless 插件
 Description: Function: Allow third-party input methods in any password box。***强制第三方输入法（键盘），作用：在任意密码框可允许第三方输入法输入（银行等特制键盘除外），20240104:更新版本号。***
 Author: 来了老弟
