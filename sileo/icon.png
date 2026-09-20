@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- 渐变背景：科技感深蓝紫 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+    <!-- 发光滤镜 -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- 背景底版（自带现代圆角） -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- 边框高光 -->
+  <rect x="4" y="4" width="504" height="504" rx="108" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="8" />
+
+  <!-- 主体图形：JBOpenReborn / 分屏与越狱极客符号 (终端符号 & 分屏窗口抽象) -->
+  <g transform="translate(256, 256) scale(1)">
+    <!-- 外圈科技环 -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="#38bdf8" stroke-width="6" stroke-dasharray="20 10" opacity="0.4" />
+    
+    <!-- 分屏/窗口概念：左窗口与右窗口交错 -->
+    <rect x="-110" y="-80" width="100" height="160" rx="16" fill="rgba(56, 189, 248, 0.15)" stroke="#38bdf8" stroke-width="8" />
+    <rect x="10" y="-80" width="100" height="160" rx="16" fill="rgba(236, 72, 153, 0.15)" stroke="#ec4899" stroke-width="8" />
+
+    <!-- 终端命令行符号：>_ -->
+    <text x="-55" y="20" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', monospace" font-weight="900" font-size="75" fill="#ffffff" filter="url(#glow)">&gt;_</text>
+  </g>
+</svg>
