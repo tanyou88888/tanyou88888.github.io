@@ -3,6 +3,7 @@ name: Update APT Repository
 on:
   push:
     paths:
+      - "sileo/debs/**/*.deb"
       - "sileo/debs/*.deb"
   workflow_dispatch:
 
@@ -22,17 +23,26 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y dpkg-dev
 
-      - name: Generate Packages
+      - name: Generate Packages with all versions
         run: |
           cd sileo
-          dpkg-scanpackages -m debs /dev/null > Packages
 
-      - name: Generate Packages.gz
-        run: |
-          cd sileo
+          rm -f Packages Packages.gz
+
+          dpkg-scanpackages \
+            --multiversion \
+            debs \
+            /dev/null \
+            > Packages
+
           gzip -c Packages > Packages.gz
 
-      - name: Commit updated repository
+      - name: Show package index
+        run: |
+          echo "===== Package index ====="
+          grep -E '^(Package|Version|Architecture|Filename):' sileo/Packages || true
+
+      - name: Commit updated indexes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -40,7 +50,7 @@ jobs:
           git add sileo/Packages sileo/Packages.gz
 
           if git diff --cached --quiet; then
-            echo "No repository metadata changes."
+            echo "No index changes."
           else
             git commit -m "Update APT package index"
             git push
