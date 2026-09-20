@@ -1,239 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b0b0f">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0d16">
+  <title>tanyou88888 · Jailbreak Repo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <title>tanyou8888 · Jailbreak</title>
+    :root {
+      --bg:        #0d0d16;
+      --surface:   #16161f;
+      --surface2:  #1e1e2a;
+      --border:    rgba(255,255,255,.08);
+      --text:      #f0f0f5;
+      --muted:     #9898ac;
+      --accent1:   #bf85ff;
+      --accent2:   #5eb7ff;
+      --accent3:   #ff7eb3;
+      --radius:    18px;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            color: white;
-            background:
-                radial-gradient(
-                    circle at 50% -10%,
-                    #30265c,
-                    #171526 35%,
-                    #08090d 70%
-                );
+    /* ── Hero ─────────────────────────────────────── */
+    .hero {
+      text-align: center;
+      padding: 64px 24px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 25% 0%, rgba(94,183,255,.18) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 35% at 75% 0%, rgba(255,126,179,.15) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 50% 80%, rgba(191,133,255,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
-            display: flex;
-            justify-content: center;
-        }
+    .hero-logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 26px;
+      box-shadow: 0 8px 40px rgba(191,133,255,.35), 0 2px 8px rgba(0,0,0,.6);
+      margin-bottom: 20px;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 700px;
-            padding: 80px 20px 40px;
-            text-align: center;
-        }
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      background: linear-gradient(135deg, var(--accent2) 0%, var(--accent1) 50%, var(--accent3) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
 
-        .logo {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 25px;
+    .hero p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 32px;
+    }
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    /* ── Add buttons ──────────────────────────────── */
+    .add-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
 
-            border-radius: 25px;
+    .add-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-size: .95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .15s, box-shadow .15s;
+      border: 1px solid var(--border);
+    }
+    .add-btn:hover { transform: translateY(-2px); }
+    .add-btn svg { flex-shrink: 0; }
 
-            font-size: 40px;
-            font-weight: bold;
+    .btn-sileo  { background: linear-gradient(135deg,#1a6fff,#6b2fff); box-shadow: 0 4px 20px rgba(107,47,255,.4); color:#fff; }
+    .btn-zebra  { background: linear-gradient(135deg,#ff8c00,#ffd000); box-shadow: 0 4px 20px rgba(255,160,0,.35); color:#1a1a00; }
+    .btn-cydia  { background: linear-gradient(135deg,#00b4d8,#0077b6); box-shadow: 0 4px 20px rgba(0,180,216,.35); color:#fff; }
 
-            background: linear-gradient(
-                135deg,
-                #7567ff,
-                #4235b8
-            );
+    .copy-url {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .url-chip {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: .85rem;
+      font-family: "SF Mono", ui-monospace, monospace;
+      color: var(--accent2);
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .url-chip:hover { background: var(--surface); }
+    .copy-hint { font-size: .8rem; color: var(--muted); }
 
-            box-shadow:
-                0 15px 45px rgba(0,0,0,.45);
-        }
+    /* ── Section header ───────────────────────────── */
+    .section-header {
+      max-width: 680px;
+      margin: 40px auto 16px;
+      padding: 0 20px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .section-header h2 { font-size: 1.15rem; font-weight: 600; color: var(--text); }
+    .section-header .badge {
+      font-size: .75rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--muted);
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 42px;
-        }
+    /* ── Package cards ────────────────────────────── */
+    .pkg-grid {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-        .subtitle {
-            margin-top: 12px;
-            color: #a6a8b5;
-            line-height: 1.6;
-        }
+    .pkg-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      transition: background .15s, border-color .15s;
+    }
+    .pkg-card:hover {
+      background: var(--surface2);
+      border-color: rgba(255,255,255,.14);
+    }
 
-        .buttons {
-            margin: 35px auto 0;
-            max-width: 420px;
-        }
+    .pkg-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 13px;
+      flex-shrink: 0;
+      background: var(--surface2);
+    }
 
-        .button {
-            display: block;
+    .pkg-info { flex: 1; min-width: 0; }
+    .pkg-name {
+      font-weight: 600;
+      font-size: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .pkg-desc {
+      color: var(--muted);
+      font-size: .875rem;
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+    .pkg-version {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: .75rem;
+      color: var(--accent1);
+      background: rgba(191,133,255,.12);
+      border-radius: 4px;
+      padding: 1px 7px;
+    }
 
-            margin-bottom: 12px;
-
-            padding: 16px 20px;
-
-            border-radius: 15px;
-
-            text-decoration: none;
-
-            color: white;
-
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .sileo {
-            background: linear-gradient(
-                135deg,
-                #7567ff,
-                #5648db
-            );
-
-            box-shadow:
-                0 12px 30px
-                rgba(100,85,240,.35);
-        }
-
-        .source {
-            background: rgba(255,255,255,.07);
-            border: 1px solid rgba(255,255,255,.1);
-        }
-
-        .card {
-            margin-top: 35px;
-            padding: 22px;
-
-            text-align: left;
-
-            border-radius: 20px;
-
-            background: rgba(18,18,25,.8);
-
-            border: 1px solid
-                rgba(255,255,255,.08);
-        }
-
-        .card h2 {
-            margin-top: 0;
-        }
-
-        .card p {
-            color: #9fa2b0;
-            line-height: 1.7;
-        }
-
-        .url {
-            display: block;
-
-            padding: 12px;
-
-            border-radius: 10px;
-
-            background: #08080c;
-
-            color: #c7c3ff;
-
-            font-family: monospace;
-
-            font-size: 13px;
-
-            word-break: break-all;
-        }
-
-        footer {
-            margin-top: 35px;
-            color: #686b78;
-            font-size: 13px;
-        }
-    </style>
+    /* ── Footer ───────────────────────────────────── */
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    footer a { color: var(--accent2); text-decoration: none; }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <div class="hero">
+    <img class="hero-logo" src="https://tanyou88888.github.io/sileo/CydiaIcon.png" alt="tanyou88888">
+    <h1>tanyou88888</h1>
+    <p>iOS 越狱软件源 &nbsp;&middot;&nbsp; 2 packages</p>
 
-    <div class="logo">
-        T
+    <div class="add-buttons">
+      <a class="add-btn btn-sileo" href="sileo://source/https://tanyou88888.github.io/sileo/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path fill="#1a6fff" d="M8 10h8M8 14h5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        添加到 Sileo
+      </a>
+      <a class="add-btn btn-zebra" href="zbra://sources/add/https://tanyou88888.github.io/sileo/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/><path fill="#ff8c00" d="M7 8h10M7 12h7M7 16h10" stroke="#1a1a00" stroke-width="2" stroke-linecap="round"/></svg>
+        添加到 Zebra
+      </a>
+      <a class="add-btn btn-cydia" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://tanyou88888.github.io/sileo/">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path fill="#00b4d8" d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        添加到 Cydia
+      </a>
     </div>
 
-    <h1>
-        tanyou8888
-    </h1>
+    <div class="copy-url">
+      <span class="url-chip" onclick="navigator.clipboard.writeText('https://tanyou88888.github.io/sileo/').then(()=>{this.textContent='已复制！';setTimeout(()=>this.textContent='https://tanyou88888.github.io/sileo/',1500)})">https://tanyou88888.github.io/sileo/</span>
+      <span class="copy-hint">点击复制</span>
+    </div>
+  </div>
 
-    <div class="subtitle">
-        Jailbreak Repository
-        <br>
-        iOS Tweaks · Tools · Utilities
+  <div class="section-header">
+    <h2>软件包</h2>
+    <span class="badge">2</span>
+  </div>
+
+  <div class="pkg-grid">
+
+    <div class="pkg-card">
+      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenjb.png" alt="TrollOpen 分屏 icon" onerror="this.style.display='none'">
+      <div class="pkg-info">
+        <div class="pkg-name">TrollOpen 分屏</div>
+        <div class="pkg-desc">TrollOpen 的越狱版本，支持 iOS 16 及以上，悬浮分屏免费公开版。</div>
+        <div class="pkg-version">v1.3.7</div>
+      </div>
     </div>
 
-    <div class="buttons">
-
-        <!-- 添加到 Sileo -->
-        <a
-            class="button sileo"
-            href="sileo://source/https://tanyou88888.github.io/sileo/"
-        >
-            添加到 Sileo
-        </a>
-
-        <!-- 查看源 -->
-        <a
-            class="button source"
-            href="/sileo/"
-        >
-            查看越狱源
-        </a>
-
+    <div class="pkg-card">
+      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png" alt="JBOpenReborn icon" onerror="this.style.display='none'">
+      <div class="pkg-info">
+        <div class="pkg-name">JBOpenReborn</div>
+        <div class="pkg-desc">TrollOpenJB 行为等价复刻版：以原版 IDA 逆向证据为准，逐机制 1:1 复刻的越狱分屏插件。</div>
+        <div class="pkg-version">v0.6.19</div>
+      </div>
     </div>
 
-    <div class="card">
+  </div>
 
-        <h2>
-            Repository
-        </h2>
-
-        <p>
-            我的 iOS 越狱软件源。
-            支持 Sileo、Zebra 等软件包管理器。
-        </p>
-
-        <span class="url">
-            https://tanyou88888.github.io/sileo/
-        </span>
-
-    </div>
-
-    <div class="card">
-
-        <h2>
-            如何添加
-        </h2>
-
-        <p>
-            使用越狱设备的 Safari 打开本页面，
-            点击「添加到 Sileo」即可尝试添加软件源。
-            如果没有自动打开 Sileo，
-            也可以复制上面的源地址手动添加。
-        </p>
-
-    </div>
-
-    <footer>
-        © 2026 tanyou8888
-    </footer>
-
-</div>
+  <footer>
+    © 2026 tanyou88888 &nbsp;·&nbsp; <a href="https://github.com/tanyou88888/tanyou88888.github.io">GitHub</a>
+  </footer>
 
 </body>
 </html>
