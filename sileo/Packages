@@ -1,5 +1,22 @@
+Package: cn.llld.fivecolumnscc
+Name: FiveColumnsCC控制中心增强
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.fivecolumnscc.json?v=1
+Version: 1.0~beta4
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟 h_h_x_t
+Depends: mobilesubstrate
+Filename: debs/rootless/控制中心5列-rootless.deb
+Size: 5320
+MD5sum: 19116d0a1dbf60f79e04a261aef51efd
+SHA1: 83d77e7b8177202b035a7d3a1b5c1999eb5511d7
+SHA256: 32e1fa8c90010ec88172169a1bad2bd01dbe79d00c8f5e2f2c436b2c80ca0387
+Section: rootless修复插件
+Description: Five rows of settings arranged in the control center。控制中心排列五行设定。
+Author: 4nni3 <4nni3.14@gmail.com>
+
 Package: cn.llld.hideallbar
 Name: 隐藏底部横条-roothide
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.hideallbar.json?v=1
 Version: 1.0
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -13,8 +30,25 @@ Section: roothide隐藏专区
 Description: Hide home bar隐藏底部横条，需要安装Legacy arm64e Support，介意卸载---roothide
 Author: netskao
 
+Package: cn.llld.thsj
+Name: 最近通话增加具体时间-rootless
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.thsj.json?v=1
+Version: 0.1-1
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟
+Depends: firmware (>= 9.0), mobilesubstrate
+Filename: debs/rootless/最近通话详细时间(rootless) .deb
+Size: 5608
+MD5sum: 34cb58f2bffa47db97af0f9c6c6b34a8
+SHA1: 47cc9f246b9075f96a461b84b314569e6a996099
+SHA256: 333e4d315f1ef96adad404447e08bb8d2a2fb9afc3f83efcb2d81fe470d38a5f
+Section: rootless应用插件
+Description: The specific time of the recent call has been increased.最近通话增加具体时间
+Author: 来了老弟
+
 Package: cn.llld.ycxbt
 Name: HideNoHomeBar-roothide
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.ycxbt.json?v=1
 Version: 0.0.1
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -131,3 +165,20 @@ Changelog: 0.6.19 正式版（2026-09-23）
  对齐原版 sub_5E078 逐行证据：仅保留 InCallService / decar / 用户排除列表三个否决条件。
  全仓自造规则与占位函数专项普查：空实现 0 处，硬编码白名单均有原版背书。
  真机验收 A 级：Spotlight 打开「设置」正常浮窗；门禁 classes=39 missing=0。
+
+Package: llld.keyboard
+Name: 强制第三方输入法-rootless
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/llld.keyboard.json?v=1
+Version: 2.0
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟
+Installed-Size: 168
+Depends: mobilesubstrate
+Filename: debs/rootless/强制第三方键盘输入-arm64-rootleess.deb
+Size: 4164
+MD5sum: 0353977b8885498f3e6a4fc569042061
+SHA1: 16f563bd168032a9a381043be00103506f48b36a
+SHA256: cc385c8732dbe808973ccd1bdda70d0732ae4440a8fbc71dc79d5caa475de984
+Section: rootless插件
+Description: Function: Allow third-party input methods in any password box。***强制第三方输入法（键盘），作用：在任意密码框可允许第三方输入法输入（银行等特制键盘除外），20240104:更新版本号。***
+Author: 来了老弟
