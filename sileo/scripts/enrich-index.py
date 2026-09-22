@@ -99,16 +99,43 @@ def head_ver(view):
 
 
 def sync_depiction(pkg, versions, changelogs):
-    """把 control Changelog 同步进 depiction。versions 需已降序排列。"""
+    """把 control Changelog 同步进 depiction。versions 需已降序排列。
+
+    - 索引中存在且带 Changelog 的版本：插入/更新日记块（置顶）
+    - 索引中已不存在的版本（deb 被删除）：清理其日记块，不留失效残留
+    - Details 的 Version 行始终同步为最新版本
+    """
     path = os.path.join(BASE, "depictions", pkg + ".json")
     if not os.path.isfile(path):
         return
     d = json.load(open(path, encoding="utf-8"))
     changed = False
+    vset = set(versions)
     for tab in d.get("tabs", []):
         if tab.get("tabname") != "Changelog":
             continue
         views = tab["views"]
+        # ① 清理已不存在版本的日记块（deb 删除后自动清残留）
+        kept, i = [], 0
+        while i < len(views):
+            v = views[i]
+            if v.get("class") == "DepictionHeaderView":
+                j = len(views)
+                for k in range(i + 1, len(views)):
+                    if views[k].get("class") == "DepictionHeaderView":
+                        j = k
+                        break
+                hv = head_ver(v)
+                if versions and hv is not None and hv not in vset:
+                    changed = True  # 丢弃该块
+                else:
+                    kept.extend(views[i:j])
+                i = j
+            else:
+                kept.append(v)
+                i += 1
+        views[:] = kept
+        # ② 插入/更新存在版本的日记块
         for ver in versions:
             if ver not in changelogs:
                 continue
@@ -131,14 +158,16 @@ def sync_depiction(pkg, versions, changelogs):
                                 if v.get("class") == "DepictionHeaderView"), len(views))
                 views[first_h:first_h] = block
                 changed = True
-    if not changed:
-        return
+    # ③ Details 的 Version 行同步（独立于日记块变化）
     for tab in d.get("tabs", []):
         if tab.get("tabname") == "Details":
             for v in tab.get("views", []):
                 if v.get("class") == "DepictionTableTextView" and v.get("title") == "Version":
                     if versions and v.get("text") != versions[0]:
                         v["text"] = versions[0]
+                        changed = True
+    if not changed:
+        return
     json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=4)
 
 

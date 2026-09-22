@@ -53,30 +53,7 @@
         {
             "class": "DepictionStackView",
             "tabname": "Changelog",
-            "views": [
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "1.0~beta4"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "rootless 专区",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 控制中心五列排列",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                }
-            ]
+            "views": []
         }
     ]
 }
