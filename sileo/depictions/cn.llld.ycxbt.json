@@ -32,7 +32,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Requires",
-                    "text": "roothide Bootstrap"
+                    "text": "roothide"
                 },
                 {
                     "class": "DepictionTableTextView",

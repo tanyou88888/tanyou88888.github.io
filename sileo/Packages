@@ -1,7 +1,7 @@
 Package: cn.llld.fivecolumnscc
 Name: FiveColumnsCC控制中心增强
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.fivecolumnscc.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.fivecolumnscc.json?v=94cbe7f0
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.fivecolumnscc.json?v=b7344075
 Version: 1.0~beta4
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟 h_h_x_t
@@ -18,7 +18,7 @@ Author: 4nni3 <4nni3.14@gmail.com>
 Package: cn.llld.hideallbar
 Name: 隐藏底部横条-roothide
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.hideallbar.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.hideallbar.json?v=947b0ad3
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.hideallbar.json?v=e24c55ae
 Version: 1.0
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -52,7 +52,7 @@ Author: 来了老弟
 Package: cn.llld.ycxbt
 Name: HideNoHomeBar-roothide
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.ycxbt.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.ycxbt.json?v=3bc7e49d
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.ycxbt.json?v=b12cd192
 Version: 0.0.1
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -70,7 +70,7 @@ Author: 来了老弟 h_h_x_t
 Package: com.charlieleung.trollopenjb
 Name: TrollOpen 分屏
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenjb.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=d7fba3cd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=0cc67dad
 Version: 1.3.7
 Architecture: iphoneos-arm64e
 Maintainer: Charlie Leung
@@ -89,7 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=a42378f5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b881e043
 Version: 0.6.103
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -113,43 +113,7 @@ Changelog: 0.6.103 清理自造持有变量
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=a42378f5
-Version: 0.6.15
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1680
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.15_iphoneos-arm64e.deb
-Size: 404946
-MD5sum: 7bdbd1ccf566aa408bd6fc4a40265795
-SHA1: d83028cf35f5015f81872f2669c67d7d773c5e19
-SHA256: 09d2e2d29851ac0fd71831d3a98d6b901b41ebb72206448a87cebe1056ed0b97
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
-Author: TrollOpenReborn
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=a42378f5
-Version: 0.6.15-489-1
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1684
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.15-489-1_iphoneos-arm64e.deb
-Size: 405572
-MD5sum: 6ba1baf9dfef5bd4941e8e06fe4ae92f
-SHA1: a5c6cf356496942b0c0d6a65b31bc1e9a6b86bb1
-SHA256: be6e296eca324bc2135e4572335879ae6c208d5184cc8c3b2debe47dfca97041
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
-Author: TrollOpenReborn
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=a42378f5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=cac08fe9
 Version: 0.6.15-499-1
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -173,7 +137,7 @@ Changelog: 0.6.15-499-1
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=a42378f5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=cac08fe9
 Version: 0.6.19
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -197,7 +161,7 @@ Changelog: 0.6.19 正式版（2026-09-23）
 Package: llld.keyboard
 Name: 强制第三方输入法-rootless
 Icon: https://tanyou88888.github.io/sileo/icons/llld.keyboard.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/llld.keyboard.json?v=85f46b82
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/llld.keyboard.json?v=740e1990
 Version: 2.0
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟

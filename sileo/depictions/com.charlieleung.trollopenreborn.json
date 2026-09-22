@@ -31,7 +31,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Requires",
-                    "text": "iOS 16.0+"
+                    "text": "iOS 16.0+ · roothide"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -172,70 +172,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• miniMode 机制复刻：轻点恢复 + 拖动手势，hitTest/pointInside 命中逻辑与原版一致。",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.15-489-1"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "2026-09-20",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 悬浮分屏 scene→handle 绑定链路贯通",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 扇形菜单复刻完成，手势分发逐行对应",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.15"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "2026-09-20",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 正式发布 0.6.15",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 完善触发器和窗口行为",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"

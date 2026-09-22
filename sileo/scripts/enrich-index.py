@@ -12,7 +12,11 @@ Icon / SileoDepiction 字段，且多行 Changelog 的位置影响 Sileo 解析�
                         depiction 内容一变 URL 自动变，无需手工递增）
   3. 字段排序:        Package → Name → Icon → SileoDepiction → 其余 → Changelog（多行字段置尾）
   4. 分类归一:        按目录 Section 统一为「rootless 插件 / roothide 插件」
-  5. depiction 自动更新:
+  5. 旧版本保留策略:  每包仅保留最近 KEEP_VERSIONS 个版本的 deb，
+                      更旧的 deb 自动删除（日记块随之由规则 4 清理）
+  6. Requires 自动统一: Details 的 Requires 行按分区（rootless/roothide）
+                      与 firmware 依赖自动生成
+  7. depiction 自动更新:
                       - 从索引各版本的 control Changelog 自动生成 depiction 的
                         Changelog 选项卡（新版本块自动插到顶部，同版本已一致则原样保留）
                       - Details 的 Version 行同步为最新版本号
@@ -28,6 +32,7 @@ import re
 import sys
 
 REPO_URL = "https://tanyou88888.github.io/sileo"
+KEEP_VERSIONS = 3  # 每包保留的最近版本数，更旧的 deb 自动清理
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 FIELD_ORDER = [
@@ -98,7 +103,7 @@ def head_ver(view):
     return m.group(1) if m else None
 
 
-def sync_depiction(pkg, versions, changelogs):
+def sync_depiction(pkg, versions, changelogs, requires=None):
     """把 control Changelog 同步进 depiction。versions 需已降序排列。
 
     - 索引中存在且带 Changelog 的版本：插入/更新日记块（置顶）
@@ -166,6 +171,10 @@ def sync_depiction(pkg, versions, changelogs):
                     if versions and v.get("text") != versions[0]:
                         v["text"] = versions[0]
                         changed = True
+                if v.get("class") == "DepictionTableTextView" and v.get("title") == "Requires" and requires:
+                    if v.get("text") != requires:
+                        v["text"] = requires
+                        changed = True
     if not changed:
         return
     json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=4)
@@ -189,14 +198,51 @@ def main():
             if len(lines) >= 1:
                 ent["changelogs"][ver] = (lines[0], lines[1:])
 
+    # 按包聚合 firmware 最低版本（取最新条目的 Depends）
+    fw = {}
+    for fields, multi in stanzas:
+        pkg = fields.get("Package", "")
+        dep = fields.get("Depends", "")
+        m = re.search(r"firmware\s*\(>=\s*([0-9.]+)\)", dep)
+        if pkg and (pkg not in fw or (m and "firmware" in dep)):
+            fw[pkg] = m.group(1) if m else None
+
+    # 旧版本保留策略：每包保留最近 KEEP_VERSIONS 个版本，删除更旧的 deb
+    dropped = []
+    for pkg, ent in by_pkg.items():
+        ent["versions"].sort(key=vkey, reverse=True)
+        if len(ent["versions"]) <= KEEP_VERSIONS:
+            continue
+        for ver in ent["versions"][KEEP_VERSIONS:]:
+            for fields, multi in stanzas:
+                if fields.get("Package") == pkg and fields.get("Version") == ver:
+                    fn = fields.get("Filename", "")
+                    if fn:
+                        path = os.path.join(BASE, fn)
+                        if os.path.isfile(path):
+                            os.remove(path)
+                            dropped.append(fn)
+    if dropped:
+        print("旧版本清理（保留最近 %d 版）: %s" % (KEEP_VERSIONS, ", ".join(dropped)))
+        stanzas = [(f, m) for f, m in stanzas
+                   if not any(f.get("Filename") == fn for fn in dropped)]
+        for pkg, ent in by_pkg.items():
+            ent["versions"] = [v for v in ent["versions"]
+                               if v in {f.get("Version") for f, _ in stanzas if f.get("Package") == pkg}]
+
     out = []
     for fields, multi in stanzas:
         pkg = fields.get("Package", "")
         ent = by_pkg.get(pkg, {"versions": [], "changelogs": {}})
         ent["versions"].sort(key=vkey, reverse=True)
 
-        # 自动同步 depiction 更新日记（在计算哈希前完成）
-        sync_depiction(pkg, ent["versions"], ent["changelogs"])
+        # 自动同步 depiction 更新日记与 Requires（在计算哈希前完成）
+        zone = ("roothide" if "/roothide/" in fields.get("Filename", "")
+                else "rootless" if "/rootless/" in fields.get("Filename", "") else None)
+        minfw = fw.get(pkg)
+        requires = " · ".join(x for x in (
+            ("iOS %s+" % minfw) if minfw else None, zone) if x)
+        sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None)
 
         # Icon：仓库内每包图标（强制覆盖，保证命名约定统一）
         if os.path.isfile(os.path.join(BASE, "icons", pkg + ".png")):

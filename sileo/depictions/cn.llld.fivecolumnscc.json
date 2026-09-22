@@ -32,7 +32,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Requires",
-                    "text": "iOS 14.0+ · rootless"
+                    "text": "rootless"
                 },
                 {
                     "class": "DepictionTableTextView",
