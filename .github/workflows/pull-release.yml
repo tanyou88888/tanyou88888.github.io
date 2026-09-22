@@ -18,27 +18,18 @@ jobs:
         env:
           JB_TOKEN: ${{ secrets.JBOPENREBORN_TOKEN }}
         run: |
-          API=$(curl -s -H "Authorization: Bearer $JB_TOKEN" \
-            "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest" \
-            | python3 -c "
-import json,sys
-r=json.load(sys.stdin)
-print(r.get('message','') or r['tag_name'], file=sys.stderr)
-a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]
-print(a[0]['url'] if a else '')")
-          [ -n "$API" ] || { echo "::error::最新 Release 没有 .deb 资产"; exit 1; }
+          set -e
+          REL=$(curl -s -H "Authorization: Bearer $JB_TOKEN" "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest")
+          API=$(echo "$REL" | grep -o '"browser_download_url": *"[^"]*\.deb"' | head -1 | sed 's/.*"\(https[^"]*\)"/\1/')
+          if [ -z "$API" ]; then
+            echo "::error::最新 Release 没有 .deb 资产"
+            exit 1
+          fi
+          NAME=$(basename "$API")
+          echo "拉取: $NAME"
           mkdir -p sileo/debs/rootless
-          curl -sL -H "Authorization: Bearer $JB_TOKEN" -H "Accept: application/octet-stream" \
-            -o sileo/debs/rootless/deb.tmp "$API"
-          NAME=$(curl -s -H "Authorization: Bearer $JB_TOKEN" \
-            "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest" \
-            | python3 -c "
-import json,sys
-r=json.load(sys.stdin)
-a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]
-print(a[0]['name'] if a else 'package.deb')")
-          mv sileo/debs/rootless/deb.tmp "sileo/debs/rootless/$NAME"
-          echo "已下载: $NAME"
+          curl -sL -H "Authorization: Bearer $JB_TOKEN" -o "sileo/debs/rootless/$NAME" "$API"
+          ls -la "sileo/debs/rootless/$NAME"
 
       - name: Commit if new
         run: |
