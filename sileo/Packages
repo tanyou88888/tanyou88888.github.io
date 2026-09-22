@@ -90,6 +90,30 @@ Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
 SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7
+Version: 0.6.103
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1704
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.103_iphoneos-arm64e.deb
+Size: 416318
+MD5sum: 72c7d5c41b0ddb0af13f475affd95bce
+SHA1: 17c2a107d086803e44ce918429008b474ac941c2
+SHA256: b7e314b334a1570c8792c84b4f23fdae2c128a4f217ef372ed6ae37d9433d1c4
+Section: rootless 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.103)
+Author: TrollOpenReborn
+Changelog: 0.6.103 清理自造持有变量
+ 清理：删除自造 ivar _floatingWindow（原版无此物，仅写全局槽）
+ 修复：暖态恢复（最小化后从边缘图标取回）不再出现黑帧
+ 修复：边缘图标恢复不再闪启动封面
+ 优化：摘启动封面改由场景内容就绪驱动，消除启动透明空隙
+ 已知问题：锁屏解锁后浮窗仍会重现，对齐原版方案待收口
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7
 Version: 0.6.15
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
