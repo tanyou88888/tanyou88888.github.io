@@ -57,7 +57,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add sileo/Packages sileo/Packages.gz
+          git add sileo/Packages sileo/Packages.gz sileo/depictions sileo/scripts/enrich-index.py
 
           if git diff --cached --quiet; then
             echo "No index changes."
