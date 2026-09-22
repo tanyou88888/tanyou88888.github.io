@@ -1,0 +1,53 @@
+name: Pull JBOpenReborn release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download latest release deb
+        env:
+          JB_TOKEN: ${{ secrets.JBOPENREBORN_TOKEN }}
+        run: |
+          API=$(curl -s -H "Authorization: Bearer $JB_TOKEN" \
+            "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest" \
+            | python3 -c "
+import json,sys
+r=json.load(sys.stdin)
+print(r.get('message','') or r['tag_name'], file=sys.stderr)
+a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]
+print(a[0]['url'] if a else '')")
+          [ -n "$API" ] || { echo "::error::最新 Release 没有 .deb 资产"; exit 1; }
+          mkdir -p sileo/debs/rootless
+          curl -sL -H "Authorization: Bearer $JB_TOKEN" -H "Accept: application/octet-stream" \
+            -o sileo/debs/rootless/deb.tmp "$API"
+          NAME=$(curl -s -H "Authorization: Bearer $JB_TOKEN" \
+            "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest" \
+            | python3 -c "
+import json,sys
+r=json.load(sys.stdin)
+a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]
+print(a[0]['name'] if a else 'package.deb')")
+          mv sileo/debs/rootless/deb.tmp "sileo/debs/rootless/$NAME"
+          echo "已下载: $NAME"
+
+      - name: Commit if new
+        run: |
+          git config user.name "release-puller"
+          git config user.email "actions@users.noreply.github.com"
+          git add sileo/debs/
+          if git diff --cached --quiet; then
+            echo "没有新版本"
+            exit 0
+          fi
+          git commit -m "拉取 JBOpenReborn 最新正式版 deb"
+          git push
