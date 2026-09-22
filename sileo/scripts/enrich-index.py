@@ -216,6 +216,28 @@ def main():
         out.append(render(fields, multi))
 
     open(pkg_path, "w", encoding="utf-8").write("\n\n".join(out) + "\n")
+
+    # 生成 Packages.gz（mtime 固定，保证同内容同哈希）并更新 Release 校验和
+    import gzip as _gz
+    raw = open(pkg_path, "rb").read()
+    gz_path = os.path.join(BASE, "Packages.gz")
+    with _gz.GzipFile(filename="Packages", mode="wb", fileobj=open(gz_path, "wb"), mtime=0) as f:
+        f.write(raw)
+    gz_data = open(gz_path, "rb").read()
+
+    rel_path = os.path.join(BASE, "Release")
+    rel = [l for l in open(rel_path, encoding="utf-8").read().splitlines()
+           if not re.match(r"^(MD5Sum|SHA1|SHA256):", l) and not l.startswith(" ")]
+    def _h(data, algo):
+        return hashlib.new(algo, data).hexdigest()
+    rel.append("MD5Sum:")
+    for name, data in (("Packages", raw), ("Packages.gz", gz_data)):
+        rel.append(" %s %8d %s" % (_h(data, "md5"), len(data), name))
+    rel.append("SHA256:")
+    for name, data in (("Packages", raw), ("Packages.gz", gz_data)):
+        rel.append(" %s %8d %s" % (_h(data, "sha256"), len(data), name))
+    open(rel_path, "w", encoding="utf-8").write("\n".join(rel) + "\n")
+
     print("enriched %d stanzas" % len(out))
 
 

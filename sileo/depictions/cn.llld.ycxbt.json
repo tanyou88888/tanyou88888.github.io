@@ -1,7 +1,7 @@
 {
     "class": "DepictionTabView",
     "minVersion": "0.1",
-    "tintColor": "#08a8a8",
+    "tintColor": "#8e8e93",
     "tabs": [
         {
             "class": "DepictionStackView",
@@ -85,5 +85,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "headerImage": "https://tanyou88888.github.io/sileo/banners/cn.llld.ycxbt.png"
 }

@@ -1,7 +1,7 @@
 {
     "class": "DepictionTabView",
     "minVersion": "0.1",
-    "tintColor": "#5eb7ff",
+    "tintColor": "#e8960c",
     "tabs": [
         {
             "class": "DepictionStackView",
@@ -55,5 +55,6 @@
             "tabname": "Changelog",
             "views": []
         }
-    ]
+    ],
+    "headerImage": "https://tanyou88888.github.io/sileo/banners/cn.llld.fivecolumnscc.png"
 }

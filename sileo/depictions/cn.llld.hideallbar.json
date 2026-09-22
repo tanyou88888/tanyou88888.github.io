@@ -1,7 +1,7 @@
 {
     "class": "DepictionTabView",
     "minVersion": "0.1",
-    "tintColor": "#08a8a8",
+    "tintColor": "#9a6fd0",
     "tabs": [
         {
             "class": "DepictionStackView",
@@ -92,5 +92,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "headerImage": "https://tanyou88888.github.io/sileo/banners/cn.llld.hideallbar.png"
 }

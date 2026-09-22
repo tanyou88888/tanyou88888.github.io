@@ -1,4 +1,21 @@
-<!doctype html>
+#!/usr/bin/env python3
+"""
+build-homepage.py — 从 Packages 索引自动渲染源主页 index.html。
+
+卡片数据（图标/名称/简介/最新版本/分区）全部来自索引与仓库约定文件，
+加减软件包后无需手工维护主页。由 APT 流水线在 enrich 之后调用。
+"""
+
+import hashlib
+import json
+import os
+import re
+import sys
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_URL = "https://tanyou88888.github.io/sileo"
+
+TEMPLATE = """<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -68,97 +85,36 @@
 </head>
 <body>
   <div class="hero">
-    <img class="hero-logo" src="https://tanyou88888.github.io/sileo/CydiaIcon.png" alt="tanyou88888">
+    <img class="hero-logo" src="__REPO__/CydiaIcon.png" alt="tanyou88888">
     <h1>tanyou88888</h1>
-    <p>iOS 越狱软件源 &nbsp;&middot;&nbsp; 7 packages</p>
+    <p>iOS 越狱软件源 &nbsp;&middot;&nbsp; __COUNT__ packages</p>
     <div class="add-buttons">
-      <a class="add-btn btn-sileo" href="sileo://source/https://tanyou88888.github.io/sileo/">
+      <a class="add-btn btn-sileo" href="sileo://source/__REPO__/">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path fill="#1a6fff" d="M8 10h8M8 14h5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
         添加到 Sileo
       </a>
-      <a class="add-btn btn-zebra" href="zbra://sources/add/https://tanyou88888.github.io/sileo/">
+      <a class="add-btn btn-zebra" href="zbra://sources/add/__REPO__/">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="4"/><path fill="#ff8c00" d="M7 8h10M7 12h7M7 16h10" stroke="#1a1a00" stroke-width="2" stroke-linecap="round"/></svg>
         添加到 Zebra
       </a>
-      <a class="add-btn btn-cydia" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://tanyou88888.github.io/sileo/">
+      <a class="add-btn btn-cydia" href="cydia://url/https://cydia.saurik.com/api/share#?source=__REPO__/">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path fill="#00b4d8" d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         添加到 Cydia
       </a>
     </div>
     <div class="copy-url">
-      <span class="url-chip" onclick="navigator.clipboard.writeText('https://tanyou88888.github.io/sileo/').then(()=>{this.textContent='已复制！';setTimeout(()=>this.textContent='https://tanyou88888.github.io/sileo/',1500)})">https://tanyou88888.github.io/sileo/</span>
+      <span class="url-chip" onclick="navigator.clipboard.writeText('__REPO__/').then(()=>{this.textContent='已复制！';setTimeout(()=>this.textContent='__REPO__/',1500)})">__REPO__/</span>
       <span class="copy-hint">点击复制</span>
     </div>
   </div>
 
   <div class="section-header">
     <h2>软件包</h2>
-    <span class="badge">7</span>
+    <span class="badge">__COUNT__</span>
   </div>
 
   <div class="pkg-grid">
-    <div class="pkg-card">
-      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/llld.keyboard.png" alt="强制第三方输入法-rootless icon" onerror="this.src='https://tanyou88888.github.io/sileo/CydiaIcon.png'">
-      <div class="pkg-info">
-        <div class="pkg-name">强制第三方输入法-rootless</div>
-        <div class="pkg-desc">Function: Allow third-party input methods in any password bo</div>
-        <div class="pkg-meta"><span class="pkg-version">v2.0</span><span class="pkg-section">rootless 插件</span></div>
-      </div>
-    </div>
-
-    <div class="pkg-card">
-      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenjb.png" alt="TrollOpen 分屏 icon" onerror="this.src='https://tanyou88888.github.io/sileo/CydiaIcon.png'">
-      <div class="pkg-info">
-        <div class="pkg-name">TrollOpen 分屏</div>
-        <div class="pkg-desc">TrollOpen 的越狱版本，支持 ios16 及以上，免费公开版，无后续更新，不需要反馈 bug</div>
-        <div class="pkg-meta"><span class="pkg-version">v1.3.7</span><span class="pkg-section">roothide 插件</span></div>
-      </div>
-    </div>
-
-    <div class="pkg-card">
-      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/cn.llld.fivecolumnscc.png" alt="FiveColumnsCC控制中心增强 icon" onerror="this.src='https://tanyou88888.github.io/sileo/CydiaIcon.png'">
-      <div class="pkg-info">
-        <div class="pkg-name">FiveColumnsCC控制中心增强</div>
-        <div class="pkg-desc">Five rows of settings arranged in the control center</div>
-        <div class="pkg-meta"><span class="pkg-version">v1.0~beta4</span><span class="pkg-section">rootless 插件</span></div>
-      </div>
-    </div>
-
-    <div class="pkg-card">
-      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/cn.llld.hideallbar.png" alt="隐藏底部横条-roothide icon" onerror="this.src='https://tanyou88888.github.io/sileo/CydiaIcon.png'">
-      <div class="pkg-info">
-        <div class="pkg-name">隐藏底部横条-roothide</div>
-        <div class="pkg-desc">Hide home bar隐藏底部横条，需要安装Legacy arm64e Support，介意卸载---roothid</div>
-        <div class="pkg-meta"><span class="pkg-version">v1.0</span><span class="pkg-section">roothide 插件</span></div>
-      </div>
-    </div>
-
-    <div class="pkg-card">
-      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png" alt="JBOpenReborn icon" onerror="this.src='https://tanyou88888.github.io/sileo/CydiaIcon.png'">
-      <div class="pkg-info">
-        <div class="pkg-name">JBOpenReborn</div>
-        <div class="pkg-desc">TrollOpenJB behavior-equivalent rebuild (formal release 0.6.</div>
-        <div class="pkg-meta"><span class="pkg-version">v0.6.103</span><span class="pkg-section">rootless 插件</span></div>
-      </div>
-    </div>
-
-    <div class="pkg-card">
-      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/cn.llld.thsj.png" alt="最近通话增加具体时间-rootless icon" onerror="this.src='https://tanyou88888.github.io/sileo/CydiaIcon.png'">
-      <div class="pkg-info">
-        <div class="pkg-name">最近通话增加具体时间-rootless</div>
-        <div class="pkg-desc">The specific time of the recent call has been increased.最近通话</div>
-        <div class="pkg-meta"><span class="pkg-version">v0.1-1</span><span class="pkg-section">rootless 插件</span></div>
-      </div>
-    </div>
-
-    <div class="pkg-card">
-      <img class="pkg-icon" src="https://tanyou88888.github.io/sileo/icons/cn.llld.ycxbt.png" alt="HideNoHomeBar-roothide icon" onerror="this.src='https://tanyou88888.github.io/sileo/CydiaIcon.png'">
-      <div class="pkg-info">
-        <div class="pkg-name">HideNoHomeBar-roothide</div>
-        <div class="pkg-desc">HideNoHomeBar隐藏底部小白条-roothide</div>
-        <div class="pkg-meta"><span class="pkg-version">v0.0.1</span><span class="pkg-section">roothide 插件</span></div>
-      </div>
-    </div>
+__CARDS__
   </div>
 
   <footer>
@@ -166,3 +122,66 @@
   </footer>
 </body>
 </html>
+"""
+
+
+def vkey(version):
+    parts = []
+    for seg in re.split(r"[.\-+~]", version):
+        parts.append(int(seg) if seg.isdigit() else 0)
+    return tuple(parts)
+
+
+def main():
+    text = open(os.path.join(BASE, "Packages"), encoding="utf-8").read()
+    pkgs = {}
+    for block in text.rstrip("\n").split("\n\n"):
+        if not block.strip():
+            continue
+        f = {}
+        for line in block.splitlines():
+            if line.startswith((" ", "\t")) or ":" not in line:
+                continue
+            k, v = line.split(":", 1)
+            f[k.strip()] = v.strip()
+        pkg = f.get("Package", "")
+        if not pkg:
+            continue
+        cur = pkgs.setdefault(pkg, {"name": pkg, "ver": "0", "desc": "",
+                                    "section": "", "icon": ""})
+        if vkey(f.get("Version", "0")) >= vkey(cur["ver"]):
+            cur.update({
+                "name": f.get("Name", pkg),
+                "ver": f.get("Version", "0"),
+                "desc": f.get("Description", cur["desc"]),
+                "section": f.get("Section", cur["section"]),
+                "icon": f.get("Icon", cur["icon"]),
+            })
+
+    cards = []
+    for pkg in sorted(pkgs, key=lambda p: vkey(pkgs[p]["ver"]), reverse=True):
+        info = pkgs[pkg]
+        icon = info["icon"] or "%s/CydiaIcon.png" % REPO_URL
+        desc = info["desc"].split("。")[0][:60]
+        cards.append(
+            '    <div class="pkg-card">\n'
+            '      <img class="pkg-icon" src="%s" alt="%s icon" onerror="this.src=\'%s/CydiaIcon.png\'">\n'
+            '      <div class="pkg-info">\n'
+            '        <div class="pkg-name">%s</div>\n'
+            '        <div class="pkg-desc">%s</div>\n'
+            '        <div class="pkg-meta"><span class="pkg-version">v%s</span>'
+            '<span class="pkg-section">%s</span></div>\n'
+            '      </div>\n'
+            '    </div>' % (icon, info["name"], REPO_URL, info["name"],
+                           desc, info["ver"], info["section"]))
+
+    html = (TEMPLATE.replace("__REPO__", REPO_URL)
+            .replace("__COUNT__", str(len(pkgs)))
+            .replace("__CARDS__", "\n\n".join(cards)))
+    out = os.path.join(os.path.dirname(BASE), "index.html")
+    open(out, "w", encoding="utf-8").write(html)
+    print("homepage: %d packages" % len(pkgs))
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -7,3 +7,9 @@ Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
 Description: tanyou88888 iOS Jailbreak Repository
 Icon: https://tanyou88888.github.io/sileo/icon.png
+MD5Sum:
+ cfbe0087b691efa4017f95aa7fc1b6c0    10673 Packages
+ baf4ae9a70abeb14bc299b3096d0160d     4008 Packages.gz
+SHA256:
+ bec899fc17c28300246cfbf018691cbf2c212cdce77925c35e54730ed1be8e6b    10673 Packages
+ 1292fcdf532a08ace2342df9236831856e9faf2f2c16b9f00d5a87697cf7422d     4008 Packages.gz

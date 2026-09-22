@@ -1,7 +1,7 @@
 {
     "class": "DepictionTabView",
     "minVersion": "0.1",
-    "tintColor": "#5eb7ff",
+    "tintColor": "#5a7dff",
     "tabs": [
         {
             "class": "DepictionStackView",
@@ -78,5 +78,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "headerImage": "https://tanyou88888.github.io/sileo/banners/llld.keyboard.png"
 }

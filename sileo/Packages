@@ -1,7 +1,7 @@
 Package: cn.llld.fivecolumnscc
 Name: FiveColumnsCC控制中心增强
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.fivecolumnscc.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.fivecolumnscc.json?v=04029549
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.fivecolumnscc.json?v=94cbe7f0
 Version: 1.0~beta4
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟 h_h_x_t
@@ -18,7 +18,7 @@ Author: 4nni3 <4nni3.14@gmail.com>
 Package: cn.llld.hideallbar
 Name: 隐藏底部横条-roothide
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.hideallbar.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.hideallbar.json?v=d4fec55f
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.hideallbar.json?v=947b0ad3
 Version: 1.0
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -35,7 +35,7 @@ Author: netskao
 Package: cn.llld.thsj
 Name: 最近通话增加具体时间-rootless
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.thsj.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.thsj.json?v=4e482235
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.thsj.json?v=5d88c918
 Version: 0.1-1
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟
@@ -52,7 +52,7 @@ Author: 来了老弟
 Package: cn.llld.ycxbt
 Name: HideNoHomeBar-roothide
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.ycxbt.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.ycxbt.json?v=37d2f153
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.ycxbt.json?v=3bc7e49d
 Version: 0.0.1
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -197,7 +197,7 @@ Changelog: 0.6.19 正式版（2026-09-23）
 Package: llld.keyboard
 Name: 强制第三方输入法-rootless
 Icon: https://tanyou88888.github.io/sileo/icons/llld.keyboard.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/llld.keyboard.json?v=59934ddd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/llld.keyboard.json?v=85f46b82
 Version: 2.0
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟
