@@ -7,24 +7,28 @@ Icon / SileoDepiction 字段，且多行 Changelog 的位置影响 Sileo 解析�
 本脚本按固定规则补全并规范化 Packages 索引：
 
   1. Icon:            <REPO_URL>/icons/<包ID>.png（存在对应文件才注入）
-  2. SileoDepiction:  <REPO_URL>/depictions/<包ID>.json（存在对应文件才注入；
-                      Sileo 按 URL 缓存 depiction，需在 URL 上带 ?v=N 递增以强制刷新）
+  2. SileoDepiction:  <REPO_URL>/depictions/<包ID>.json?v=<内容哈希前8位>
+                      （Sileo 按 URL 缓存 depiction；用内容哈希做版本号，
+                        depiction 内容一变 URL 自动变，无需手工递增）
   3. 字段排序:        Package → Name → Icon → SileoDepiction → 其余 → Changelog（多行字段置尾）
+  4. 分类归一:        按目录 Section 统一为「rootless 插件 / roothide 插件」
+  5. depiction 自动更新:
+                      - 从索引各版本的 control Changelog 自动生成 depiction 的
+                        Changelog 选项卡（新版本块自动插到顶部，同版本已一致则原样保留）
+                      - Details 的 Version 行同步为最新版本号
 
-已写入 deb control 的 Changelog 会被 scanpackages 自然带出，本脚本仅调整其位置。
+deb control 的 Changelog 是更新日记的唯一数据源：control 里写了什么，
+Sileo 更新日志页与 depiction 日记页就显示什么。
 """
 
+import hashlib
+import json
 import os
+import re
 import sys
 
 REPO_URL = "https://tanyou88888.github.io/sileo"
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# depiction URL 缓存版本号：改了 depiction 内容后在这里 +1
-DEPICTION_VERSIONS = {
-    "com.charlieleung.trollopenreborn": 8,
-    "com.charlieleung.trollopenjb": 3,
-}
 
 FIELD_ORDER = [
     "Package", "Name", "Icon", "SileoDepiction", "Version", "Architecture",
@@ -35,7 +39,7 @@ FIELD_ORDER = [
 
 
 def parse(text):
-    """解析 Packages 为 stanza 列表：每项为 (fields dict, multiline list[(key, lines)])。"""
+    """解析 Packages 为 stanza 列表：每项为 (fields dict, multiline dict)。"""
     stanzas = []
     for block in text.rstrip("\n").split("\n\n"):
         if not block.strip():
@@ -43,7 +47,7 @@ def parse(text):
         fields, multi, cur = {}, [], None
         for line in block.splitlines():
             if line.startswith((" ", "\t")):
-                if cur is not None:
+                if cur is not None and multi:
                     multi[-1][1].append(line)
                 continue
             key, _, val = line.partition(":")
@@ -70,33 +74,121 @@ def render(fields, multi):
     return "\n".join(lines)
 
 
+def vkey(version):
+    """版本号排序键：数字段逐位比较。"""
+    parts = []
+    for seg in re.split(r"[.\-+~]", version):
+        parts.append(int(seg) if seg.isdigit() else 0)
+    return tuple(parts)
+
+
+def changelog_block(title, entries):
+    """一个版本的 depiction 更新日记块（与手工版同构）。"""
+    views = [{"class": "DepictionHeaderView", "title": title}]
+    for e in entries:
+        views.append({"class": "DepictionMarkdownView", "markdown": "• " + e,
+                      "useSpacing": True, "useMargins": True, "margins": "{0,4,10,4}"})
+    views.append({"class": "DepictionSeparatorView"})
+    return views
+
+
+def head_ver(view):
+    """从 HeaderView 标题提取版本号 token。"""
+    m = re.match(r"v?([0-9][0-9A-Za-z.\-+]*)", view.get("title", ""))
+    return m.group(1) if m else None
+
+
+def sync_depiction(pkg, versions, changelogs):
+    """把 control Changelog 同步进 depiction。versions 需已降序排列。"""
+    path = os.path.join(BASE, "depictions", pkg + ".json")
+    if not os.path.isfile(path):
+        return
+    d = json.load(open(path, encoding="utf-8"))
+    changed = False
+    for tab in d.get("tabs", []):
+        if tab.get("tabname") != "Changelog":
+            continue
+        views = tab["views"]
+        for ver in versions:
+            if ver not in changelogs:
+                continue
+            first_line, entries = changelogs[ver]
+            block = changelog_block(first_line, entries)
+            hit = [i for i, v in enumerate(views)
+                   if v.get("class") == "DepictionHeaderView" and head_ver(v) == ver]
+            if hit:
+                i = hit[0]
+                j = len(views)
+                for k in range(i + 1, len(views)):
+                    if views[k].get("class") == "DepictionHeaderView":
+                        j = k
+                        break
+                if views[i:j] != block:
+                    views[i:j] = block
+                    changed = True
+            else:
+                first_h = next((i for i, v in enumerate(views)
+                                if v.get("class") == "DepictionHeaderView"), len(views))
+                views[first_h:first_h] = block
+                changed = True
+    if not changed:
+        return
+    for tab in d.get("tabs", []):
+        if tab.get("tabname") == "Details":
+            for v in tab.get("views", []):
+                if v.get("class") == "DepictionTableTextView" and v.get("title") == "Version":
+                    if versions and v.get("text") != versions[0]:
+                        v["text"] = versions[0]
+    json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=4)
+
+
 def main():
-    path = os.path.join(BASE, "Packages")
-    text = open(path, encoding="utf-8").read()
-    out = []
-    for fields, multi in parse(text):
+    pkg_path = os.path.join(BASE, "Packages")
+    stanzas = parse(open(pkg_path, encoding="utf-8").read())
+
+    # 按包聚合版本与 Changelog
+    by_pkg = {}
+    for fields, multi in stanzas:
         pkg = fields.get("Package", "")
-        # Icon：优先使用仓库内每包图标
+        ver = fields.get("Version", "")
+        ent = by_pkg.setdefault(pkg, {"versions": [], "changelogs": {}})
+        if ver:
+            ent["versions"].append(ver)
+        if "Changelog" in fields and ver:
+            lines = [fields["Changelog"]] + multi.get("Changelog", [])
+            lines = [l.strip() for l in lines if l.strip()]
+            if len(lines) >= 1:
+                ent["changelogs"][ver] = (lines[0], lines[1:])
+
+    out = []
+    for fields, multi in stanzas:
+        pkg = fields.get("Package", "")
+        ent = by_pkg.get(pkg, {"versions": [], "changelogs": {}})
+        ent["versions"].sort(key=vkey, reverse=True)
+
+        # 自动同步 depiction 更新日记（在计算哈希前完成）
+        sync_depiction(pkg, ent["versions"], ent["changelogs"])
+
+        # Icon：仓库内每包图标（强制覆盖，保证命名约定统一）
         if os.path.isfile(os.path.join(BASE, "icons", pkg + ".png")):
             fields["Icon"] = "%s/icons/%s.png" % (REPO_URL, pkg)
-        # SileoDepiction：仅当扁平 depiction 文件存在
-        if os.path.isfile(os.path.join(BASE, "depictions", pkg + ".json")):
-            v = DEPICTION_VERSIONS.get(pkg, 1)
-            fields["SileoDepiction"] = "%s/depictions/%s.json?v=%d" % (REPO_URL, pkg, v)
-        # 分类归一：按目录统一 Section，避免分类碎片化
+        # SileoDepiction：内容哈希做 ?v=，自动缓存破坏
+        dpath = os.path.join(BASE, "depictions", pkg + ".json")
+        if os.path.isfile(dpath):
+            digest = hashlib.sha256(open(dpath, "rb").read()).hexdigest()[:8]
+            fields["SileoDepiction"] = "%s/depictions/%s.json?v=%s" % (REPO_URL, pkg, digest)
+        # 分类归一：按目录统一 Section
         if "/roothide/" in fields.get("Filename", ""):
             fields["Section"] = "roothide 插件"
         elif "/rootless/" in fields.get("Filename", ""):
             fields["Section"] = "rootless 插件"
-
         # 删除废弃的小写 Sileodepiction 字段（Sileo 会误读为 depiction 地址）
         fields.pop("Sileodepiction", None)
         out.append(render(fields, multi))
-    open(path, "w", encoding="utf-8").write("\n\n".join(out) + "\n")
+
+    open(pkg_path, "w", encoding="utf-8").write("\n\n".join(out) + "\n")
     print("enriched %d stanzas" % len(out))
 
 
 if __name__ == "__main__":
     sys.exit(main())
-
-# rebuild trigger: depictions for cn.llld.* now exist
