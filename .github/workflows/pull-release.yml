@@ -20,15 +20,23 @@ jobs:
         run: |
           set -e
           REL=$(curl -s -H "Authorization: Bearer $JB_TOKEN" "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest")
-          API=$(echo "$REL" | grep -o '"browser_download_url": *"[^"]*\.deb"' | head -1 | sed 's/.*"\(https[^"]*\)"/\1/')
+          # 私有仓库资产必须走 API 端点 + octet-stream，browser_download_url 会 404
+          API=$(echo "$REL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['url'] if a else '')")
+          NAME=$(echo "$REL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['name'] if a else 'package.deb')")
           if [ -z "$API" ]; then
             echo "::error::最新 Release 没有 .deb 资产"
             exit 1
           fi
-          NAME=$(basename "$API")
           echo "拉取: $NAME"
           mkdir -p sileo/debs/rootless
-          curl -sL -H "Authorization: Bearer $JB_TOKEN" -o "sileo/debs/rootless/$NAME" "$API"
+          curl -sL -H "Authorization: Bearer $JB_TOKEN" -H "Accept: application/octet-stream" -o "sileo/debs/rootless/$NAME" "$API"
+          # 校验下载的是 ar 格式的 deb，而不是错误页
+          if ! head -c 8 "sileo/debs/rootless/$NAME" | grep -q "!<arch>"; then
+            echo "::error::下载的内容不是有效 deb（token 权限或资产地址问题）"
+            cat "sileo/debs/rootless/$NAME" | head -c 200
+            rm -f "sileo/debs/rootless/$NAME"
+            exit 1
+          fi
           ls -la "sileo/debs/rootless/$NAME"
 
       - name: Commit if new
