@@ -89,18 +89,18 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b552a251
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d76fdc2d
 Version: 0.6.103
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1704
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.103_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.103_iphoneos-arm64e.deb
 Size: 416318
 MD5sum: 72c7d5c41b0ddb0af13f475affd95bce
 SHA1: 17c2a107d086803e44ce918429008b474ac941c2
 SHA256: b7e314b334a1570c8792c84b4f23fdae2c128a4f217ef372ed6ae37d9433d1c4
-Section: rootless 插件
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.103)
 Author: TrollOpenReborn
 Changelog: 0.6.103 清理自造持有变量
@@ -113,18 +113,18 @@ Changelog: 0.6.103 清理自造持有变量
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b552a251
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d76fdc2d
 Version: 0.6.152
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1704
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.152_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.152_iphoneos-arm64e.deb
 Size: 415806
 MD5sum: b60713dea061d1861352b7b479162604
 SHA1: 0542a9c8f95352de4b3758afa2d8be7062674fff
 SHA256: 21722c0ea6b77c42ae2fec7e7ed844374e97411f6d1f92bcc9066c830910ae66
-Section: rootless 插件
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.152)
 Author: TrollOpenReborn
 Changelog: 0.6.152 锁屏解锁行为取证收口（系统侧差异）
@@ -136,18 +136,18 @@ Changelog: 0.6.152 锁屏解锁行为取证收口（系统侧差异）
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b552a251
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d76fdc2d
 Version: 0.6.19
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1684
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.19_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.19_iphoneos-arm64e.deb
 Size: 407194
 MD5sum: 78fc726a68ce9f448768f04c102174fb
 SHA1: 86362062a586f814a8b296a39e885069eae4fe9b
 SHA256: f940b50cb6c16a0e3a5456b33f42866d5e4f511669a122669da3b0d40b699611
-Section: rootless 插件
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.19)
 Author: TrollOpenReborn
 Changelog: 0.6.19 正式版（2026-09-23）
