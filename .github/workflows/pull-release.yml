@@ -41,16 +41,7 @@ jobs:
           # 记录发布日期：{包ID: {版本: 日期}}，enrich 用它给更新日记补日期行
           PKG=$(echo "$NAME" | cut -d_ -f1)
           VER=$(echo "$NAME" | cut -d_ -f2)
-          python3 -c "
-import json, sys
-pkg, ver, date = sys.argv[1], sys.argv[2], sys.argv[3]
-try:
-    m = json.load(open('sileo/meta/release-dates.json'))
-except Exception:
-    m = {}
-m.setdefault(pkg, {})[ver] = date
-json.dump(m, open('sileo/meta/release-dates.json','w'), ensure_ascii=False, indent=2)
-" "$PKG" "$VER" "$DATE"
+          python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$PKG" "$VER" "$DATE"
 
       - name: Commit if new
         run: |
