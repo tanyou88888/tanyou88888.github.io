@@ -29,13 +29,13 @@ jobs:
             exit 1
           fi
           echo "拉取: $NAME ($DATE)"
-          mkdir -p sileo/debs/rootless sileo/meta
-          curl -sL -H "Authorization: Bearer $JB_TOKEN" -H "Accept: application/octet-stream" -o "sileo/debs/rootless/$NAME" "$API"
+          mkdir -p sileo/debs/roothide sileo/meta
+          curl -sL -H "Authorization: Bearer $JB_TOKEN" -H "Accept: application/octet-stream" -o "sileo/debs/roothide/$NAME" "$API"
           # 校验下载的是 ar 格式的 deb，而不是错误页
-          if ! head -c 8 "sileo/debs/rootless/$NAME" | grep -q "!<arch>"; then
+          if ! head -c 8 "sileo/debs/roothide/$NAME" | grep -q "!<arch>"; then
             echo "::error::下载的内容不是有效 deb（token 权限或资产地址问题）"
-            head -c 200 "sileo/debs/rootless/$NAME" || true
-            rm -f "sileo/debs/rootless/$NAME"
+            head -c 200 "sileo/debs/roothide/$NAME" || true
+            rm -f "sileo/debs/roothide/$NAME"
             exit 1
           fi
           # 记录发布日期：{包ID: {版本: 日期}}，enrich 用它给更新日记补日期行
