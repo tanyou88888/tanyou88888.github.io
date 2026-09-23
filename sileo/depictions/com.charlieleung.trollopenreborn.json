@@ -31,7 +31,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Requires",
-                    "text": "iOS 16.0+ · roothide"
+                    "text": "iOS 16.0+ · rootless"
                 },
                 {
                     "class": "DepictionTableTextView",
