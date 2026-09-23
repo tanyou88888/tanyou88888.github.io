@@ -89,18 +89,18 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=9c551371
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d76fdc2d
 Version: 0.6.103
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
 Installed-Size: 1704
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.103_iphoneos-arm64e.deb
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.103_iphoneos-arm64e.deb
 Size: 416318
 MD5sum: 72c7d5c41b0ddb0af13f475affd95bce
 SHA1: 17c2a107d086803e44ce918429008b474ac941c2
 SHA256: b7e314b334a1570c8792c84b4f23fdae2c128a4f217ef372ed6ae37d9433d1c4
-Section: rootless 插件
+Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.103)
 Author: TrollOpenReborn
 Changelog: 0.6.103 清理自造持有变量
@@ -113,31 +113,30 @@ Changelog: 0.6.103 清理自造持有变量
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=a8210f32
-Version: 0.6.15-499-1
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b552a251
+Version: 0.6.152
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
-Installed-Size: 1684
+Installed-Size: 1704
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.15-499-1_iphoneos-arm64e.deb
-Size: 406844
-MD5sum: 4fbc896e71e77536e9266d5fd50915e2
-SHA1: aa84caa7564f827ed72e1bdd7d8306c124283c3f
-SHA256: 023d6eaa77493025c4aa615e95edb614a9cdc8922f8d9bd4950cf6324e19b113
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.15)
+Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.152_iphoneos-arm64e.deb
+Size: 415806
+MD5sum: b60713dea061d1861352b7b479162604
+SHA1: 0542a9c8f95352de4b3758afa2d8be7062674fff
+SHA256: 21722c0ea6b77c42ae2fec7e7ed844374e97411f6d1f92bcc9066c830910ae66
+Section: rootless 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.152)
 Author: TrollOpenReborn
-Changelog: 0.6.15-499-1
- 悬浮分屏完整复刻：补齐 scene→handle 绑定（_setScene:/_didCreateScene:），浮窗内容正常显示，layerManager 正确接收图层。
- 完整链路贯通：synchronizeChanges 及重试 → launchIntent（进程 Running）→ updateTx commit → 场景绑定 → modifyPresentationContext 内容渲染。
- 扇形菜单复刻完成：菜单轨迹与原版同构，首次构建与缓存复用路径一致，手势分发/镜像开关/去抖逻辑逐行对应。
- 012 容器复刻落地：启动封面、触摸结构、350 约束网、miniMode 遮罩层、旋转链均已完成。
- miniMode 机制复刻：轻点恢复 + 拖动手势，hitTest/pointInside 命中逻辑与原版一致。
+Changelog: 0.6.152 锁屏解锁行为取证收口（系统侧差异）
+ 清理,恢复收窗时的终止请求（原版 0xBF558）并删除全部诊断标记
+ 结论,解锁后重挂与终止请求无关,由系统重建 App 场景经 243: 驱动
+ 修复,解锁时不再把 App 重开当作桌面启动分屏（按原版仅以 __UnlockDevice 判定）
+ 修复,锁屏时把浮窗收进边缘图标（此前场景被钉在前台导致不收窗）
 
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=a8210f32
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d76fdc2d
 Version: 0.6.19
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
