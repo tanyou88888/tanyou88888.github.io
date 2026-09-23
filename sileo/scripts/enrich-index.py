@@ -16,7 +16,9 @@ Icon / SileoDepiction 字段，且多行 Changelog 的位置影响 Sileo 解析�
                       更旧的 deb 自动删除（日记块随之由规则 4 清理）
   6. Requires 自动统一: Details 的 Requires 行按分区（rootless/roothide）
                       与 firmware 依赖自动生成
-  7. depiction 自动更新:
+  7. 发布日期注入:    读取 meta/release-dates.json（拉取流水线维护），
+                      为自动日记块补「Updated · 日期」行
+  8. depiction 自动更新:
                       - 从索引各版本的 control Changelog 自动生成 depiction 的
                         Changelog 选项卡（新版本块自动插到顶部，同版本已一致则原样保留）
                       - Details 的 Version 行同步为最新版本号
@@ -87,9 +89,14 @@ def vkey(version):
     return tuple(parts)
 
 
-def changelog_block(title, entries):
-    """一个版本的 depiction 更新日记块（与手工版同构）。"""
+def changelog_block(title, entries, date=None):
+    """一个版本的 depiction 更新日记块（与手工版同构，可带日期行）。"""
     views = [{"class": "DepictionHeaderView", "title": title}]
+    if date:
+        views.append({"class": "DepictionLabelView", "text": "Updated · %s" % date,
+                      "fontSize": 12, "useSpacing": False, "usePadding": False,
+                      "textColor": "#8E8E93", "alignment": 0,
+                      "useBottomMargin": False, "margins": "{16,0,10,2}"})
     for e in entries:
         views.append({"class": "DepictionMarkdownView", "markdown": "• " + e,
                       "useSpacing": True, "useMargins": True, "margins": "{0,4,10,4}"})
@@ -103,7 +110,8 @@ def head_ver(view):
     return m.group(1) if m else None
 
 
-def sync_depiction(pkg, versions, changelogs, requires=None):
+def sync_depiction(pkg, versions, changelogs, requires=None, dates=None):
+    dates = dates or {}
     """把 control Changelog 同步进 depiction。versions 需已降序排列。
 
     - 索引中存在且带 Changelog 的版本：插入/更新日记块（置顶）
@@ -145,7 +153,8 @@ def sync_depiction(pkg, versions, changelogs, requires=None):
             if ver not in changelogs:
                 continue
             first_line, entries = changelogs[ver]
-            block = changelog_block(first_line, entries)
+            block = changelog_block(first_line, entries,
+                                    dates.get(pkg, {}).get(ver))
             hit = [i for i, v in enumerate(views)
                    if v.get("class") == "DepictionHeaderView" and head_ver(v) == ver]
             if hit:
@@ -183,6 +192,15 @@ def sync_depiction(pkg, versions, changelogs, requires=None):
 def main():
     pkg_path = os.path.join(BASE, "Packages")
     stanzas = parse(open(pkg_path, encoding="utf-8").read())
+
+    # 发布日期表（由拉取流水线维护）：{包ID: {版本: YYYY-MM-DD}}
+    meta_path = os.path.join(BASE, "meta", "release-dates.json")
+    dates = {}
+    if os.path.isfile(meta_path):
+        try:
+            dates = json.load(open(meta_path, encoding="utf-8"))
+        except Exception:
+            dates = {}
 
     # 按包聚合版本与 Changelog
     by_pkg = {}
@@ -242,7 +260,7 @@ def main():
         minfw = fw.get(pkg)
         requires = " · ".join(x for x in (
             ("iOS %s+" % minfw) if minfw else None, zone) if x)
-        sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None)
+        sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None, dates)
 
         # Icon：仓库内每包图标（强制覆盖，保证命名约定统一）
         if os.path.isfile(os.path.join(BASE, "icons", pkg + ".png")):

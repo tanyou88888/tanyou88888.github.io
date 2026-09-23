@@ -22,6 +22,16 @@ TEMPLATE = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d0d16">
   <title>tanyou88888 · Jailbreak Repo</title>
+  <meta name="description" content="tanyou88888 iOS 越狱软件源：JBOpenReborn 分屏插件与精选越狱工具，支持 Sileo / Zebra / Cydia">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="tanyou88888 · iOS 越狱软件源">
+  <meta property="og:description" content="JBOpenReborn 分屏插件与精选越狱工具，一键添加到 Sileo / Zebra / Cydia">
+  <meta property="og:image" content="__REPO__/banners/trollopenreborn.png">
+  <meta property="og:url" content="https://tanyou88888.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="tanyou88888 · iOS 越狱软件源">
+  <meta name="twitter:description" content="JBOpenReborn 分屏插件与精选越狱工具，一键添加到 Sileo / Zebra / Cydia">
+  <meta name="twitter:image" content="__REPO__/banners/trollopenreborn.png">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {

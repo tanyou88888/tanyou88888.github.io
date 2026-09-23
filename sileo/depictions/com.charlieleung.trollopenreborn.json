@@ -58,6 +58,17 @@
                     "title": "0.6.103 清理自造持有变量"
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-22",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 清理：删除自造 ivar _floatingWindow（原版无此物，仅写全局槽）",
                     "useSpacing": true,
