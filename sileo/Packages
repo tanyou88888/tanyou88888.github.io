@@ -89,31 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=176749e7
-Version: 0.6.103
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1704
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.103_iphoneos-arm64e.deb
-Size: 416318
-MD5sum: 72c7d5c41b0ddb0af13f475affd95bce
-SHA1: 17c2a107d086803e44ce918429008b474ac941c2
-SHA256: b7e314b334a1570c8792c84b4f23fdae2c128a4f217ef372ed6ae37d9433d1c4
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.103)
-Author: TrollOpenReborn
-Changelog: 0.6.103 清理自造持有变量
- 清理：删除自造 ivar _floatingWindow（原版无此物，仅写全局槽）
- 修复：暖态恢复（最小化后从边缘图标取回）不再出现黑帧
- 修复：边缘图标恢复不再闪启动封面
- 优化：摘启动封面改由场景内容就绪驱动，消除启动透明空隙
- 已知问题：锁屏解锁后浮窗仍会重现，对齐原版方案待收口
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=176749e7
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4e6199ff
 Version: 0.6.152
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -136,7 +112,7 @@ Changelog: 0.6.152 锁屏解锁行为取证收口（系统侧差异）
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=176749e7
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4e6199ff
 Version: 0.6.214
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -154,6 +130,29 @@ Changelog: 0.6.214 删243分组E的setForeground:NO下发
  修复,激活当刻fg=false致App图层拆重建→黑帧
  对齐,原版冷路径从不下发foreground=false(595jf)
  删除,分组E的settings/mutableCopy/update下发
+ 门禁,39类 原版1205 本仓1289 缺失0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4e6199ff
+Version: 0.6.217
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1688
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.217_iphoneos-arm64e.deb
+Size: 412774
+MD5sum: bba48cc76acc8e9a28825ebb5531b952
+SHA1: 13534fe3eb411c8c98b1a1793951b30e0b7bbe81
+SHA256: 144ed0e506cd274ee955124ae97ed99352d9f4988503e35fb0052870454b2bd4
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.217)
+Author: TrollOpenReborn
+Changelog: 0.6.217 删自造幂等复用分支(595ad)
+ 删除,hostScene内的presenter/hostView复用门
+ 证据,hostScene唯一调用者=243分组D;242活调用者=293完成块
+ 说明,原版无此门,PV插入只有insertSubview:aboveSubview:
  门禁,39类 原版1205 本仓1289 缺失0
 
 Package: com.witchan.ios-mcp

@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.214"
+                    "text": "0.6.217"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,52 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.217 删自造幂等复用分支(595ad)"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-24",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 删除,hostScene内的presenter/hostView复用门",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 证据,hostScene唯一调用者=243分组D;242活调用者=293完成块",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,原版无此门,PV插入只有insertSubview:aboveSubview:",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.214 删243分组E的setForeground:NO下发"
@@ -148,59 +194,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 修复,锁屏时把浮窗收进边缘图标（此前场景被钉在前台导致不收窗）",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.103 清理自造持有变量"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-22",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理：删除自造 ivar _floatingWindow（原版无此物，仅写全局槽）",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复：暖态恢复（最小化后从边缘图标取回）不再出现黑帧",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复：边缘图标恢复不再闪启动封面",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 优化：摘启动封面改由场景内容就绪驱动，消除启动透明空隙",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 已知问题：锁屏解锁后浮窗仍会重现，对齐原版方案待收口",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
