@@ -3,7 +3,7 @@ name: Pull JBOpenReborn release
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/15 * * * *"
 
 concurrency:
   group: repo-write   # 两条流水线互斥：都是全量重建，取消旧例无损失

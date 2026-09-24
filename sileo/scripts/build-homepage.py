@@ -75,6 +75,12 @@ TEMPLATE = """<!doctype html>
     .section-header h2 { font-size: 1.15rem; font-weight: 600; color: var(--text); }
     .section-header .badge { font-size: .75rem; font-weight: 600; padding: 2px 8px;
       background: var(--surface2); border: 1px solid var(--border); border-radius: 20px; color: var(--muted); }
+    .recent-grid { max-width: 680px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; gap: 6px; }
+    .recent-item { display: flex; align-items: baseline; gap: 12px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+    .recent-date { font-size: .78rem; color: var(--muted); font-family: "SF Mono", ui-monospace, monospace; flex-shrink: 0; }
+    .recent-text { font-size: .9rem; }
+    .recent-text .rv { color: var(--accent1); font-weight: 600; font-size: .78rem; margin-left: 6px; }
     .pkg-grid { max-width: 680px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; gap: 8px; }
     .pkg-card { display: flex; align-items: center; gap: 16px; background: var(--surface);
       border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px;
@@ -116,6 +122,15 @@ TEMPLATE = """<!doctype html>
       <span class="url-chip" onclick="navigator.clipboard.writeText('__REPO__/').then(()=>{this.textContent='已复制！';setTimeout(()=>this.textContent='__REPO__/',1500)})">__REPO__/</span>
       <span class="copy-hint">点击复制</span>
     </div>
+  </div>
+
+  <div class="section-header">
+    <h2>最近更新</h2>
+    <span class="badge">__RECENT_N__</span>
+  </div>
+
+  <div class="recent-grid">
+__RECENT__
   </div>
 
   <div class="section-header">
@@ -185,9 +200,30 @@ def main():
             '    </div>' % (icon, info["name"], REPO_URL, info["name"],
                            desc, info["ver"], info["section"]))
 
+    # 最近更新时间线：meta/release-dates.json 最近 3 个版本
+    import json as _json
+    recent = []
+    meta = os.path.join(BASE, "meta", "release-dates.json")
+    if os.path.isfile(meta):
+        try:
+            for pkg, vers in _json.load(open(meta, encoding="utf-8")).items():
+                name = pkgs.get(pkg, {}).get("name", pkg)
+                for ver, date in vers.items():
+                    recent.append((date, name, ver))
+            recent.sort(reverse=True)
+        except Exception:
+            recent = []
+    recent = recent[:3]
+    recent_html = "\n".join(
+        '    <div class="recent-item"><span class="recent-date">%s</span>'
+        '<span class="recent-text">%s<span class="rv">v%s</span></span></div>' % r
+        for r in recent)
+
     html = (TEMPLATE.replace("__REPO__", REPO_URL)
             .replace("__COUNT__", str(len(pkgs)))
-            .replace("__CARDS__", "\n\n".join(cards)))
+            .replace("__CARDS__", "\n\n".join(cards))
+            .replace("__RECENT_N__", str(len(recent)))
+            .replace("__RECENT__", recent_html or '    <div class="recent-item"><span class="recent-text">暂无记录</span></div>'))
     out = os.path.join(os.path.dirname(BASE), "index.html")
     open(out, "w", encoding="utf-8").write(html)
     print("homepage: %d packages" % len(pkgs))
