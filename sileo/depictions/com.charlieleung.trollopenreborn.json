@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.152"
+                    "text": "0.6.214"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -53,6 +53,52 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.214 删243分组E的setForeground:NO下发"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-24",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,激活当刻fg=false致App图层拆重建→黑帧",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,原版冷路径从不下发foreground=false(595jf)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 删除,分组E的settings/mutableCopy/update下发",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.152 锁屏解锁行为取证收口（系统侧差异）"
@@ -145,48 +191,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 已知问题：锁屏解锁后浮窗仍会重现，对齐原版方案待收口",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.19 正式版（2026-09-23）"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复：从 Spotlight 等方式跳转分屏时，系统 App（如「设置」）被错误跳过变为全屏打开。",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 移除 TOJumpSplitAllowed 中两条原版不存在的自造跳过规则（systemSkip 列表、hasPrefix:@\"com.apple.\" 全跳过）。",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐原版 sub_5E078 逐行证据：仅保留 InCallService / decar / 用户排除列表三个否决条件。",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 全仓自造规则与占位函数专项普查：空实现 0 处，硬编码白名单均有原版背书。",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 真机验收 A 级：Spotlight 打开「设置」正常浮窗；门禁 classes=39 missing=0。",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
