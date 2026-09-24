@@ -89,30 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4e6199ff
-Version: 0.6.152
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1704
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.152_iphoneos-arm64e.deb
-Size: 415806
-MD5sum: b60713dea061d1861352b7b479162604
-SHA1: 0542a9c8f95352de4b3758afa2d8be7062674fff
-SHA256: 21722c0ea6b77c42ae2fec7e7ed844374e97411f6d1f92bcc9066c830910ae66
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.152)
-Author: TrollOpenReborn
-Changelog: 0.6.152 锁屏解锁行为取证收口（系统侧差异）
- 清理,恢复收窗时的终止请求（原版 0xBF558）并删除全部诊断标记
- 结论,解锁后重挂与终止请求无关,由系统重建 App 场景经 243: 驱动
- 修复,解锁时不再把 App 重开当作桌面启动分屏（按原版仅以 __UnlockDevice 判定）
- 修复,锁屏时把浮窗收进边缘图标（此前场景被钉在前台导致不收窗）
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4e6199ff
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
 Version: 0.6.214
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -135,7 +112,7 @@ Changelog: 0.6.214 删243分组E的setForeground:NO下发
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4e6199ff
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
 Version: 0.6.217
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -153,6 +130,33 @@ Changelog: 0.6.217 删自造幂等复用分支(595ad)
  删除,hostScene内的presenter/hostView复用门
  证据,hostScene唯一调用者=243分组D;242活调用者=293完成块
  说明,原版无此门,PV插入只有insertSubview:aboveSubview:
+ 门禁,39类 原版1205 本仓1289 缺失0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.239
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1704
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.239_iphoneos-arm64e.deb
+Size: 416640
+MD5sum: 9efbae778176329a799ee4e478c15aa2
+SHA1: be455a6967ed244ca09f502cdebfd55c80d02ff1
+SHA256: 0282fedf18fc016ebd4d912debad1af7a06f54b2134e7044f0f11cae74854440
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (0.6.239: fix 0.6.238 crash, diagnostics removed)
+Author: TrollOpenReborn
+Changelog: 0.6.239 修复0.6.238崩溃并完成诊断清理
+ 修复,隐藏dock栏背景在iOS17无效(按原版sub_7512C/70CE0逐行改回)
+ 修复,双击锁屏在iOS17无效(补手势标志与AXPI锁屏原路径)
+ 修复,iOS17长按通知安全模式与下拉通知不分屏
+ 修复,长按桌面图标缺分屏启动项
+ 对齐,跳转分屏按原版dlsym解析origin键并补选项改写
+ 修复,0.6.238清理误删isOurFloatingScene实现致安全模式
+ 清理,删除全部取证诊断代码(仅保留有原版证据的功能修改)
  门禁,39类 原版1205 本仓1289 缺失0
 
 Package: com.witchan.ios-mcp
