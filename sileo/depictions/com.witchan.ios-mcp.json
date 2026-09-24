@@ -33,12 +33,22 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Requires",
-                    "text": "iOS 15.0+ · roothide"
+                    "text": "roothide"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Section",
                     "text": "roothide 插件"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "1.9 MB"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Released",
+                    "text": "2026-09-24"
                 },
                 {
                     "class": "DepictionSeparatorView"

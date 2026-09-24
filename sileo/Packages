@@ -156,6 +156,27 @@ Changelog: 0.6.214 删243分组E的setForeground:NO下发
  删除,分组E的settings/mutableCopy/update下发
  门禁,39类 原版1205 本仓1289 缺失0
 
+Package: com.witchan.ios-mcp
+Name: iOS MCP
+Icon: https://tanyou88888.github.io/sileo/icons/com.witchan.ios-mcp.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=3d01db40
+Version: 1.2.6
+Architecture: iphoneos-arm64e
+Maintainer: witchan
+Installed-Size: 5820
+Depends: mobilesubstrate, preferenceloader
+Filename: debs/roothide/com.witchan.ios-mcp_1.2.6_iphoneos-arm64e.deb
+Size: 1965366
+MD5sum: 8fa6bf1bdf64b15d6a3292dfa99fc58e
+SHA1: 277b3c37498b6f43aa299aeae6632a5bc38102d8
+SHA256: 03c6d6caf04a9bb69f48d62d57b33c6e3befc991773d0d78b680b43100abdaa1
+Section: roothide 插件
+Description: MCP server for AI-driven iOS device control. Supports HID buttons, touch, screenshots, clipboard, app management, accessibility tree, and text input.
+Author: witchan
+Conflicts: com.witchan.iphone-mcp
+Replaces: com.witchan.iphone-mcp
+Provides: com.witchan.iphone-mcp
+
 Package: llld.keyboard
 Name: 强制第三方输入法-rootless
 Icon: https://tanyou88888.github.io/sileo/icons/llld.keyboard.png
