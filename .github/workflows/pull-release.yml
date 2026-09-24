@@ -52,6 +52,25 @@ jobs:
           VER=$(echo "$NAME" | cut -d_ -f2)
           python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$PKG" "$VER" "$DATE"
 
+      - name: Sync witchan/ios-mcp latest release (public)
+        run: |
+          set -e
+          WREL=$(curl -s "https://api.github.com/repos/witchan/ios-mcp/releases/latest")
+          WAPI=$(echo "$WREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('arm64e.deb')]; print(a[0]['browser_download_url'] if a else '')")
+          WNAME=$(echo "$WREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('arm64e.deb')]; print(a[0]['name'] if a else '')")
+          WDATE=$(echo "$WREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('published_at','')[:10])")
+          if [ -n "$WAPI" ]; then
+            echo "同步 ios-mcp: $WNAME ($WDATE)"
+            mkdir -p sileo/debs/roothide sileo/meta
+            curl -sL -o "sileo/debs/roothide/$WNAME" "$WAPI"
+            head -c 8 "sileo/debs/roothide/$WNAME" | grep -q "!<arch>" || { echo "::error::ios-mcp 下载无效"; rm -f "sileo/debs/roothide/$WNAME"; exit 1; }
+            WPKG=$(echo "$WNAME" | cut -d_ -f1)
+            WVER=$(echo "$WNAME" | cut -d_ -f2)
+            python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$WPKG" "$WVER" "$WDATE"
+          else
+            echo "ios-mcp 无可用 arm64e 资产，跳过"
+          fi
+
       - name: Rebuild index (scan + enrich + homepage)
         run: |
           set -e
