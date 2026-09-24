@@ -45,6 +45,11 @@
                     "text": "2 KB"
                 },
                 {
+                    "class": "DepictionTableTextView",
+                    "title": "Released",
+                    "text": "2023-10-02"
+                },
+                {
                     "class": "DepictionSeparatorView"
                 },
                 {
