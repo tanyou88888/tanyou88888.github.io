@@ -18,7 +18,6 @@ jobs:
         env:
           JB_TOKEN: ${{ secrets.JBOPENREBORN_TOKEN }}
         run: |
-<<<<<<< Updated upstream
           set -e
           REL=$(curl -s -H "Authorization: Bearer $JB_TOKEN" "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest")
           # 私有仓库资产必须走 API 端点 + octet-stream，browser_download_url 会 404
@@ -43,29 +42,6 @@ jobs:
           PKG=$(echo "$NAME" | cut -d_ -f1)
           VER=$(echo "$NAME" | cut -d_ -f2)
           python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$PKG" "$VER" "$DATE"
-=======
-          API=$(curl -s -H "Authorization: Bearer $JB_TOKEN" \
-            "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest" \
-            | python3 -c "
-import json,sys
-r=json.load(sys.stdin)
-print(r.get('message','') or r['tag_name'], file=sys.stderr)
-a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]
-print(a[0]['url'] if a else '')")
-          [ -n "$API" ] || { echo "::error::最新 Release 没有 .deb 资产"; exit 1; }
-          mkdir -p sileo/debs/rootless
-          curl -sL -H "Authorization: Bearer $JB_TOKEN" -H "Accept: application/octet-stream" \
-            -o sileo/debs/rootless/deb.tmp "$API"
-          NAME=$(curl -s -H "Authorization: Bearer $JB_TOKEN" \
-            "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest" \
-            | python3 -c "
-import json,sys
-r=json.load(sys.stdin)
-a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]
-print(a[0]['name'] if a else 'package.deb')")
-          mv sileo/debs/rootless/deb.tmp "sileo/debs/roothide/$NAME"
-          echo "已下载: $NAME"
->>>>>>> Stashed changes
 
       - name: Commit if new
         run: |
