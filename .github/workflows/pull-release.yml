@@ -14,6 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Debian tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev
+
       - name: Download latest release deb
         env:
           JB_TOKEN: ${{ secrets.JBOPENREBORN_TOKEN }}
@@ -43,17 +48,26 @@ jobs:
           VER=$(echo "$NAME" | cut -d_ -f2)
           python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$PKG" "$VER" "$DATE"
 
+      - name: Rebuild index (scan + enrich + homepage)
+        run: |
+          set -e
+          cd sileo
+          rm -f Packages Packages.gz
+          dpkg-scanpackages --multiversion debs /dev/null > Packages
+          python3 scripts/enrich-index.py
+          python3 scripts/build-homepage.py
+
       - name: Commit if new
         run: |
           git config user.name "release-puller"
           git config user.email "actions@users.noreply.github.com"
-          git add sileo/debs/ sileo/meta/
+          git add sileo/debs/ sileo/meta/ sileo/Packages sileo/Packages.gz sileo/Release sileo/depictions sileo/scripts index.html
           if git diff --cached --quiet; then
             echo "没有新版本"
             echo "RESULT=无新版本" >> $GITHUB_ENV
             exit 0
           fi
-          git commit -m "拉取 JBOpenReborn 最新正式版 deb"
+          git commit -m "拉取 JBOpenReborn 最新正式版 deb 并重建索引"
           git push
           echo "RESULT=已上架" >> $GITHUB_ENV
 
