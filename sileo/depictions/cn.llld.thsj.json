@@ -40,6 +40,11 @@
                     "text": "rootless应用插件"
                 },
                 {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "5 KB"
+                },
+                {
                     "class": "DepictionSeparatorView"
                 },
                 {

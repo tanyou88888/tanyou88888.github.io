@@ -1,7 +1,7 @@
 Package: cn.llld.fivecolumnscc
 Name: FiveColumnsCC控制中心增强
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.fivecolumnscc.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.fivecolumnscc.json?v=b7344075
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.fivecolumnscc.json?v=1125e930
 Version: 1.0~beta4
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟 h_h_x_t
@@ -18,7 +18,7 @@ Author: 4nni3 <4nni3.14@gmail.com>
 Package: cn.llld.hideallbar
 Name: 隐藏底部横条-roothide
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.hideallbar.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.hideallbar.json?v=e24c55ae
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.hideallbar.json?v=4ee9937d
 Version: 1.0
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -35,7 +35,7 @@ Author: netskao
 Package: cn.llld.thsj
 Name: 最近通话增加具体时间-rootless
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.thsj.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.thsj.json?v=5d88c918
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.thsj.json?v=8395e516
 Version: 0.1-1
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟
@@ -52,7 +52,7 @@ Author: 来了老弟
 Package: cn.llld.ycxbt
 Name: HideNoHomeBar-roothide
 Icon: https://tanyou88888.github.io/sileo/icons/cn.llld.ycxbt.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.ycxbt.json?v=b12cd192
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/cn.llld.ycxbt.json?v=aec0f3e3
 Version: 0.0.1
 Architecture: iphoneos-arm64e
 Maintainer: 来了老弟
@@ -70,7 +70,7 @@ Author: 来了老弟 h_h_x_t
 Package: com.charlieleung.trollopenjb
 Name: TrollOpen 分屏
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenjb.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=0cc67dad
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenjb.json?v=d08c1e11
 Version: 1.3.7
 Architecture: iphoneos-arm64e
 Maintainer: Charlie Leung
@@ -89,7 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=142b0dc4
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=176749e7
 Version: 0.6.103
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -113,7 +113,7 @@ Changelog: 0.6.103 清理自造持有变量
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=142b0dc4
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=176749e7
 Version: 0.6.152
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -136,7 +136,7 @@ Changelog: 0.6.152 锁屏解锁行为取证收口（系统侧差异）
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=142b0dc4
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=176749e7
 Version: 0.6.214
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -159,7 +159,7 @@ Changelog: 0.6.214 删243分组E的setForeground:NO下发
 Package: llld.keyboard
 Name: 强制第三方输入法-rootless
 Icon: https://tanyou88888.github.io/sileo/icons/llld.keyboard.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/llld.keyboard.json?v=740e1990
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/llld.keyboard.json?v=e8aa8602
 Version: 2.0
 Architecture: iphoneos-arm64
 Maintainer: 来了老弟

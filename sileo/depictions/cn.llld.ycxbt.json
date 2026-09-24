@@ -40,6 +40,11 @@
                     "text": "roothide 隐藏专区"
                 },
                 {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "2 KB"
+                },
+                {
                     "class": "DepictionSeparatorView"
                 },
                 {

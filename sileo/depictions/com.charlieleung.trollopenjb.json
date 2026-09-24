@@ -41,6 +41,11 @@
                     "text": "分屏插件"
                 },
                 {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "1.1 MB"
+                },
+                {
                     "class": "DepictionSeparatorView"
                 },
                 {

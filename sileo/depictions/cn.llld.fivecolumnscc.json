@@ -40,6 +40,11 @@
                     "text": "rootless修复插件"
                 },
                 {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "5 KB"
+                },
+                {
                     "class": "DepictionSeparatorView"
                 },
                 {

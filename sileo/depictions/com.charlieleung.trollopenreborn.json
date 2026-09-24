@@ -39,6 +39,16 @@
                     "text": "Tweaks"
                 },
                 {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "403 KB"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Released",
+                    "text": "2026-09-24"
+                },
+                {
                     "class": "DepictionSeparatorView"
                 },
                 {

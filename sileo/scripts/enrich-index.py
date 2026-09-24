@@ -16,6 +16,8 @@ Icon / SileoDepiction 字段，且多行 Changelog 的位置影响 Sileo 解析�
                       更旧的 deb 自动删除（日记块随之由规则 4 清理）
   6. Requires 自动统一: Details 的 Requires 行按分区（rootless/roothide）
                       与 firmware 依赖自动生成
+  6b. Size / Released: Details 的 Size 行 = 最新 deb 大小（人类可读），
+                      Released 行 = 最新版本发布日期（meta）
   7. 发布日期注入:    读取 meta/release-dates.json（拉取流水线维护），
                       为自动日记块补「Updated · 日期」行
   8. depiction 自动更新:
@@ -110,7 +112,7 @@ def head_ver(view):
     return m.group(1) if m else None
 
 
-def sync_depiction(pkg, versions, changelogs, requires=None, dates=None):
+def sync_depiction(pkg, versions, changelogs, requires=None, dates=None, size_text=None, released=None):
     dates = dates or {}
     """把 control Changelog 同步进 depiction。versions 需已降序排列。
 
@@ -172,18 +174,32 @@ def sync_depiction(pkg, versions, changelogs, requires=None, dates=None):
                                 if v.get("class") == "DepictionHeaderView"), len(views))
                 views[first_h:first_h] = block
                 changed = True
-    # ③ Details 的 Version 行同步（独立于日记块变化）
+    # ③ Details 的 Version / Requires / Size / Released 行同步（独立于日记块变化）
+    def set_row(views, title, text):
+        """更新已有的 TableTextView 行；不存在则插到最后一行之后。"""
+        nonlocal changed
+        for v in views:
+            if v.get("class") == "DepictionTableTextView" and v.get("title") == title:
+                if text is not None and v.get("text") != text:
+                    v["text"] = text
+                    changed = True
+                return
+        if text is None:
+            return
+        last = max((i for i, v in enumerate(views)
+                    if v.get("class") == "DepictionTableTextView"), default=None)
+        if last is None:
+            return
+        views.insert(last + 1, {"class": "DepictionTableTextView",
+                                "title": title, "text": text})
+        changed = True
+
     for tab in d.get("tabs", []):
         if tab.get("tabname") == "Details":
-            for v in tab.get("views", []):
-                if v.get("class") == "DepictionTableTextView" and v.get("title") == "Version":
-                    if versions and v.get("text") != versions[0]:
-                        v["text"] = versions[0]
-                        changed = True
-                if v.get("class") == "DepictionTableTextView" and v.get("title") == "Requires" and requires:
-                    if v.get("text") != requires:
-                        v["text"] = requires
-                        changed = True
+            set_row(tab.get("views", []), "Version", versions[0] if versions else None)
+            set_row(tab.get("views", []), "Requires", requires)
+            set_row(tab.get("views", []), "Size", size_text)
+            set_row(tab.get("views", []), "Released", released)
     if not changed:
         return
     json.dump(d, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=4)
@@ -215,6 +231,17 @@ def main():
             lines = [l.strip() for l in lines if l.strip()]
             if len(lines) >= 1:
                 ent["changelogs"][ver] = (lines[0], lines[1:])
+
+    # 按包聚合最新版本 deb 大小（供 Details Size 行）
+    latest_sizes = {}
+    _vs = {}
+    for fields, multi in stanzas:
+        p = fields.get("Package", "")
+        if p:
+            _vs.setdefault(p, []).append((vkey(fields.get("Version", "0")), fields.get("Size", "")))
+    for p, lst in _vs.items():
+        lst.sort(reverse=True)
+        latest_sizes[p] = lst[0][1] or None
 
     # 按包聚合 firmware 最低版本（取最新条目的 Depends）
     fw = {}
@@ -260,7 +287,14 @@ def main():
         minfw = fw.get(pkg)
         requires = " · ".join(x for x in (
             ("iOS %s+" % minfw) if minfw else None, zone) if x)
-        sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None, dates)
+        # Size：最新版本 deb 大小（人类可读）；Released：最新版本发布日期
+        latest_size = latest_sizes.get(pkg)
+        size_text = None
+        if latest_size:
+            n = int(latest_size)
+            size_text = ("%.1f MB" % (n / 1048576.0)) if n >= 1048576 else ("%d KB" % (n // 1024))
+        released = (dates.get(pkg, {}) or {}).get(ent["versions"][0]) if ent["versions"] else None
+        sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None, dates, size_text, released)
 
         # Icon：仓库内每包图标（强制覆盖，保证命名约定统一）
         if os.path.isfile(os.path.join(BASE, "icons", pkg + ".png")):
