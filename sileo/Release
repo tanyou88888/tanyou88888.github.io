@@ -1,11 +1,11 @@
 Origin: tanyou88888
-Label: tanyou88888
+Label: tanyou88888 分屏源
 Suite: stable
 Codename: stable
 Version: 1.0
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
-Description: tanyou88888 iOS Jailbreak Repository
+Description: JBOpenReborn（TrollOpenJB 行为等价复刻）· TrollOpen 分屏 · roothide / rootless 双分区 · 正式版自动上架
 Icon: https://tanyou88888.github.io/sileo/icon.png
 MD5Sum:
  2a26001bf8ad870e81dd22ed0326a7b5     8359 Packages
