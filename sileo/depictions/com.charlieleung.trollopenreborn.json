@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.277"
+                    "text": "0.6.278"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,62 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.278 小窗缩放写回点回归原版调用方"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,小窗缩放写回原塞在二分函数内属自造副作用",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,228改为纯函数由调用方150按原版写visualScale",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,228补回原版下限回夹与NaN判据",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,018布局写入端NaN按原版落0.2避免记录失效",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 更正,105注释短边误读与251注释错误地址",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 删除,自造别名enterMiniScale105零引用",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1259 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.277 小窗进出布局恢复回归原版并删自造快照"
@@ -175,69 +231,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 挂账,URL拉起双触发与Darwin回调原版门待查",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.275 修复全屏应用突然变成悬浮窗(直通段顺序)"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,全屏应用有时突然变成悬浮窗(用户报障)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,跳转分屏提前直通段上移到SpringBoard支路之前",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,原版sub_5A240只有Spotlight与尾段两个触发点",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 保持,桌面图标分屏/Spotlight分屏/URL拉其它App三条路",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 新增,真机复现+全入口探针定位(探针已删strings0命中)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 精化,最前台App链只在切换器上下文为nil全屏时可用",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 新增,sub_3768C解平坦清单与语义稿(沿用0.6.274)",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
