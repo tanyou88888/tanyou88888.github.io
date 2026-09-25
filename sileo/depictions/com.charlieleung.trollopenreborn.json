@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.273"
+                    "text": "0.6.274"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,69 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.274 切换器下滑判据按原版sub_3768C重写"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,sub_3768C解平坦(196派表221块66真实路径)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 删除,自造近似判据pan.translation.y大于0(无阈值)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,新增isKindOfClass:UIScrollView前置门与原版6.0门",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,新增门后最前台App比较条件(真机恒不等)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 已知,报障未消失:原版该门真机退化属原版行为",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 新增,sub_3768C解平坦清单与语义稿(共2份)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,cff_emu工具Wn/Xn别名与浮点标志位缺陷",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.273 补齐相机组件并修面容支付空白浮窗"
@@ -172,62 +235,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 修复,横屏右下角热区唤不出扇形菜单(坐标系+窗口旋转)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理,移除全部调试探针与诊断打点",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.271 修复旋转后热区残留与朝向下发"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,横屏转竖屏后左边缘残留蓝色热区(点一下才消失)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,旋转处理器改调原版 sub_6C4DC 全文(含debug热区刷新)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,长按绿色条旋转回不来(343五处240调用被错置)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,横屏右下角热区唤不出扇形菜单(坐标系+窗口旋转)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,240下发对齐原版单次updateSettingsWithBlock",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
