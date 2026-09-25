@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.257"
+                    "text": "0.6.258"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,41 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.258 修复浮窗初始比例跳变"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,布局持久化改走原版115:(删自造扁平格式)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 根因,自造记录缺size1/size2致还原按全局base重算",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 证据,v25帧序列(458.19被重算为558.94)+记录字段对照",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.257 修复冷启动透明闪烁"
@@ -119,41 +154,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 说明,均因0.6.250删中间层而失效,原版无此接口面",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.252 删除293内A-1自造替身"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理,删除293转调adapter的A-1替身(真机从不执行)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,原版本仓配置下发均在建窗期一致命中",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 说明,原版站5-7未落地缺口如实挂账不接线",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
