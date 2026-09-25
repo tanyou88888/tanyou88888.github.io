@@ -160,6 +160,32 @@ Changelog: 0.6.269 修复浮窗不跟随App旋转
  验证,浮窗跟随横屏且无时隐时现半屏旋转关窗
  门禁,39类 原版1205 本仓1263 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.271
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1547
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.271_iphoneos-arm64e.deb
+Size: 403768
+MD5sum: 113d11acf5288fb4af594064442f46d1
+SHA1: 5133d70ee5166c4f210334a92d88627d7f33f26f
+SHA256: 51c7a119a7dbfa017a559c4c937dcb05d89cf567ec1ec47896640b8cec32a87e
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.271)
+Author: TrollOpenReborn
+Changelog: 0.6.271 修复旋转后热区残留与朝向下发
+ 修复,横屏转竖屏后左边缘残留蓝色热区(点一下才消失)
+ 修复,旋转处理器改调原版 sub_6C4DC 全文(含debug热区刷新)
+ 修复,长按绿色条旋转回不来(343五处240调用被错置)
+ 修复,横屏右下角热区唤不出扇形菜单(坐标系+窗口旋转)
+ 修复,240下发对齐原版单次updateSettingsWithBlock
+ 清理,移除全部调试探针与诊断打点
+ 门禁,39类 原版1205 本仓1263 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -308,3 +334,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
