@@ -167,6 +167,32 @@ Changelog: 0.6.277 小窗进出布局恢复回归原版并删自造快照
  已知,设备上遗留扁平记录原版读不到按原版忽略不迁移
  门禁,39类 原版1205 本仓1263 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.278
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1614
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.278_iphoneos-arm64e.deb
+Size: 404990
+MD5sum: 07124269d49ad789fe2650c8a6efdfc8
+SHA1: afc4ee8324ccdfd97c039e67b85f59956bfe5074
+SHA256: 9f9bb83c2719300560810014ac8a465280fe3b3060576a159f453d7b3d95f5c8
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.278)
+Author: TrollOpenReborn
+Changelog: 0.6.278 小窗缩放写回点回归原版调用方
+ 修复,小窗缩放写回原塞在二分函数内属自造副作用
+ 对齐,228改为纯函数由调用方150按原版写visualScale
+ 对齐,228补回原版下限回夹与NaN判据
+ 对齐,018布局写入端NaN按原版落0.2避免记录失效
+ 更正,105注释短边误读与251注释错误地址
+ 删除,自造别名enterMiniScale105零引用
+ 门禁,39类 原版1205 本仓1259 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -315,3 +341,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
