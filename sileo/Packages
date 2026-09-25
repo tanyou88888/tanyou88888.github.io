@@ -155,6 +155,30 @@ Changelog: 0.6.258 修复浮窗初始比例跳变
  证据,v25帧序列(458.19被重算为558.94)+记录字段对照
  门禁,39类 原版1205 本仓1289 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.262
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1547
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.262_iphoneos-arm64e.deb
+Size: 407186
+MD5sum: bb22c868b0ac3af3453fdac022d6da17
+SHA1: dd978a1004cffc19ef775766893acbde09ba6485
+SHA256: 685c91a0e8b29865d18618e3424516c762e67591c35eb04638d8cb78bbc1cf5b
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.262)
+Author: TrollOpenReborn
+Changelog: 0.6.262 补齐原版对外开浮窗通知入口
+ 修复,iOS17下拉横幅通知不分屏(第三方插件投递被本仓丢弃)
+ 对齐,复刻原版TOS_openFloatingView观察者(只读object作bundleID)
+ 证据,原版真机post即开浮窗+空串不触发+加密常量串长20
+ 说明,原版该链无enabled门,本仓同样不加门
+ 门禁,39类 原版1205 本仓1289 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -283,3 +307,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
