@@ -9,8 +9,9 @@ Description: JBOpenReborn（TrollOpenJB 行为等价复刻）· TrollOpen 分屏
 Icon: https://tanyou88888.github.io/sileo/icon.png
 
 MD5Sum:
- 7c3f53089ff2a0917d140065c5815d4d    13099 Packages
- 33cf57b508e2b3fee6404cc0fa0fcbb3     4508 Packages.gz
+ f5dd0164350175b91618e071fa889841 14218 Packages
+ 54110bd67579e1446a6f6102637c3270 4748 Packages.gz
 SHA256:
- 6fb792bf02c455bc486d39f82bb7ba91143e12d1f1b1d95110ef19d20f42f202    13099 Packages
- 0df9ed74043e6f549f89569ed27a769cdcf8f8dd701f217f3f141f835099e31e     4508 Packages.gz
+ 5841cd74002be8944fdf8b3526535edc5e0ef4a310a407147c4639a568a6e40d 14218 Packages
+ 588705c36781bd07db6d90d39f19dc0c5dd9030962b8552b1da659c8fafbcde6 4748 Packages.gz
+
