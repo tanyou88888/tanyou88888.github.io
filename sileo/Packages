@@ -222,3 +222,23 @@ SHA256: cc385c8732dbe808973ccd1bdda70d0732ae4440a8fbc71dc79d5caa475de984
 Section: rootless 插件
 Description: Function: Allow third-party input methods in any password box。***强制第三方输入法（键盘），作用：在任意密码框可允许第三方输入法输入（银行等特制键盘除外），20240104:更新版本号。***
 Author: 来了老弟
+
+Package: re.frida.server
+Name: Frida
+Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=4241dee6
+Version: 16.1.4
+Architecture: iphoneos-arm64
+Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
+Installed-Size: 60104
+Filename: debs/rootless/frida_16.1.4_iphoneos-arm64.deb
+Size: 17453056
+MD5sum: 6bbb23b202f7c4b1a84a3bc24d717fa1
+SHA1: f57fccb582e07f107487ce204b18fb8f810ed6df
+SHA256: a2c58ee310d79b2f55af84d943366acf1fc355e5ba17ea473d0b87a21219132b
+Section: rootless 插件
+Description: Observe and reprogram running programs.
+Author: Frida Developers <oleavr@nowsecure.com>
+Homepage: https://frida.re/
+Conflicts: re.frida.server64
+Priority: optional

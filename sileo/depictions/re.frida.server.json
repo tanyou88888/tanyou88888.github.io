@@ -32,12 +32,22 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Requires",
-                    "text": "rootless（/var/jb 引导）"
+                    "text": "rootless"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Section",
                     "text": "rootless 插件"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "16.6 MB"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Released",
+                    "text": "2023-08-29"
                 },
                 {
                     "class": "DepictionSeparatorView"

@@ -8,8 +8,8 @@ Components: main
 Description: JBOpenReborn（TrollOpenJB 行为等价复刻）· TrollOpen 分屏 · roothide / rootless 双分区 · 正式版自动上架
 Icon: https://tanyou88888.github.io/sileo/icon.png
 MD5Sum:
- 31c12aa117ea6d5214679524246c25cb    10428 Packages
- 56a5f6a44bce129afbb84159da414552     4058 Packages.gz
+ 39c74dad0bb9678d18a2fc4d0ef952fe    11190 Packages
+ 4e89cd98c2066c58e2b9549824eea0a5     4321 Packages.gz
 SHA256:
- 83cb4002b894d9a8fb9b5a3b0b9d9153adc03ec6859bbb4c2a117d858c6ffe14    10428 Packages
- 7cba38f6cae7661cfe262a3ba787f69fb77e9d5f74253634e8f169f46ee95778     4058 Packages.gz
+ 991f63eed7e202ff86e7bbc691e46fd726102313f25253d68bc62c18ca3ebe27    11190 Packages
+ c912e628ddc518c8def23279c069018ad8e23dc28012ff2713a14c1756393381     4321 Packages.gz
