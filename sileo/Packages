@@ -135,17 +135,17 @@ Changelog: 0.6.258 修复浮窗初始比例跳变
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=70500972
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
 Version: 0.6.262
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
-Installed-Size: 1672
+Installed-Size: 1547
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
 Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.262_iphoneos-arm64e.deb
-Size: 407186
-MD5sum: bb22c868b0ac3af3453fdac022d6da17
-SHA1: dd978a1004cffc19ef775766893acbde09ba6485
-SHA256: 685c91a0e8b29865d18618e3424516c762e67591c35eb04638d8cb78bbc1cf5b
+Size: 406134
+MD5sum: bbf2dc24cdc7c44a5f3ec71aec84437a
+SHA1: 068d6a5cb4acebc6caeac511abd8d87ce7a870fe
+SHA256: ca19db1086d362ba4bb321bff040b19f44b39ea36a4f1605711489068f571353
 Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.262)
 Author: TrollOpenReborn
@@ -284,3 +284,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
