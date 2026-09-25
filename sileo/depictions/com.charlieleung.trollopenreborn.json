@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.264"
+                    "text": "0.6.265"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "394 KB"
+                    "text": "393 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,48 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.265 继续清理自造设置层零消费字段"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删TOFeatureConfig七个零引用样式字段",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删TOSettingsManager八个零引用属性与八个死键常量",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,存活字段均有真实消费点(扇形菜单/宿主复刻体)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,本版行为不变,仅去无效字段(共减约66行)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.264 清理自造结果模型与死配置字段"
@@ -140,48 +182,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 证据,原版名取自加密常量串off_169B20(长度42)运行期dump",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.262 补齐原版对外开浮窗通知入口"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,iOS17下拉横幅通知不分屏(第三方插件投递被本仓丢弃)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,复刻原版TOS_openFloatingView观察者(只读object作bundleID)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,原版真机post即开浮窗+空串不触发+加密常量串长20",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 说明,原版该链无enabled门,本仓同样不加门",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"

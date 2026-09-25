@@ -89,31 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=de18c6bf
-Version: 0.6.262
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1672
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.262_iphoneos-arm64e.deb
-Size: 406134
-MD5sum: bbf2dc24cdc7c44a5f3ec71aec84437a
-SHA1: 068d6a5cb4acebc6caeac511abd8d87ce7a870fe
-SHA256: ca19db1086d362ba4bb321bff040b19f44b39ea36a4f1605711489068f571353
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.262)
-Author: TrollOpenReborn
-Changelog: 0.6.262 补齐原版对外开浮窗通知入口
- 修复,iOS17下拉横幅通知不分屏(第三方插件投递被本仓丢弃)
- 对齐,复刻原版TOS_openFloatingView观察者(只读object作bundleID)
- 证据,原版真机post即开浮窗+空串不触发+加密常量串长20
- 说明,原版该链无enabled门,本仓同样不加门
- 门禁,39类 原版1205 本仓1289 缺失0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=de18c6bf
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=8086aacf
 Version: 0.6.263
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -138,7 +114,7 @@ Changelog: 0.6.263 设置页注销链按原版1:1归位
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=de18c6bf
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=8086aacf
 Version: 0.6.264
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -162,11 +138,11 @@ Changelog: 0.6.264 清理自造结果模型与死配置字段
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=8086aacf
 Version: 0.6.265
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
-Installed-Size: 1531
+Installed-Size: 1652
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
 Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.265_iphoneos-arm64e.deb
 Size: 402588
@@ -311,4 +287,3 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
-
