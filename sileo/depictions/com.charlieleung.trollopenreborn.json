@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.253"
+                    "text": "0.6.257"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "397 KB"
+                    "text": "396 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -65,6 +65,41 @@
             "views": [
                 {
                     "class": "DepictionHeaderView",
+                    "title": "0.6.257 修复冷启动透明闪烁"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,恢复封面判据sceneIfExists(无活场景显示封面)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 归因,黑屏=重复回接(已回退) 透明=无封面(本次)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 证据,三版对照+v23实测挂载时contentState=2",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
                     "title": "0.6.253 删除失效的Reborn接口面"
                 },
                 {
@@ -84,59 +119,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 说明,均因0.6.250删中间层而失效,原版无此接口面",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.251 正式版"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-25",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,扇形菜单快捷指令打开App会多弹一次全屏",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,场景创建时未回接到浮窗(原版sub_A9368)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,浮窗建窗块与触发链按原版逐行重排",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理,删除中间层与诊断残留等非原版自造代码",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
