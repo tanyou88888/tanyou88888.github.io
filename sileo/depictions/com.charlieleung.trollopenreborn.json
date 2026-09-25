@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.278"
+                    "text": "0.6.279"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "395 KB"
+                    "text": "394 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,62 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.279 左下角拉伸比例与建窗缩放钳位逐行回归原版"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,左下角拉伸松手后比例钳位NaN漏出会写坏visualScale",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,086拉扯两处钳位改原版两变量写法NaN落0.2",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,086松手按原版先写原始比例再写钳后比例",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,413建窗缩放判据按原版GT极性NaN回落基准宽",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 删除,自造构造器initWithFrame与setupTouchRegions零引用",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 删除,建窗缩放公式在init里的第二份实现避免漂移",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.278 小窗缩放写回点回归原版调用方"
@@ -168,69 +224,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 已知,设备上遗留扁平记录原版读不到按原版忽略不迁移",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.276 通知分屏补回原版全局开关门sub_43C4"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,总开关关闭时通知分屏仍生效(缺sub_43C4门)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,sub_613A0/sub_61630两处补上全局enabled门",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,sub_65128门口径改回sub_43C4(原版无sub_4FA0)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 保持,其余通知分屏条件与顺序未动(单变量)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 核验,真机原版域enabled=True等四键实测(新门必过)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 已知,本项行为验收待真实通知横幅(B级IDA逐行)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 挂账,URL拉起双触发与Darwin回调原版门待查",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
