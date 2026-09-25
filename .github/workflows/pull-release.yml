@@ -1,4 +1,4 @@
-name: Pull JBOpenReborn release
+name: Pull upstream releases
 
 on:
   workflow_dispatch:
@@ -21,91 +21,48 @@ jobs:
       - name: Install Debian tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y dpkg-dev
+          sudo apt-get install -y dpkg-dev jq
 
-      - name: Download latest release deb
+      # 上游清单：sileo/meta/upstreams.json（加上游只加一条配置，无需改本文件）
+      # 字段：repo=仓库 / private=是否需 JB_TOKEN / asset_suffix=资产名后缀
+      #       dest=rootless|roothide 目录 / package=包 ID（记 meta 日期用）
+      - name: Sync all upstreams
         env:
           JB_TOKEN: ${{ secrets.JBOPENREBORN_TOKEN }}
         run: |
           set -e
-          REL=$(curl -s -H "Authorization: Bearer $JB_TOKEN" "https://api.github.com/repos/hejunjiea/JBOpenReborn/releases/latest")
-          # 私有仓库资产必须走 API 端点 + octet-stream，browser_download_url 会 404
-          API=$(echo "$REL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['url'] if a else '')")
-          NAME=$(echo "$REL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['name'] if a else 'package.deb')")
-          DATE=$(echo "$REL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('published_at','')[:10])")
-          if [ -z "$API" ]; then
-            echo "::error::最新 Release 没有 .deb 资产"
-            exit 1
-          fi
-          echo "拉取: $NAME ($DATE)"
-          mkdir -p sileo/debs/roothide sileo/meta
-          curl -sL -H "Authorization: Bearer $JB_TOKEN" -H "Accept: application/octet-stream" -o "sileo/debs/roothide/$NAME" "$API"
-          # 校验下载的是 ar 格式的 deb，而不是错误页
-          if ! head -c 8 "sileo/debs/roothide/$NAME" | grep -q "!<arch>"; then
-            echo "::error::下载的内容不是有效 deb（token 权限或资产地址问题）"
-            head -c 200 "sileo/debs/roothide/$NAME" || true
-            rm -f "sileo/debs/roothide/$NAME"
-            exit 1
-          fi
-          # 记录发布日期：{包ID: {版本: 日期}}，enrich 用它给更新日记补日期行
-          PKG=$(echo "$NAME" | cut -d_ -f1)
-          VER=$(echo "$NAME" | cut -d_ -f2)
-          python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$PKG" "$VER" "$DATE"
-
-      - name: Sync witchan/ios-mcp latest release (public)
-        run: |
-          set -e
-          WREL=$(curl -s "https://api.github.com/repos/witchan/ios-mcp/releases/latest")
-          WAPI=$(echo "$WREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('arm64e.deb')]; print(a[0]['browser_download_url'] if a else '')")
-          WNAME=$(echo "$WREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('arm64e.deb')]; print(a[0]['name'] if a else '')")
-          WDATE=$(echo "$WREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('published_at','')[:10])")
-          if [ -n "$WAPI" ]; then
-            echo "同步 ios-mcp: $WNAME ($WDATE)"
-            mkdir -p sileo/debs/roothide sileo/meta
-            curl -sL -o "sileo/debs/roothide/$WNAME" "$WAPI"
-            head -c 8 "sileo/debs/roothide/$WNAME" | grep -q "!<arch>" || { echo "::error::ios-mcp 下载无效"; rm -f "sileo/debs/roothide/$WNAME"; exit 1; }
-            WPKG=$(echo "$WNAME" | cut -d_ -f1)
-            WVER=$(echo "$WNAME" | cut -d_ -f2)
-            python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$WPKG" "$WVER" "$WDATE"
-          else
-            echo "ios-mcp 无可用 arm64e 资产，跳过"
-          fi
-
-      - name: Sync nfzerox/VirtualMacOniPad latest release (public)
-        run: |
-          set -e
-          VREL=$(curl -s "https://api.github.com/repos/nfzerox/VirtualMacOniPad/releases/latest")
-          VURL=$(echo "$VREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['browser_download_url'] if a else '')")
-          VNAME=$(echo "$VREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['name'] if a else '')")
-          VDATE=$(echo "$VREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('published_at','')[:10])")
-          VVER=$(echo "$VREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('tag_name',''))")
-          if [ -n "$VURL" ]; then
-            echo "同步 VirtualMac: $VNAME ($VDATE)"
-            mkdir -p sileo/debs/rootless sileo/meta
-            curl -sL -o "sileo/debs/rootless/$VNAME" "$VURL"
-            head -c 8 "sileo/debs/rootless/$VNAME" | grep -q "!<arch>" || { echo "::error::VirtualMac 下载无效"; rm -f "sileo/debs/rootless/$VNAME"; exit 1; }
-            python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault('com.mac.virtual',{})[sys.argv[1]]=sys.argv[2]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "2:$VVER+607.91c53c84b2" "$VDATE"
-          else
-            echo "VirtualMac 无 deb 资产，跳过"
-          fi
-
-      - name: Sync frida/frida latest release (public, rootless arm64)
-        run: |
-          set -e
-          FREL=$(curl -s "https://api.github.com/repos/frida/frida/releases/latest")
-          FURL=$(echo "$FREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('iphoneos-arm64.deb')]; print(a[0]['browser_download_url'] if a else '')")
-          FNAME=$(echo "$FREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('iphoneos-arm64.deb')]; print(a[0]['name'] if a else '')")
-          FDATE=$(echo "$FREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('published_at','')[:10])")
-          FVER=$(echo "$FREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('tag_name',''))")
-          if [ -n "$FURL" ]; then
-            echo "同步 frida: $FNAME ($FDATE)"
-            mkdir -p sileo/debs/rootless sileo/meta
-            curl -sL -o "sileo/debs/rootless/$FNAME" "$FURL"
-            head -c 8 "sileo/debs/rootless/$FNAME" | grep -q "!<arch>" || { echo "::error::frida 下载无效"; rm -f "sileo/debs/rootless/$FNAME"; exit 1; }
-            python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault('re.frida.server',{})[sys.argv[1]]=sys.argv[2]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$FVER" "$FDATE"
-          else
-            echo "frida 无 arm64 deb 资产，跳过"
-          fi
+          mkdir -p sileo/debs/rootless sileo/debs/roothide sileo/meta
+          for row in $(jq -c '.upstreams[]' sileo/meta/upstreams.json); do
+            REPO=$(echo "$row" | jq -r '.repo')
+            PRIVATE=$(echo "$row" | jq -r '.private')
+            SUFFIX=$(echo "$row" | jq -r '.asset_suffix')
+            DEST=$(echo "$row" | jq -r '.dest')
+            PKG=$(echo "$row" | jq -r '.package')
+            AUTH=()
+            if [ "$PRIVATE" = "true" ]; then
+              AUTH=(-H "Authorization: Bearer $JB_TOKEN")
+            fi
+            REL=$(curl -s "${AUTH[@]}" "https://api.github.com/repos/$REPO/releases/latest")
+            API=$(echo "$REL" | jq -r --arg s "$SUFFIX" '[.assets[] | select(.name | endswith($s))][0].url // empty')
+            NAME=$(echo "$REL" | jq -r --arg s "$SUFFIX" '[.assets[] | select(.name | endswith($s))][0].name // empty')
+            DATE=$(echo "$REL" | jq -r '.published_at // ""' | cut -c1-10)
+            if [ -z "$API" ]; then
+              echo "::warning::$REPO 无后缀为 $SUFFIX 的资产，跳过"
+              continue
+            fi
+            echo "同步 $REPO: $NAME ($DATE) → $DEST"
+            # 私有仓库资产必须走 API 端点 + octet-stream（browser_download_url 404）
+            ACCEPT="Accept: application/octet-stream"
+            curl -sL "${AUTH[@]}" -H "$ACCEPT" -o "sileo/debs/$DEST/$NAME" "$API"
+            if ! head -c 8 "sileo/debs/$DEST/$NAME" | grep -q "!<arch>"; then
+              echo "::error::$REPO 下载内容不是有效 deb"
+              head -c 200 "sileo/debs/$DEST/$NAME" || true
+              rm -f "sileo/debs/$DEST/$NAME"
+              exit 1
+            fi
+            VER=$(echo "${NAME%.deb}" | cut -d_ -f2)
+            python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$PKG" "$VER" "$DATE"
+          done
 
       - name: Rebuild index (scan + enrich + homepage)
         run: |
@@ -126,7 +83,7 @@ jobs:
             echo "RESULT=无新版本" >> $GITHUB_ENV
             exit 0
           fi
-          git commit -m "拉取 JBOpenReborn 最新正式版 deb 并重建索引"
+          git commit -m "同步上游 Release 并重建索引"
           git push
           echo "RESULT=已上架" >> $GITHUB_ENV
 
@@ -137,7 +94,7 @@ jobs:
           TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          TITLE="JBOpenReborn 拉取流水线"
+          TITLE="上游拉取流水线"
           if [ "${{ job.status }}" = "success" ]; then
             BODY="✅ ${RESULT:-成功}"
           else

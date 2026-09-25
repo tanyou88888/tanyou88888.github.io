@@ -13,6 +13,11 @@
 | 包数量 | 10 个（见下表） |
 | 分区规则 | **声明式按目录**：`debs/rootless/` 或 `debs/roothide/`，与文件名、control 内容无关 |
 
+## 上游同步（配置驱动：`sileo/meta/upstreams.json`）
+
+加上游 = 在 JSON 里加一条 `{repo, private, asset_suffix, dest, package}`，**无需改 workflow**。
+字段：repo=仓库；private=是否需 `JBOPENREBORN_TOKEN`；asset_suffix=资产名后缀（如 arm64e.deb）；dest=rootless|roothide；package=记 meta 日期用的包 ID。
+
 ## 软件包与上游同步（4 个上游）
 
 | 包（Package ID） | 分区 | 来源 | 同步方式 |

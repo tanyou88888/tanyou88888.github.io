@@ -1,0 +1,32 @@
+{
+  "upstreams": [
+    {
+      "repo": "hejunjiea/JBOpenReborn",
+      "private": true,
+      "asset_suffix": ".deb",
+      "dest": "roothide",
+      "package": "com.charlieleung.trollopenreborn"
+    },
+    {
+      "repo": "witchan/ios-mcp",
+      "private": false,
+      "asset_suffix": "arm64e.deb",
+      "dest": "roothide",
+      "package": "com.witchan.ios-mcp"
+    },
+    {
+      "repo": "nfzerox/VirtualMacOniPad",
+      "private": false,
+      "asset_suffix": ".deb",
+      "dest": "rootless",
+      "package": "com.mac.virtual"
+    },
+    {
+      "repo": "frida/frida",
+      "private": false,
+      "asset_suffix": "iphoneos-arm64.deb",
+      "dest": "rootless",
+      "package": "re.frida.server"
+    }
+  ]
+}

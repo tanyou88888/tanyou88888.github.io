@@ -293,7 +293,17 @@ def main():
         if latest_size:
             n = int(latest_size)
             size_text = ("%.1f MB" % (n / 1048576.0)) if n >= 1048576 else ("%d KB" % (n // 1024))
-        released = (dates.get(pkg, {}) or {}).get(ent["versions"][0]) if ent["versions"] else None
+        released = None
+        if ent["versions"]:
+            mdates = dates.get(pkg, {}) or {}
+            top = ent["versions"][0]
+            released = mdates.get(top)
+            if released is None:
+                # 版本号写法不一致时的容错（如 1.2.3 vs 2:1.2.3+build）
+                for k, v in mdates.items():
+                    if k in top or top in k:
+                        released = v
+                        break
         sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None, dates, size_text, released)
 
         # Icon：仓库内每包图标（强制覆盖，保证命名约定统一）
