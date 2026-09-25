@@ -161,6 +161,32 @@ Changelog: 0.6.271 修复旋转后热区残留与朝向下发
  清理,移除全部调试探针与诊断打点
  门禁,39类 原版1205 本仓1263 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.272
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1547
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.272_iphoneos-arm64e.deb
+Size: 403826
+MD5sum: 35d5d02785f750a593e6f81c49a4b706
+SHA1: 6d5f91edadcd121104e0646c5703f3f1e2bcd799
+SHA256: 539f76f729600cfb5cb4cd152a5ccd0958092dd0abcde3af74369b73c1da98af
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.272)
+Author: TrollOpenReborn
+Changelog: 0.6.272 修复左下角拉伸等8处240错置
+ 修复,左下角拖拽拉伸后场景不跟随(086两分支调错函数)
+ 修复,左下角长按切比例/054/配置变更/014刷新同样错置
+ 修复,以上8处按原版恢复TOJBMETHOD240下发场景设置
+ 修复,长按绿色条旋转回不来(343五处240被错置)
+ 修复,横屏右下角热区唤不出扇形菜单(坐标系+窗口旋转)
+ 清理,移除全部调试探针与诊断打点
+ 门禁,39类 原版1205 本仓1263 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -309,3 +335,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
