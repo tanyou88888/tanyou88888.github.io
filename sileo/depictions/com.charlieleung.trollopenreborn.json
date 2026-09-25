@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.239"
+                    "text": "0.6.252"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "406 KB"
+                    "text": "397 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,83 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.251 正式版"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,扇形菜单快捷指令打开App会多弹一次全屏",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,场景创建时未回接到浮窗(原版sub_A9368)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,浮窗建窗块与触发链按原版逐行重排",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删除中间层与诊断残留等非原版自造代码",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.252 删除293内A-1自造替身"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删除293转调adapter的A-1替身(真机从不执行)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 证据,原版本仓配置下发均在建窗期一致命中",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,原版站5-7未落地缺口如实挂账不接线",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.239 修复0.6.238崩溃并完成诊断清理"
@@ -123,98 +200,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 清理,删除全部取证诊断代码(仅保留有原版证据的功能修改)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.217 删自造幂等复用分支(595ad)"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-24",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 删除,hostScene内的presenter/hostView复用门",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,hostScene唯一调用者=243分组D;242活调用者=293完成块",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 说明,原版无此门,PV插入只有insertSubview:aboveSubview:",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.214 删243分组E的setForeground:NO下发"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-24",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,激活当刻fg=false致App图层拆重建→黑帧",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,原版冷路径从不下发foreground=false(595jf)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 删除,分组E的settings/mutableCopy/update下发",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
