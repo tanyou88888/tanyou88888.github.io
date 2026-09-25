@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.265"
+                    "text": "0.6.266"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,55 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.266 删除26个零调用多余方法"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删012侧15个描述性手势转发壳(挂载早已直连原版选择子)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删keepAlive与resizeHandle两组死属性及其存取器",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删tojbPersistLayoutEnabled与refreshReusedWindow174与restartApp死方法",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 口径,方法数1289降至1263,多余84降至58,缺失仍为0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,保留项均有真实调用或赋值(已逐条检索)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.265 继续清理自造设置层零消费字段"
@@ -133,55 +182,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 说明,本项目行为不变,仅去脚手架与无效字段",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.263 设置页注销链按原版1:1归位"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,注销改用原版机制FBSystemService exitAndRelaunch:@YES",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理,删自造通知名reborn-respring与自造killall机制",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,观察并投递原版名trollopenjbprefs-respring",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,原版真机post该名即命中exitAndRelaunch:实参@1后exit(0)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,原版名取自加密常量串off_169B20(长度42)运行期dump",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
