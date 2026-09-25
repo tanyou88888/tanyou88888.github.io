@@ -159,6 +159,29 @@ Changelog: 0.6.239 修复0.6.238崩溃并完成诊断清理
  清理,删除全部取证诊断代码(仅保留有原版证据的功能修改)
  门禁,39类 原版1205 本仓1289 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.251
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1547
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.251_iphoneos-arm64e.deb
+Size: 407206
+MD5sum: 29f9d986a67e0aa1371b368e2687b40a
+SHA1: 90fd189595525f902322d192e53b878dfbf37f9e
+SHA256: 3d1df3d01e73d487aea89e59591b4a4f13fd4d1247de040430caaf3bf99466cf
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.252)
+Author: TrollOpenReborn
+Changelog: 0.6.252 删除293内A-1自造替身
+ 清理,删除293转调adapter的A-1替身(真机从不执行)
+ 证据,原版本仓配置下发均在建窗期一致命中
+ 说明,原版站5-7未落地缺口如实挂账不接线
+ 门禁,39类 原版1205 本仓1289 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -242,3 +265,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
