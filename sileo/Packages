@@ -156,6 +156,31 @@ Changelog: 0.6.262 补齐原版对外开浮窗通知入口
  说明,原版该链无enabled门,本仓同样不加门
  门禁,39类 原版1205 本仓1289 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.263
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1547
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.263_iphoneos-arm64e.deb
+Size: 406478
+MD5sum: be60625d6710042f3b752ceedf0bb065
+SHA1: 301919a93ab3376a754cfb74b329d349e1dc4bca
+SHA256: 14c60acfffad92c36ec13d99591a1400d1a1587427137aa2395f29bf5a294c2d
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.263)
+Author: TrollOpenReborn
+Changelog: 0.6.263 设置页注销链按原版1:1归位
+ 修复,注销改用原版机制FBSystemService exitAndRelaunch:@YES
+ 清理,删自造通知名reborn-respring与自造killall机制
+ 对齐,观察并投递原版名trollopenjbprefs-respring
+ 证据,原版真机post该名即命中exitAndRelaunch:实参@1后exit(0)
+ 证据,原版名取自加密常量串off_169B20(长度42)运行期dump
+ 门禁,39类 原版1205 本仓1289 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -284,3 +309,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
