@@ -89,31 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=ca7cb0e5
-Version: 0.6.265
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1652
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.265_iphoneos-arm64e.deb
-Size: 402588
-MD5sum: 27ab918c7152990f461dec60ed939c61
-SHA1: 89c8b7609916c14a9ad94e32dc965e032413cc89
-SHA256: 5a4a2349dd2de77e80838c4584b2eb49b439f77483c6d03d8737e6813df5455b
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.265)
-Author: TrollOpenReborn
-Changelog: 0.6.265 继续清理自造设置层零消费字段
- 清理,删TOFeatureConfig七个零引用样式字段
- 清理,删TOSettingsManager八个零引用属性与八个死键常量
- 说明,存活字段均有真实消费点(扇形菜单/宿主复刻体)
- 说明,本版行为不变,仅去无效字段(共减约66行)
- 门禁,39类 原版1205 本仓1289 缺失0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=ca7cb0e5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=fe36ccce
 Version: 0.6.266
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -138,7 +114,7 @@ Changelog: 0.6.266 删除26个零调用多余方法
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=ca7cb0e5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=fe36ccce
 Version: 0.6.267
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -163,11 +139,11 @@ Changelog: 0.6.267 修复点设置AppleID行必崩SpringBoard
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=fe36ccce
 Version: 0.6.268
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
-Installed-Size: 0
+Installed-Size: 1668
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
 Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.268_iphoneos-arm64e.deb
 Size: 404228
@@ -332,4 +308,3 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
-
