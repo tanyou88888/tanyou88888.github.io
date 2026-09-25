@@ -1,0 +1,96 @@
+{
+    "class": "DepictionTabView",
+    "minVersion": "0.1",
+    "tintColor": "#8e8e93",
+    "tabs": [
+        {
+            "class": "DepictionStackView",
+            "tabname": "Details",
+            "views": [
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "在 iPad 上运行 macOS：Xcode、Terminal、Final Cut Pro 等专业应用直接跑在设备上。需要 iPad Pro（M1/M2）或 iPad Air（M1），iPadOS 14.5 – 16.3.1。**不支持 roothide 环境**（需官方 Dopamine）。",
+                    "useSpacing": true
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "Package Info"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Author",
+                    "text": "Virtual Mac (nfzerox)"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Version",
+                    "text": "1.2.3"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Requires",
+                    "text": "iPadOS 14.5–16.3.1 · rootless（不支持 roothide）"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Section",
+                    "text": "rootless 插件"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionTableButtonView",
+                    "title": "上游项目 nfzerox/VirtualMacOniPad",
+                    "action": "https://github.com/nfzerox/VirtualMacOniPad",
+                    "openExternal": true
+                }
+            ]
+        },
+        {
+            "class": "DepictionStackView",
+            "tabname": "Changelog",
+            "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "1.2.3"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-08-27",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• Magic Keyboard 惯性滚动，轻点可中断",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复 Firefox 图形问题",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 创建虚拟 Mac 时默认更大存储",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                }
+            ]
+        }
+    ]
+}

@@ -71,6 +71,24 @@ jobs:
             echo "ios-mcp 无可用 arm64e 资产，跳过"
           fi
 
+      - name: Sync nfzerox/VirtualMacOniPad latest release (public)
+        run: |
+          set -e
+          VREL=$(curl -s "https://api.github.com/repos/nfzerox/VirtualMacOniPad/releases/latest")
+          VURL=$(echo "$VREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['browser_download_url'] if a else '')")
+          VNAME=$(echo "$VREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('.deb')]; print(a[0]['name'] if a else '')")
+          VDATE=$(echo "$VREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('published_at','')[:10])")
+          VVER=$(echo "$VREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('tag_name',''))")
+          if [ -n "$VURL" ]; then
+            echo "同步 VirtualMac: $VNAME ($VDATE)"
+            mkdir -p sileo/debs/rootless sileo/meta
+            curl -sL -o "sileo/debs/rootless/$VNAME" "$VURL"
+            head -c 8 "sileo/debs/rootless/$VNAME" | grep -q "!<arch>" || { echo "::error::VirtualMac 下载无效"; rm -f "sileo/debs/rootless/$VNAME"; exit 1; }
+            python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault('com.mac.virtual',{})[sys.argv[1]]=sys.argv[2]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "2:$VVER+607.91c53c84b2" "$VDATE"
+          else
+            echo "VirtualMac 无 deb 资产，跳过"
+          fi
+
       - name: Rebuild index (scan + enrich + homepage)
         run: |
           set -e
