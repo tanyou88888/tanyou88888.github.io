@@ -156,6 +156,29 @@ Changelog: 0.6.253 删除失效的Reborn接口面
  说明,均因0.6.250删中间层而失效,原版无此接口面
  门禁,39类 原版1205 本仓1289 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.257
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1547
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.257_iphoneos-arm64e.deb
+Size: 406168
+MD5sum: f0d51479bd222c5e1d51538ec5b5dfe6
+SHA1: a535fd8ffc64c93674dadb984aa5296ad7e6b796
+SHA256: d43aac5e9c68fda1aeacac8cf2e3c5e01e95cb14efda12c01bbe665230b4dc2a
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.257)
+Author: TrollOpenReborn
+Changelog: 0.6.257 修复冷启动透明闪烁
+ 修复,恢复封面判据sceneIfExists(无活场景显示封面)
+ 归因,黑屏=重复回接(已回退) 透明=无封面(本次)
+ 证据,三版对照+v23实测挂载时contentState=2
+ 门禁,39类 原版1205 本仓1289 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -284,3 +307,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
