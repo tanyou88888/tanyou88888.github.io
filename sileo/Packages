@@ -89,30 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=16733811
-Version: 0.6.258
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1672
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.258_iphoneos-arm64e.deb
-Size: 405846
-MD5sum: 2ba136eb901ff859e9ba9cafd28ae8ed
-SHA1: 3cd5381b7b53fbfee36706e902d74fbfea73335e
-SHA256: a5dc5c84fb1f2436b9cbe67534f72482164dec931a5ad4494a1637bdce63433f
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.258)
-Author: TrollOpenReborn
-Changelog: 0.6.258 修复浮窗初始比例跳变
- 修复,布局持久化改走原版115:(删自造扁平格式)
- 根因,自造记录缺size1/size2致还原按全局base重算
- 证据,v25帧序列(458.19被重算为558.94)+记录字段对照
- 门禁,39类 原版1205 本仓1289 缺失0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=16733811
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=de18c6bf
 Version: 0.6.262
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -136,7 +113,7 @@ Changelog: 0.6.262 补齐原版对外开浮窗通知入口
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=16733811
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=de18c6bf
 Version: 0.6.263
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -161,11 +138,11 @@ Changelog: 0.6.263 设置页注销链按原版1:1归位
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=de18c6bf
 Version: 0.6.264
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
-Installed-Size: 1547
+Installed-Size: 1668
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
 Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.264_iphoneos-arm64e.deb
 Size: 404032
@@ -310,4 +287,3 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
-

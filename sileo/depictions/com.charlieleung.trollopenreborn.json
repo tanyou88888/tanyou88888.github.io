@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.263"
+                    "text": "0.6.264"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "396 KB"
+                    "text": "394 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,48 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.264 清理自造结果模型与死配置字段"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删TOFeatureResult模型(仅一处分型签名,零构造零消费)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,删TOFeatureConfig八个零读取字段与死枚举常量",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,164块入口返回类型改回void(原版块体无返回值)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,本项目行为不变,仅去脚手架与无效字段",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.263 设置页注销链按原版1:1归位"
@@ -140,41 +182,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 说明,原版该链无enabled门,本仓同样不加门",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.258 修复浮窗初始比例跳变"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,布局持久化改走原版115:(删自造扁平格式)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 根因,自造记录缺size1/size2致还原按全局base重算",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,v25帧序列(458.19被重算为558.94)+记录字段对照",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
