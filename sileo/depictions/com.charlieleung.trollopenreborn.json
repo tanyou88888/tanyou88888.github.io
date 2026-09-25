@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.275"
+                    "text": "0.6.276"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "398 KB"
+                    "text": "396 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,69 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.276 通知分屏补回原版全局开关门sub_43C4"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,总开关关闭时通知分屏仍生效(缺sub_43C4门)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,sub_613A0/sub_61630两处补上全局enabled门",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,sub_65128门口径改回sub_43C4(原版无sub_4FA0)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 保持,其余通知分屏条件与顺序未动(单变量)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 核验,真机原版域enabled=True等四键实测(新门必过)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 已知,本项行为验收待真实通知横幅(B级IDA逐行)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 挂账,URL拉起双触发与Darwin回调原版门待查",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.275 修复全屏应用突然变成悬浮窗(直通段顺序)"
@@ -175,80 +238,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 修复,cff_emu工具Wn/Xn别名与浮点标志位缺陷",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.273 补齐相机组件并修面容支付空白浮窗"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-25",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 新增,复刻原版第三个组件TrollOpenCamera(注入mediaserverd)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,浮窗里相机用不了(缺相机守护进程侧组件)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,浮窗微信面容支付跳空白浮窗只能手动输密码",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,系统认证UI进程被误分屏(springboard支路缺inSplit门)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,连跳多个浮窗(同一动作对同一系统进程重复触发)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,左下角拉伸等8处原版TOJBMETHOD240错置",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理,移除全部调试探针与诊断打点",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
