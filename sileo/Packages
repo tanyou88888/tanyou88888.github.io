@@ -89,7 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=bc31cfa0
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7809d670
 Version: 0.6.264
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -113,7 +113,7 @@ Changelog: 0.6.264 清理自造结果模型与死配置字段
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=bc31cfa0
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7809d670
 Version: 0.6.265
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -137,7 +137,7 @@ Changelog: 0.6.265 继续清理自造设置层零消费字段
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=bc31cfa0
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7809d670
 Version: 0.6.266
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -251,7 +251,7 @@ Author: 来了老弟
 Package: re.frida.server
 Name: Frida
 Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=f357e9b9
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=6d94c15a
 Version: 16.1.4
 Architecture: iphoneos-arm64
 Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
@@ -271,7 +271,7 @@ Priority: optional
 Package: re.frida.server
 Name: Frida
 Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=f357e9b9
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=6d94c15a
 Version: 17.18.0
 Architecture: iphoneos-arm64
 Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
@@ -281,6 +281,26 @@ Size: 16590784
 MD5sum: c4c4d8b7df6eacf0bb6339447acd000c
 SHA1: 65e9c28000faaf4d0a040ba9a6c97b68d83a3510
 SHA256: b5b29d1ca27f4569541db8349c3d0ee9cbbe5aa1c3eac2770cdffc0e42c37cf8
+Section: rootless 插件
+Description: Observe and reprogram running programs.
+Author: Frida Developers <oleavr@nowsecure.com>
+Homepage: https://frida.re/
+Conflicts: re.frida.server64
+Priority: optional
+
+Package: re.frida.server
+Name: Frida
+Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=6d94c15a
+Version: 17.19.0
+Architecture: iphoneos-arm64
+Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
+Installed-Size: 53524
+Filename: debs/rootless/frida_17.19.0_iphoneos-arm64.deb
+Size: 16605844
+MD5sum: 8edd450d745373459e195351dc9d5f6a
+SHA1: 6dfe5225481a6ac778b86ef98d6a2e3511c26492
+SHA256: aabe1e8ea74e3cb0cac0b2af8d24a3eccf38cdefb4d002bae886276151882feb
 Section: rootless 插件
 Description: Observe and reprogram running programs.
 Author: Frida Developers <oleavr@nowsecure.com>
