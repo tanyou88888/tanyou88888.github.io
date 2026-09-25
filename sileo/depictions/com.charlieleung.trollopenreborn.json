@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.271"
+                    "text": "0.6.272"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,62 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.272 修复左下角拉伸等8处240错置"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,左下角拖拽拉伸后场景不跟随(086两分支调错函数)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,左下角长按切比例/054/配置变更/014刷新同样错置",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,以上8处按原版恢复TOJBMETHOD240下发场景设置",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,长按绿色条旋转回不来(343五处240被错置)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,横屏右下角热区唤不出扇形菜单(坐标系+窗口旋转)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,移除全部调试探针与诊断打点",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.271 修复旋转后热区残留与朝向下发"
@@ -154,48 +210,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 验证,浮窗跟随横屏且无时隐时现半屏旋转关窗",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.268 修复URL拉起不进分屏"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,补齐原版四条启动入口中的三条",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,target口径回归原版sub_5D4B4(补.identifier)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,真机探针该请求bundleIdentifier为空仅有identifier",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 验证,QQ小程序与QQhttp链接与信息链接均进浮窗",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"

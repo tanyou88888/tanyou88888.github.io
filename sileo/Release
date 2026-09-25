@@ -23,10 +23,10 @@ Icon: https://tanyou88888.github.io/sileo/icon.png
 
 
 
-MD5Sum:
- 4d7a1296e178519a18ea57fcfa9855f8 15264 Packages
- c46a480958484beb30b7676e21d2dc65 4922 Packages.gz
-SHA256:
- 64c9ecf5877879440df5f02bc0eebc751735a0445d76e15398f1d6a4b1a264c9 15264 Packages
- 59c31fbf54d22799dd471fdc11e5eb869124ed7210dd3694587d02beaec2ed3b 4922 Packages.gz
 
+MD5Sum:
+ afe30128d420e7483b8eabd7a0a97b7d    14095 Packages
+ 38893a18a20ebc10c62f0e804f6cb57d     4636 Packages.gz
+SHA256:
+ 9d3c5b8f3e8e740f68c988db914e5d4bbcb98885c43ef2f60d94b0dd94f50f80    14095 Packages
+ 82c897176645e46da94d06d8a86abb46652c3b6e2ba66eebda1707e3816690f0     4636 Packages.gz
