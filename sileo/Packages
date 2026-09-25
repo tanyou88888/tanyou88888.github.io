@@ -158,6 +158,30 @@ Changelog: 0.6.263 设置页注销链按原版1:1归位
  证据,原版名取自加密常量串off_169B20(长度42)运行期dump
  门禁,39类 原版1205 本仓1289 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.264
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1547
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.264_iphoneos-arm64e.deb
+Size: 404032
+MD5sum: 4e966c2c1d6fe0282b161ded5e017f3c
+SHA1: 97a070b340b6e21bdaf3cf14cb92f32f29fe72a3
+SHA256: d9d255006046468a344b77cace4e7f41c0d8c7090f0471eb773b0d3f76347006
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.264)
+Author: TrollOpenReborn
+Changelog: 0.6.264 清理自造结果模型与死配置字段
+ 清理,删TOFeatureResult模型(仅一处分型签名,零构造零消费)
+ 清理,删TOFeatureConfig八个零读取字段与死枚举常量
+ 对齐,164块入口返回类型改回void(原版块体无返回值)
+ 说明,本项目行为不变,仅去脚手架与无效字段
+ 门禁,39类 原版1205 本仓1289 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -286,3 +310,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
