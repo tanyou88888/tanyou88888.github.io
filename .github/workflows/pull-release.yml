@@ -89,6 +89,24 @@ jobs:
             echo "VirtualMac 无 deb 资产，跳过"
           fi
 
+      - name: Sync frida/frida latest release (public, rootless arm64)
+        run: |
+          set -e
+          FREL=$(curl -s "https://api.github.com/repos/frida/frida/releases/latest")
+          FURL=$(echo "$FREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('iphoneos-arm64.deb')]; print(a[0]['browser_download_url'] if a else '')")
+          FNAME=$(echo "$FREL" | python3 -c "import json,sys; r=json.load(sys.stdin); a=[x for x in r.get('assets',[]) if x['name'].endswith('iphoneos-arm64.deb')]; print(a[0]['name'] if a else '')")
+          FDATE=$(echo "$FREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('published_at','')[:10])")
+          FVER=$(echo "$FREL" | python3 -c "import json,sys; print(json.load(sys.stdin).get('tag_name',''))")
+          if [ -n "$FURL" ]; then
+            echo "同步 frida: $FNAME ($FDATE)"
+            mkdir -p sileo/debs/rootless sileo/meta
+            curl -sL -o "sileo/debs/rootless/$FNAME" "$FURL"
+            head -c 8 "sileo/debs/rootless/$FNAME" | grep -q "!<arch>" || { echo "::error::frida 下载无效"; rm -f "sileo/debs/rootless/$FNAME"; exit 1; }
+            python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault('re.frida.server',{})[sys.argv[1]]=sys.argv[2]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$FVER" "$FDATE"
+          else
+            echo "frida 无 arm64 deb 资产，跳过"
+          fi
+
       - name: Rebuild index (scan + enrich + homepage)
         run: |
           set -e
