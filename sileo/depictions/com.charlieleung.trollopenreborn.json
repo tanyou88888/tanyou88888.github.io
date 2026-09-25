@@ -68,6 +68,17 @@
                     "title": "0.6.279 左下角拉伸比例与建窗缩放钳位逐行回归原版"
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-25",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 修复,左下角拉伸松手后比例钳位NaN漏出会写坏visualScale",
                     "useSpacing": true,
