@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.266"
+                    "text": "0.6.267"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,55 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.267 修复点设置AppleID行必崩SpringBoard"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,补回原版sub_5A240提前直通判定段",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 证据,4份SpringBoard崩溃报告故障点恒为同一处",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对照,原版1.3.7与停用本插件与关闭全局门均不崩",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,补sub_5DF64(target已是前台)与v67逐行判定",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,sub_5E078三个否决条件维持原版不变",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.266 删除26个零调用多余方法"
@@ -151,48 +200,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 说明,本版行为不变,仅去无效字段(共减约66行)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1289 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.264 清理自造结果模型与死配置字段"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理,删TOFeatureResult模型(仅一处分型签名,零构造零消费)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 清理,删TOFeatureConfig八个零读取字段与死枚举常量",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,164块入口返回类型改回void(原版块体无返回值)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 说明,本项目行为不变,仅去脚手架与无效字段",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
