@@ -165,6 +165,33 @@ Changelog: 0.6.273 补齐相机组件并修面容支付空白浮窗
  清理,移除全部调试探针与诊断打点
  门禁,39类 原版1205 本仓1263 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.274
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1614
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.274_iphoneos-arm64e.deb
+Size: 406718
+MD5sum: c1e64ff8694d2c153e6260d919dba8e8
+SHA1: bd2cc6804fef80ceb39fc5f438609b10f6d79991
+SHA256: 832cb84e212afb83f82aec0fb90e9a15b2f1504fea687815d5aaa2b400afbb38
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.274)
+Author: TrollOpenReborn
+Changelog: 0.6.274 切换器下滑判据按原版sub_3768C重写
+ 对齐,sub_3768C解平坦(196派表221块66真实路径)
+ 删除,自造近似判据pan.translation.y大于0(无阈值)
+ 对齐,新增isKindOfClass:UIScrollView前置门与原版6.0门
+ 对齐,新增门后最前台App比较条件(真机恒不等)
+ 已知,报障未消失:原版该门真机退化属原版行为
+ 新增,sub_3768C解平坦清单与语义稿(共2份)
+ 修复,cff_emu工具Wn/Xn别名与浮点标志位缺陷
+ 门禁,39类 原版1205 本仓1263 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -313,3 +340,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
