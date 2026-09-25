@@ -89,7 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=da3e47d5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b8b77943
 Version: 0.6.239
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -116,17 +116,17 @@ Changelog: 0.6.239 修复0.6.238崩溃并完成诊断清理
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=da3e47d5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b8b77943
 Version: 0.6.251
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
-Installed-Size: 1680
+Installed-Size: 1672
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
 Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.251_iphoneos-arm64e.deb
-Size: 407206
-MD5sum: 29f9d986a67e0aa1371b368e2687b40a
-SHA1: 90fd189595525f902322d192e53b878dfbf37f9e
-SHA256: 3d1df3d01e73d487aea89e59591b4a4f13fd4d1247de040430caaf3bf99466cf
+Size: 406834
+MD5sum: 2c918c16feecdc7ecebe4d0b5105d83f
+SHA1: 82d5f21620a161b818d6320df5ffa847cb247b3f
+SHA256: c27e9274f3581acd612b7a3aba71c8b9e0e3f6aef6847626878ab3d778b28d83
 Section: roothide 插件
 Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.251)
 Author: TrollOpenReborn
@@ -140,7 +140,7 @@ Changelog: 0.6.251 正式版
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=da3e47d5
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=b8b77943
 Version: 0.6.252
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -170,6 +170,31 @@ Maintainer: Virtual Mac
 Installed-Size: 104084
 Depends: firmware (>= 14.5), firmware (<< 16.4), ellekit | org.coolstar.libhooker
 Filename: debs/rootless/com.mac.virtual_2:1.2.3+607.91c53c84b2_all.deb
+Size: 20986888
+MD5sum: 2a7498b1905fe437fc87cbbf5217bd90
+SHA1: e9a1db2fa5b4ee1de6f25d98a07dc09098b3b41d
+SHA256: 435ce1dc76b9e18b1547c77b84e2cf33ffe40a16be63e366f181d14709a41aa0
+Section: rootless 插件
+Description: People have dreamed of running macOS on iPad for more than a decade.
+ Today, that dream comes true. With Virtual Mac, iPad finally breaks free from
+ iPadOS, enabling pro apps like Xcode, Terminal, Final Cut Pro, Logic Pro, and
+ Pixelmator Pro to run directly on device.
+ Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 14 up to 16.3.1,
+ or iPhone 14 Pro and iPhone 14 Pro Max running iOS 16 up to 16.3.1.
+Author: Virtual Mac
+Priority: optional
+Tag: role::enduser
+
+Package: com.mac.virtual
+Name: Virtual Mac
+Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=98d016b0
+Version: 2:1.2.3+607.91c53c84b2
+Architecture: all
+Maintainer: Virtual Mac
+Installed-Size: 104084
+Depends: firmware (>= 14.5), firmware (<< 16.4), ellekit | org.coolstar.libhooker
+Filename: debs/rootless/VirtualMac_1.2.3.deb
 Size: 20986888
 MD5sum: 2a7498b1905fe437fc87cbbf5217bd90
 SHA1: e9a1db2fa5b4ee1de6f25d98a07dc09098b3b41d
@@ -227,7 +252,7 @@ Author: 来了老弟
 Package: re.frida.server
 Name: Frida
 Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=4241dee6
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=f357e9b9
 Version: 16.1.4
 Architecture: iphoneos-arm64
 Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
@@ -237,6 +262,26 @@ Size: 17453056
 MD5sum: 6bbb23b202f7c4b1a84a3bc24d717fa1
 SHA1: f57fccb582e07f107487ce204b18fb8f810ed6df
 SHA256: a2c58ee310d79b2f55af84d943366acf1fc355e5ba17ea473d0b87a21219132b
+Section: rootless 插件
+Description: Observe and reprogram running programs.
+Author: Frida Developers <oleavr@nowsecure.com>
+Homepage: https://frida.re/
+Conflicts: re.frida.server64
+Priority: optional
+
+Package: re.frida.server
+Name: Frida
+Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=f357e9b9
+Version: 17.18.0
+Architecture: iphoneos-arm64
+Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
+Installed-Size: 53476
+Filename: debs/rootless/frida_17.18.0_iphoneos-arm64.deb
+Size: 16590784
+MD5sum: c4c4d8b7df6eacf0bb6339447acd000c
+SHA1: 65e9c28000faaf4d0a040ba9a6c97b68d83a3510
+SHA256: b5b29d1ca27f4569541db8349c3d0ee9cbbe5aa1c3eac2770cdffc0e42c37cf8
 Section: rootless 插件
 Description: Observe and reprogram running programs.
 Author: Frida Developers <oleavr@nowsecure.com>

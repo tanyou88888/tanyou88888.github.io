@@ -68,6 +68,17 @@
                     "title": "0.6.251 正式版"
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-25",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 修复,扇形菜单快捷指令打开App会多弹一次全屏",
                     "useSpacing": true,
