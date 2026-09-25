@@ -163,6 +163,33 @@ Changelog: 0.6.272 修复左下角拉伸等8处240错置
  清理,移除全部调试探针与诊断打点
  门禁,39类 原版1205 本仓1263 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.273
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1614
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.273_iphoneos-arm64e.deb
+Size: 406666
+MD5sum: 9b0d5e8b20ee081f47ca709f67143b1f
+SHA1: 4cc06e300316e9fb8e124bc243bf019abd60491c
+SHA256: afa26ec61dd01e5f20d2e37145ac87d475bd7e519025ec9c9a1f3bfa23199ddd
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.273)
+Author: TrollOpenReborn
+Changelog: 0.6.273 补齐相机组件并修面容支付空白浮窗
+ 新增,复刻原版第三个组件TrollOpenCamera(注入mediaserverd)
+ 修复,浮窗里相机用不了(缺相机守护进程侧组件)
+ 修复,浮窗微信面容支付跳空白浮窗只能手动输密码
+ 修复,系统认证UI进程被误分屏(springboard支路缺inSplit门)
+ 修复,连跳多个浮窗(同一动作对同一系统进程重复触发)
+ 修复,左下角拉伸等8处原版TOJBMETHOD240错置
+ 清理,移除全部调试探针与诊断打点
+ 门禁,39类 原版1205 本仓1263 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -311,3 +338,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
