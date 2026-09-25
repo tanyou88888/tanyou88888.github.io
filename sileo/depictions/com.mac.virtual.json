@@ -27,17 +27,27 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.2.3"
+                    "text": "2:1.2.3+607.91c53c84b2"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Requires",
-                    "text": "iPadOS 14.5–16.3.1 · rootless（不支持 roothide）"
+                    "text": "iOS 14.5+ · rootless"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Section",
                     "text": "rootless 插件"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Size",
+                    "text": "20.0 MB"
+                },
+                {
+                    "class": "DepictionTableTextView",
+                    "title": "Released",
+                    "text": "2026-08-27"
                 },
                 {
                     "class": "DepictionSeparatorView"
@@ -53,44 +63,7 @@
         {
             "class": "DepictionStackView",
             "tabname": "Changelog",
-            "views": [
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "1.2.3"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-08-27",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• Magic Keyboard 惯性滚动，轻点可中断",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复 Firefox 图形问题",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 创建虚拟 Mac 时默认更大存储",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                }
-            ]
+            "views": []
         }
     ]
 }
