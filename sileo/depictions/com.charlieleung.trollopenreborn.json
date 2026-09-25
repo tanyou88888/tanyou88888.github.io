@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.269"
+                    "text": "0.6.271"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "395 KB"
+                    "text": "394 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,62 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.271 修复旋转后热区残留与朝向下发"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,横屏转竖屏后左边缘残留蓝色热区(点一下才消失)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,旋转处理器改调原版 sub_6C4DC 全文(含debug热区刷新)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,长按绿色条旋转回不来(343五处240调用被错置)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,横屏右下角热区唤不出扇形菜单(坐标系+窗口旋转)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,240下发对齐原版单次updateSettingsWithBlock",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 清理,移除全部调试探针与诊断打点",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.269 修复浮窗不跟随App旋转"
@@ -140,55 +196,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 验证,QQ小程序与QQhttp链接与信息链接均进浮窗",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.267 修复点设置AppleID行必崩SpringBoard"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,补回原版sub_5A240提前直通判定段",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,4份SpringBoard崩溃报告故障点恒为同一处",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对照,原版1.3.7与停用本插件与关闭全局门均不崩",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,补sub_5DF64(target已是前台)与v67逐行判定",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 说明,sub_5E078三个否决条件维持原版不变",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
