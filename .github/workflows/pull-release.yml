@@ -62,6 +62,8 @@ jobs:
             fi
             VER=$(echo "${NAME%.deb}" | cut -d_ -f2)
             python3 -c "import json,sys,os; p='sileo/meta/release-dates.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(sys.argv[1],{})[sys.argv[2]]=sys.argv[3]; json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)" "$PKG" "$VER" "$DATE"
+            BODY=$(echo "$REL" | jq -r '.body // ""')
+            PKGARG="$PKG" VER="$VER" NOTE="$BODY" python3 -c "import json,os,re; pkg,ver,body=os.environ['PKGARG'],os.environ['VER'],os.environ.get('NOTE',''); bullets=[]; [bullets.append(re.sub(r'^[\-*+]\s*','',t).strip()) for t in body.splitlines() if t.strip() and not t.strip().startswith(('http','![')) and not t.strip().startswith('#') and len(bullets)<8]; p='sileo/meta/release-notes.json'; m=json.load(open(p)) if os.path.exists(p) else {}; m.setdefault(pkg,{}).setdefault(ver,{'title':ver,'bullets':bullets}); json.dump(m,open(p,'w'),ensure_ascii=False,indent=2)"
           done
 
       - name: Rebuild index (scan + enrich + homepage)

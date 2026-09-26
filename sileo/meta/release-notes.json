@@ -1,0 +1,22 @@
+{
+  "com.witchan.ios-mcp": {
+    "1.2.7": {
+      "title": "1.2.7",
+      "bullets": [
+        "新增离线 PaddleOCR 引擎（PP-OCRv5 + ONNX Runtime CPU），支持中英文和数字识别",
+        "OCR 默认使用 PaddleOCR；可用 engine=\"vision\" 切回 Apple Vision",
+        "PaddleOCR 独立 worker：会话复用、并发与内存限制、请求取消与超时终止",
+        "install_app 支持 .tipa 格式（复用 IPA 安装流程）"
+      ]
+    },
+    "1.2.6": {
+      "title": "1.2.6",
+      "bullets": [
+        "修复横屏下截图、UI 元素、OCR 与点击坐标不一致",
+        "修复部分设备中文 OCR 识别失败（准确模式直接用 CPU）",
+        "OCR 默认快速模式，含中文自动切换准确模式",
+        "修复 OCR 区域越界导致误识别全屏的问题"
+      ]
+    }
+  }
+}

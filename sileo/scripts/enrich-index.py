@@ -218,6 +218,15 @@ def main():
         except Exception:
             dates = {}
 
+    # 发布说明表（control 无 Changelog 时的日记数据源）
+    notes_path = os.path.join(BASE, "meta", "release-notes.json")
+    notes = {}
+    if os.path.isfile(notes_path):
+        try:
+            notes = json.load(open(notes_path, encoding="utf-8"))
+        except Exception:
+            notes = {}
+
     # 按包聚合版本与 Changelog
     by_pkg = {}
     for fields, multi in stanzas:
@@ -231,6 +240,10 @@ def main():
             lines = [l.strip() for l in lines if l.strip()]
             if len(lines) >= 1:
                 ent["changelogs"][ver] = (lines[0], lines[1:])
+        elif ver and ver in notes.get(pkg, {}):
+            n = notes[pkg][ver]
+            if n.get("bullets"):
+                ent["changelogs"][ver] = (n.get("title") or ver, n["bullets"])
 
     # 按包聚合最新版本 deb 大小（供 Details Size 行）
     latest_sizes = {}

@@ -216,7 +216,7 @@ Tag: role::enduser
 Package: com.witchan.ios-mcp
 Name: iOS MCP
 Icon: https://tanyou88888.github.io/sileo/icons/com.witchan.ios-mcp.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=ccec1537
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=ea19bfe5
 Version: 1.2.6
 Architecture: iphoneos-arm64e
 Maintainer: witchan
@@ -237,7 +237,7 @@ Provides: com.witchan.iphone-mcp
 Package: com.witchan.ios-mcp
 Name: iOS MCP
 Icon: https://tanyou88888.github.io/sileo/icons/com.witchan.ios-mcp.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=ccec1537
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=ea19bfe5
 Version: 1.2.7
 Architecture: iphoneos-arm64e
 Maintainer: witchan

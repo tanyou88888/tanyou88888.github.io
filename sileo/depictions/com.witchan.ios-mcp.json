@@ -67,6 +67,52 @@
             "views": [
                 {
                     "class": "DepictionHeaderView",
+                    "title": "1.2.7"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-26",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 新增离线 PaddleOCR 引擎（PP-OCRv5 + ONNX Runtime CPU），支持中英文和数字识别",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• OCR 默认使用 PaddleOCR；可用 engine=\"vision\" 切回 Apple Vision",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• PaddleOCR 独立 worker：会话复用、并发与内存限制、请求取消与超时终止",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• install_app 支持 .tipa 格式（复用 IPA 安装流程）",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
                     "title": "1.2.6"
                 },
                 {
@@ -107,6 +153,9 @@
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
                 }
             ]
         }
