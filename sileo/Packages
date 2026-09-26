@@ -156,6 +156,29 @@ Changelog: 0.6.293 勘误: 左侧取项式本就是原版行为
  说明,本版行为与 0.6.292 完全相同,仅更正注释与文档定性
  门禁,39类 原版1205 本仓1257 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.294
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1614
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.294_iphoneos-arm64e.deb
+Size: 405212
+MD5sum: b1539a0ae3a6207678c221d0a99842fc
+SHA1: 17aa8b9faa164baa2a8ff58fb380957d215278e6
+SHA256: fad8c52ea8f093ebec8399b8630029136de65a07b72bc59ee68f2a8ba0f9a59a
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.294)
+Author: TrollOpenReborn
+Changelog: 0.6.294 边缘/悬浮条下半屏角点订正
+ 修复,边缘模式下左侧下半屏触发方向错(角点误返回0,应为1)
+ 修复,悬浮条模式下半屏角点同错,可能导致唤出位置/命中异常
+ 对齐,原版 0x74250/0x742E0 CSINC 得 (y<半高)?3:1
+ 门禁,39类 原版1205 本仓1257 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -325,3 +348,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
