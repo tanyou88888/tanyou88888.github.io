@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.279"
+                    "text": "0.6.280"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,55 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.280 修复短信点链接分屏首跳全屏黑屏与第二跳不收旧窗"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,点http链接首跳出现约10秒全屏黑屏后才显示浮窗",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,第二跳时旧浮窗不收导致两个都是大窗",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,补回原版缺失的forceNow协议byte_19E540读写",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,补回setBackground与setAnimationDisabled两条事务钩子",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 删除,回退无效的启动事务begin后移实验",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.279 左下角拉伸比例与建窗缩放钳位逐行回归原版"
@@ -179,69 +228,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 门禁,39类 原版1205 本仓1259 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.277 小窗进出布局恢复回归原版并删自造快照"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,小窗退出恢复走自造内存快照与扁平读盘(非原版)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,exit按原版调018 TOJBMETHOD013:hostBounds:恢复布局",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,宿主rect取superview或hostViewController.view否则CGRectZero",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 删除,自造内存快照两方法与自造扁平schema读盘方法",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 删除,自造ivar与头声明(全仓零引用)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,写入端0.6.258已回归原版,本版补齐读取端",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 已知,设备上遗留扁平记录原版读不到按原版忽略不迁移",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1263 缺失0",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
