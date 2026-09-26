@@ -89,7 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=28e5fe8b
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=3f49581a
 Version: 0.6.293
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -112,7 +112,7 @@ Changelog: 0.6.293 勘误: 左侧取项式本就是原版行为
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=28e5fe8b
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=3f49581a
 Version: 0.6.294
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -135,7 +135,7 @@ Changelog: 0.6.294 边缘/悬浮条下半屏角点订正
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=28e5fe8b
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=3f49581a
 Version: 0.6.295
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
