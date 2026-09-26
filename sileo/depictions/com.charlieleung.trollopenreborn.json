@@ -46,7 +46,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Released",
-                    "text": "2026-09-25"
+                    "text": "2026-09-26"
                 },
                 {
                     "class": "DepictionSeparatorView"
@@ -66,6 +66,17 @@
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.280 修复短信点链接分屏首跳全屏黑屏与第二跳不收旧窗"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-26",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
                 },
                 {
                     "class": "DepictionMarkdownView",

@@ -89,7 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=ff9fe481
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7afef0f1
 Version: 0.6.278
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -115,7 +115,7 @@ Changelog: 0.6.278 小窗缩放写回点回归原版调用方
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=ff9fe481
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7afef0f1
 Version: 0.6.279
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -141,7 +141,7 @@ Changelog: 0.6.279 左下角拉伸比例与建窗缩放钳位逐行回归原版
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=ff9fe481
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7afef0f1
 Version: 0.6.280
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
