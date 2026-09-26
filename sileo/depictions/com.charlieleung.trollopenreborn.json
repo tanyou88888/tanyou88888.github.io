@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.293"
+                    "text": "0.6.294"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,7 +41,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "396 KB"
+                    "text": "395 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,41 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.294 边缘/悬浮条下半屏角点订正"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,边缘模式下左侧下半屏触发方向错(角点误返回0,应为1)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,悬浮条模式下半屏角点同错,可能导致唤出位置/命中异常",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,原版 0x74250/0x742E0 CSINC 得 (y<半高)?3:1",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.293 勘误: 左侧取项式本就是原版行为"
@@ -112,55 +147,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 对齐,原版 sub_77CC8 会把捕获的 bundleId 传给 sub_6298(与工具面板同形)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.287 延迟截图残留覆盖层订正"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,延迟截图截到的画面里仍有控制台面板(改回原版立即硬摘除)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,sub_6B450 面板段逐指令复刻,不再误用 sub_699FC 的动画软收起",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,补 sub_6B450 的 ++qword_19E718 与 qword_19E628=0 两项清理",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修正,sub_6B3A4 守卫改为两槽 OR 判空(此前只判工具槽)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修正,sub_69A78 背板淡出守卫同上,漏判动作槽",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
