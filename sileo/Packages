@@ -156,6 +156,29 @@ Changelog: 0.6.291 动作面板选应用分屏按选中项
  对齐,原版 sub_77CC8 会把捕获的 bundleId 传给 sub_6298(与工具面板同形)
  门禁,39类 原版1205 本仓1257 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.293
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1614
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.293_iphoneos-arm64e.deb
+Size: 406124
+MD5sum: 2777671b2a19243af8cac3cadbaee600
+SHA1: b40ac5926d975e889b002676d3abb459ae49677d
+SHA256: 2e51ffc1cb04205b0449176933feb17b6264eca538f40b2eaa5ee257cf8cd5d5
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.293)
+Author: TrollOpenReborn
+Changelog: 0.6.293 勘误: 左侧取项式本就是原版行为
+ 更正,0.6.292 把左侧取项式称为受控偏差属误判,已撤回该偏差登记
+ 对齐,原版循环尾 0x7BFE8 SUB X19,X19,#1 每轮自减 => 原版即 cells-1-col
+ 说明,本版行为与 0.6.292 完全相同,仅更正注释与文档定性
+ 门禁,39类 原版1205 本仓1257 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -325,3 +348,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
