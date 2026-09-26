@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.287"
+                    "text": "0.6.291"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,34 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.291 动作面板选应用分屏按选中项"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,动作面板里选应用分屏时切到了当前前台应用而非选中应用",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,原版 sub_77CC8 会把捕获的 bundleId 传给 sub_6298(与工具面板同形)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.287 延迟截图残留覆盖层订正"
@@ -144,48 +172,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 对齐,横幅点击/长按下滑/通知中心三键独立生效",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.281 补回原版尾段回桌面调用并清理自造件"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,锁屏解锁类启动未按原版先回桌面再分屏",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,尾段回桌面调用按原版四条件与位置补齐",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 删除,通知分屏三个零引用自造件(Darwin回调等)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,240块setFrame矩形无转置(订正旧误读)",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
