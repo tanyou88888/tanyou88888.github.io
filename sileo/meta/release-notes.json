@@ -18,5 +18,43 @@
         "修复 OCR 区域越界导致误识别全屏的问题"
       ]
     }
+  },
+  "com.charlieleung.trollopenreborn": {
+    "0.6.282": {
+      "title": "0.6.282",
+      "bullets": [
+        "> 发布日期：2026-09-27 ｜ 适用：iOS 16.0+（真机验证 iOS 17.2.1 / arm64e，roothide）",
+        "**报障（用户 A/B，A 级）**：设置里关掉「通知分屏 → 横幅点击」（长按/下滑=开、通知中心=关）后，**在屏幕上直接点横幅仍建浮窗**；原版不建。",
+        "**根因（CONFIRMED，源码级）**：本仓这条链上只有「**三键取或**」（`TONotificationSplitHooks.xm` 的 `to_notifSplitEnabled()`），",
+        "全仓没有任何单把门 ⇒ 或门被「横幅长按/下滑」点亮 ⇒ 点横幅越权触发。",
+        "**取证否证（IDA 13337）**：旧记录「`sub_4FA0()` = 三个通知子开关之或」**不成立**——其 CFF 家族（PAC `0xA410`，22 块）",
+        "**零 `BL`、零字符串/选择子引用** ⇒ 纯不透明谓词（与 `sub_5D70` ≡ `byte_19E004` 同形）。三把键在原版 dylib 亦**非明文**（运行时解密）。",
+        "**原版映射依据**：原版 `sub_6429C` 建 userInfo 时 `fromBanner = @(source == 1)` ⇒ 原版以 `source == 1` 表示「来自横幅」。",
+        "**落地（单变量）**：四处挂点由「三键取或」改为**各自单键**——"
+      ]
+    }
+  },
+  "com.mac.virtual": {
+    "1.2.3": {
+      "title": "1.2.3",
+      "bullets": [
+        "Virtual Mac on iPad 1.2.3 adds momentum scrolling when using Magic Keyboard, fixes graphics issues with Firefox, and defaults to larger storage size when creating Virtual Mac.",
+        "Input",
+        "Adds momentum scrolling when using Magic Keyboard for iPad",
+        "Adds the ability to interrupt momentum scrolling with a light tap",
+        "Graphics",
+        "Fixes graphics issues with Firefox",
+        "Creation",
+        "Defaults to larger storage size for newly created Virtual Mac when iPad has sufficient remaining storage space"
+      ]
+    }
+  },
+  "re.frida.server": {
+    "17.19.0": {
+      "title": "17.19.0",
+      "bullets": [
+        "See https://frida.re/news/ for details."
+      ]
+    }
   }
 }

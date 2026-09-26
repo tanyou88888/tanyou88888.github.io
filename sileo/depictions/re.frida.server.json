@@ -66,6 +66,31 @@
             "views": [
                 {
                     "class": "DepictionHeaderView",
+                    "title": "17.19.0"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-25",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• See https://frida.re/news/ for details.",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
                     "title": "16.1.4"
                 },
                 {

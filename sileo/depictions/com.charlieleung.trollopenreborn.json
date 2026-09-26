@@ -68,6 +68,17 @@
                     "title": "0.6.282 通知分屏子开关按路径分别生效"
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-26",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 修复,关闭横幅点击后点横幅仍会建浮窗",
                     "useSpacing": true,
