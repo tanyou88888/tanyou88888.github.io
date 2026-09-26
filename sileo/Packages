@@ -155,6 +155,28 @@ Changelog: 0.6.295 悬浮条可视条与热区位置不一致修复
  对齐,refreshTriggerStrip/updateDebugZoneWindow/hotZoneScreenRectSettings
  门禁,39类 原版1205 本仓1257 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.296
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1614
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.296_iphoneos-arm64e.deb
+Size: 405156
+MD5sum: a07d44d57ec3ef3fc266284eaf0e3673
+SHA1: 475d3080035847f777a9c6e9be8c80c53fe6c063
+SHA256: dff7d4d828ec2ab6aa5ec0ad1d3dcd51e4d87c1cbc2a001bd134f5bdcf384bd0
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.296)
+Author: TrollOpenReborn
+Changelog: 0.6.296 反转长按动作下选当前前台应用会开出黑屏浮窗修复
+ 修复,选中项就是当前前台应用时改为先回主屏再建浮窗(原版 sub_6298 相等支)
+ 对齐,补齐 sub_6298 前台相等动作(逐指令 0x82E0-0x871C 与 0x88EC-0x8900 两支汇合)
+ 门禁,39类 原版1205 本仓1257 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -324,3 +346,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
