@@ -218,7 +218,7 @@ Tag: role::enduser
 Package: com.witchan.ios-mcp
 Name: iOS MCP
 Icon: https://tanyou88888.github.io/sileo/icons/com.witchan.ios-mcp.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=3d01db40
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=ccec1537
 Version: 1.2.6
 Architecture: iphoneos-arm64e
 Maintainer: witchan
@@ -229,6 +229,27 @@ Size: 1965366
 MD5sum: 8fa6bf1bdf64b15d6a3292dfa99fc58e
 SHA1: 277b3c37498b6f43aa299aeae6632a5bc38102d8
 SHA256: 03c6d6caf04a9bb69f48d62d57b33c6e3befc991773d0d78b680b43100abdaa1
+Section: roothide 插件
+Description: MCP server for AI-driven iOS device control. Supports HID buttons, touch, screenshots, clipboard, app management, accessibility tree, and text input.
+Author: witchan
+Conflicts: com.witchan.iphone-mcp
+Replaces: com.witchan.iphone-mcp
+Provides: com.witchan.iphone-mcp
+
+Package: com.witchan.ios-mcp
+Name: iOS MCP
+Icon: https://tanyou88888.github.io/sileo/icons/com.witchan.ios-mcp.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.witchan.ios-mcp.json?v=ccec1537
+Version: 1.2.7
+Architecture: iphoneos-arm64e
+Maintainer: witchan
+Installed-Size: 40776
+Depends: mobilesubstrate, preferenceloader
+Filename: debs/roothide/com.witchan.ios-mcp_1.2.7_iphoneos-arm64e.deb
+Size: 23659414
+MD5sum: e044531b7602cb6c7dfe17f91151e5fe
+SHA1: 5ccff034cefc806c5f0ed5dc74fe8b7125c7298f
+SHA256: c3001583f38068cecc5b7a3f0372d0e6d54dc9ad0aa0fab17cace063eb4c4149
 Section: roothide 插件
 Description: MCP server for AI-driven iOS device control. Supports HID buttons, touch, screenshots, clipboard, app management, accessibility tree, and text input.
 Author: witchan

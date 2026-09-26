@@ -28,7 +28,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.2.6"
+                    "text": "1.2.7"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -43,12 +43,12 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "1.9 MB"
+                    "text": "22.6 MB"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Released",
-                    "text": "2026-09-24"
+                    "text": "2026-09-26"
                 },
                 {
                     "class": "DepictionSeparatorView"
