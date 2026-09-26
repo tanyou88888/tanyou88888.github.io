@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.295"
+                    "text": "0.6.296"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,34 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.296 反转长按动作下选当前前台应用会开出黑屏浮窗修复"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,选中项就是当前前台应用时改为先回主屏再建浮窗(原版 sub_6298 相等支)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,补齐 sub_6298 前台相等动作(逐指令 0x82E0-0x871C 与 0x88EC-0x8900 两支汇合)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.295 悬浮条可视条与热区位置不一致修复"
@@ -130,41 +158,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 对齐,原版 0x74250/0x742E0 CSINC 得 (y<半高)?3:1",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.293 勘误: 左侧取项式本就是原版行为"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 更正,0.6.292 把左侧取项式称为受控偏差属误判,已撤回该偏差登记",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,原版循环尾 0x7BFE8 SUB X19,X19,#1 每轮自减 => 原版即 cells-1-col",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 说明,本版行为与 0.6.292 完全相同,仅更正注释与文档定性",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"

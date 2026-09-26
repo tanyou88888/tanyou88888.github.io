@@ -89,30 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=3f49581a
-Version: 0.6.293
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1740
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.293_iphoneos-arm64e.deb
-Size: 406124
-MD5sum: 2777671b2a19243af8cac3cadbaee600
-SHA1: b40ac5926d975e889b002676d3abb459ae49677d
-SHA256: 2e51ffc1cb04205b0449176933feb17b6264eca538f40b2eaa5ee257cf8cd5d5
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.293)
-Author: TrollOpenReborn
-Changelog: 0.6.293 勘误: 左侧取项式本就是原版行为
- 更正,0.6.292 把左侧取项式称为受控偏差属误判,已撤回该偏差登记
- 对齐,原版循环尾 0x7BFE8 SUB X19,X19,#1 每轮自减 => 原版即 cells-1-col
- 说明,本版行为与 0.6.292 完全相同,仅更正注释与文档定性
- 门禁,39类 原版1205 本仓1257 缺失0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=3f49581a
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4ecbd469
 Version: 0.6.294
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -135,7 +112,7 @@ Changelog: 0.6.294 边缘/悬浮条下半屏角点订正
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=3f49581a
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4ecbd469
 Version: 0.6.295
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -158,11 +135,11 @@ Changelog: 0.6.295 悬浮条可视条与热区位置不一致修复
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4ecbd469
 Version: 0.6.296
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
-Installed-Size: 1614
+Installed-Size: 1740
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
 Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.296_iphoneos-arm64e.deb
 Size: 405156
@@ -346,4 +323,3 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
-
