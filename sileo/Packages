@@ -161,6 +161,29 @@ Changelog: 0.6.281 补回原版尾段回桌面调用并清理自造件
  对齐,240块setFrame矩形无转置(订正旧误读)
  门禁,39类 原版1205 本仓1257 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.282
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1598
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.282_iphoneos-arm64e.deb
+Size: 404560
+MD5sum: 058f6b5602806d5f5e0bae3710139e0d
+SHA1: 1e980de436889842dc3fff20eecd08d2983924a5
+SHA256: 98f57411faa7009024cbb948c575fa30809fde4b14fd69628ea9c6d2b4ca5845
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.282)
+Author: TrollOpenReborn
+Changelog: 0.6.282 通知分屏子开关按路径分别生效
+ 修复,关闭横幅点击后点横幅仍会建浮窗
+ 对齐,四路通知分屏钩子改按各自单开关把关
+ 对齐,横幅点击/长按下滑/通知中心三键独立生效
+ 门禁,39类 原版1205 本仓1257 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -330,3 +353,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
