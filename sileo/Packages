@@ -154,6 +154,29 @@ Changelog: 0.6.294 边缘/悬浮条下半屏角点订正
  对齐,原版 0x74250/0x742E0 CSINC 得 (y<半高)?3:1
  门禁,39类 原版1205 本仓1257 缺失0
 
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=5e1f3caa
+Version: 0.6.295
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1598
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.295_iphoneos-arm64e.deb
+Size: 405464
+MD5sum: bbcd29d47463e69c056a7cc36c0381a0
+SHA1: 3cc92d023935d51bcbc7ce7bd8b843cf8c10c692
+SHA256: 331d36bb1f4860a37edce8bcc2cdaa227d385fbfa491236ba678a68d53a8c73a
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.295)
+Author: TrollOpenReborn
+Changelog: 0.6.295 悬浮条可视条与热区位置不一致修复
+ 修复,悬浮条画出来的条与能触发的热区位置不一致导致唤不出
+ 修复,几何读取改双域口径(原为裸读Reborn域,取不到原版域几何键)
+ 对齐,refreshTriggerStrip/updateDebugZoneWindow/hotZoneScreenRectSettings
+ 门禁,39类 原版1205 本仓1257 缺失0
+
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
@@ -323,3 +346,4 @@ Author: Frida Developers <oleavr@nowsecure.com>
 Homepage: https://frida.re/
 Conflicts: re.frida.server64
 Priority: optional
+
