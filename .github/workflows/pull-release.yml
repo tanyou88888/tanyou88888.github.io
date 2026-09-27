@@ -43,6 +43,15 @@ jobs:
               AUTH=(-H "Authorization: Bearer $JB_TOKEN")
             fi
             REL=$(curl -s "${AUTH[@]}" "https://api.github.com/repos/$REPO/releases/latest")
+            # ★★★ 2026-09-27 容错修正（实测驱动）：**单个上游 API 失败不得中断整个同步**。
+            #   实测事故：某上游的 releases/latest 未返回资产列表（404/限流）⇒ 下一行 `.assets[]`
+            #   报 `jq: Cannot iterate over null` ⇒ **整个 job 失败**；而失败点在 commit 之前，
+            #   于是同一轮里**已经下载成功**的其它上游（含 JBOpenReborn 的 rootless 件）一并丢失。
+            #   ⇒ 先做 `.assets` 可迭代性校验，不满足则告警跳过该上游，继续处理其余 upstream。
+            if ! echo "$REL" | jq -e '.assets' >/dev/null 2>&1; then
+              echo "::warning::$REPO 取不到 releases/latest 的资产列表（API 失败/限流），跳过本轮"
+              continue
+            fi
             API=$(echo "$REL" | jq -r --arg s "$SUFFIX" '[.assets[] | select(.name | endswith($s))][0].url // empty')
             NAME=$(echo "$REL" | jq -r --arg s "$SUFFIX" '[.assets[] | select(.name | endswith($s))][0].name // empty')
             DATE=$(echo "$REL" | jq -r '.published_at // ""' | cut -c1-10)
