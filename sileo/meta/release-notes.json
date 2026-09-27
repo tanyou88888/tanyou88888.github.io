@@ -146,6 +146,14 @@
         "证据：原版 vs 本仓同一只读探针 A/B 逐态一致（`cover=UIView h=false a=1 sup=Y` → `a=0` → 移出容器）；用户真机确认「不闪了」",
         "门禁：39 类 / 原版 1205 / 本仓 1205 / 缺失 0；audit 全部自洽"
       ]
+    },
+    "0.6.316": {
+      "title": "0.6.316",
+      "bullets": [
+        "对齐：封面隐藏动画完成后按原版 `sub_BA8F8` 逐指令置空 `startupCoverView`/`startupCoverIconView` 并复位 `startupCoverUsesLaunchImage`",
+        "效果：收尾态与原版真机探针读数一致（`cover=nil`）；视觉与 0.6.315 相同",
+        "门禁：39 类 / 原版 1205 / 本仓 1205 / 缺失 0；audit 全部自洽"
+      ]
     }
   },
   "com.mac.virtual": {
