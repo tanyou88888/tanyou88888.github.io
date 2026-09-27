@@ -8,6 +8,13 @@
       "package": "com.charlieleung.trollopenreborn"
     },
     {
+      "repo": "hejunjiea/JBOpenReborn",
+      "private": true,
+      "asset_suffix": "arm64.deb",
+      "dest": "rootless",
+      "package": "com.charlieleung.trollopenreborn"
+    },
+    {
       "repo": "witchan/ios-mcp",
       "private": false,
       "asset_suffix": "arm64e.deb",
