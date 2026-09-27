@@ -83,6 +83,13 @@ def render(fields, multi):
     return "\n".join(lines)
 
 
+def vnorm(version):
+    """版本号归一化：去掉 epoch 前缀（N:）与 +构建后缀，用于日记块匹配。"""
+    v = re.sub(r"^[0-9]+:", "", version or "")
+    v = re.sub(r"\+.*$", "", v)
+    return v
+
+
 def vkey(version):
     """版本号排序键：数字段逐位比较。"""
     parts = []
@@ -152,7 +159,8 @@ def sync_depiction(pkg, versions, changelogs, requires=None, dates=None, size_te
                         j = k
                         break
                 hv = head_ver(v)
-                if versions and hv is not None and hv not in vset:
+                hvset = {vnorm(x) for x in vset} | vset
+                if versions and hv is not None and hv not in hvset:
                     changed = True  # 丢弃该块
                 else:
                     kept.extend(views[i:j])
@@ -169,7 +177,7 @@ def sync_depiction(pkg, versions, changelogs, requires=None, dates=None, size_te
             block = changelog_block(first_line, entries,
                                     dates.get(pkg, {}).get(ver))
             hit = [i for i, v in enumerate(views)
-                   if v.get("class") == "DepictionHeaderView" and head_ver(v) == ver]
+                   if v.get("class") == "DepictionHeaderView" and vnorm(head_ver(v) or "") == vnorm(ver)]
             if hit:
                 i = hit[0]
                 j = len(views)
@@ -259,9 +267,11 @@ def main():
             lines = [l.strip() for l in lines if l.strip()]
             if len(lines) >= 1:
                 ent["changelogs"][ver] = (lines[0], lines[1:])
-        elif ver and ver in notes.get(pkg, {}):
-            n = notes[pkg][ver]
-            if n.get("bullets"):
+        elif ver:
+            n = (notes.get(pkg, {}) or {}).get(ver) or next(
+                (n for k, n in (notes.get(pkg, {}) or {}).items()
+                 if vnorm(k) == vnorm(ver)), None)
+            if n and n.get("bullets"):
                 ent["changelogs"][ver] = (n.get("title") or ver, n["bullets"])
 
     # 按包聚合最新版本 deb 大小（供 Details Size 行）

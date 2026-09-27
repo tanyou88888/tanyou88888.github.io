@@ -163,7 +163,7 @@ Changelog: 0.6.316 启动封面收尾严格对齐原版
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=98d016b0
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=f04cd0cd
 Version: 2:1.2.3+607.91c53c84b2
 Architecture: all
 Maintainer: Virtual Mac
@@ -188,7 +188,7 @@ Tag: role::enduser
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=98d016b0
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=f04cd0cd
 Version: 2:1.2.3+607.91c53c84b2
 Architecture: all
 Maintainer: Virtual Mac
