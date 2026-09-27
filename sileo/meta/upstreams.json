@@ -3,7 +3,7 @@
     {
       "repo": "hejunjiea/JBOpenReborn",
       "private": true,
-      "asset_suffix": ".deb",
+      "asset_suffix": "arm64e.deb",
       "dest": "roothide",
       "package": "com.charlieleung.trollopenreborn"
     },
