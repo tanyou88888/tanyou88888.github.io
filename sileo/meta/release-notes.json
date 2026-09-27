@@ -45,6 +45,19 @@
         "（另三次触点：14.33/461.00、17.67/464.33、13.67/457.00）",
         "```"
       ]
+    },
+    "0.6.296": {
+      "title": "0.6.296",
+      "bullets": [
+        "> 发布日期：2026-09-27 ｜ 适用：iOS 16.0+（roothide）",
+        "> ⚠️ 本版为**待真机验收**版本（修复依据 = IDA 逐指令 CONFIRMED；A 级验收待补）",
+        "打开「反转长按动作」后，扇形菜单选「当前前台应用」会创建悬浮窗但**黑屏**；原版同一操作不会出现黑窗。",
+        "原版 `sub_6298`（= 分屏打开的唯一入口）块集合里有一段前台判定：",
+        "```",
+        "0x8370 [SpringBoard sharedApplication] → 0x8478 _accessibilityFrontMostApplication",
+        "0x85BC bundleIdentifier                → 0x8708 X2 = 入参 bundleID → 0x870C isEqualToString:",
+        "0x8718 LDR X8,[off_17B908 + W0*8]      ; W0 = 1（相等）→ sub_8724"
+      ]
     }
   },
   "com.mac.virtual": {

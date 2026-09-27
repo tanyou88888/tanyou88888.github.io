@@ -68,6 +68,17 @@
                     "title": "0.6.296 反转长按动作下选当前前台应用会开出黑屏浮窗修复"
                 },
                 {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-26",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 修复,选中项就是当前前台应用时改为先回主屏再建浮窗(原版 sub_6298 相等支)",
                     "useSpacing": true,
