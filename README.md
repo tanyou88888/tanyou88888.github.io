@@ -69,7 +69,16 @@ sileo/
 
 ## 流水线
 
-### pull-release.yml（发布主链路，每 15 分钟 + 手动/API 触发）
+### pull-release.yml（发布主链路）
+
+**触发方式（按可靠性排序）**：
+1. **发版后主动触发（推荐，秒级）**：`./sileo/scripts/trigger-sync.sh`（用本机 gh 登录身份，或 `SOURCE_TOKEN=xxx`）
+2. **手动**：Actions → Pull upstream releases → Run workflow
+3. **cron 兜底（不可靠）**：配了 `*/15`，但 GitHub 对 schedule 有节流，实测常被延迟到 2~6 小时一次——
+   **不要依赖它做及时上架**，只当安全网。
+
+**注意**：每次运行只拉取各上游的**最新** Release，中间跳过的版本不会补（如 0.6.302 未被拉取）；
+如需完整版本历史需改为遍历 releases 列表。
 1. 同步 JBOpenReborn（私有，需 secret `JBOPENREBORN_TOKEN`：hejunjiea 账号、对私有仓库 Contents Read-only）
 2. 同步 witchan/ios-mcp（公开，arm64e）
 3. 同步 nfzerox/VirtualMacOniPad（公开，任意 deb 资产）
@@ -89,7 +98,7 @@ sileo/
 
 | 场景 | 做法 |
 |---|---|
-| JBOpenReborn 发新版 | 私有仓库发 Release 附 deb（control 带 Changelog）→ 15 分钟内自动上架 |
+| JBOpenReborn 发新版 | 私有仓库发 Release 附 deb（control 带 Changelog）→ **立刻跑 `sileo/scripts/trigger-sync.sh`**（cron 只当兜底） |
 | 其他上游更新 | 自动（15 分钟轮询） |
 | 手动加包 | deb 丢对应分区目录，push（文件名随意） |
 | 删包/版本 | 删 deb push，索引与日记自动清 |
@@ -115,6 +124,13 @@ sileo/
 5. Workflow 文件推送需 token 带 workflow scope。
 6. 私有仓库（hejunjiea）Actions 被 billing 卡住——一切依赖它的 CI 不可用，「拉取」方向因此设计为公开仓库主动拉。
 7. token/敏感值曾出现在会话输出中——本仓库相关 token 建议 rotate。
+
+## 发布后同步检查清单（发版必做）
+
+1. 私有仓库发 Release，确认 **附了 .deb 资产**（没附资产流水线会跳过并告警）；
+2. 跑 `./sileo/scripts/trigger-sync.sh` 触发同步；
+3. 1~2 分钟后到公开仓库看提交（应为「同步上游 Release 并重建索引」）；
+4. Sileo 刷新确认：包列表版本、更新日志、Size/Released 是否都更新。
 
 ## 历史大事记
 
