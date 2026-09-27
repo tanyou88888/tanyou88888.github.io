@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.314"
+                    "text": "0.6.315"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,73 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.315 修复从 Spotlight 跳转分屏时动画过程透明"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-27",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,应用停在边缘图标时下拉 Spotlight 点它,浮窗动画过程透明",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,原版 sub_FE6A8/361 的封面门语义,重新建立入场态即显示封面",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 判据,非边缘锚点恢复则出封面;暖态恢复仍不出,避免恢复时闪封面",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,浮窗复用分支未重新挂载呈现视图,可能造成窗口无内容",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,封面置顶顺序与原版 bringSubviewToFront 一致",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 证据,原版本仓同探针 A/B 逐态一致 封面 alpha=1 可见",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1205 缺失0 多余0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.314 对齐通知驱动路径的场景设置下发"
@@ -169,59 +236,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 保留,场景设置下发仍回退(三次实验与探针均证其在本仓引发图层重建)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1205 缺失0 多余0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.304 243 补原版全局 enabled 门"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-27",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,原版 243 首个业务动作是读 enabled 总门,本仓此前缺失",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,门为假时按原版收尾支释放对象并返回假,不建 presenter",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,sub_43C4→0xF06E0→派表 0x198A28[0]=0xEF4A4 收尾/1=0xF06F8 主链",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 一变量,只加门不改其它顺序;真机回归:浮窗与分屏均照常",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"

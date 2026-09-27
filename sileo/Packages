@@ -89,31 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=389fb1e3
-Version: 0.6.304
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1728
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.304_iphoneos-arm64e.deb
-Size: 405834
-MD5sum: 37c76a5987ee28363668318776db4794
-SHA1: 31ade46b85c61cce5ea31ddc4f196e5722211c27
-SHA256: a1fbd030d68a6f15c1a975add8b86922ed1dbe421f5a510eca4c0a9434379516
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.304)
-Author: TrollOpenReborn
-Changelog: 0.6.304 243 补原版全局 enabled 门
- 修复,原版 243 首个业务动作是读 enabled 总门,本仓此前缺失
- 对齐,门为假时按原版收尾支释放对象并返回假,不建 presenter
- 证据,sub_43C4→0xF06E0→派表 0x198A28[0]=0xEF4A4 收尾/1=0xF06F8 主链
- 一变量,只加门不改其它顺序;真机回归:浮窗与分屏均照常
- 门禁,39类 原版1205 本仓1205 缺失0 多余0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=389fb1e3
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7e8d1339
 Version: 0.6.313
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -138,7 +114,7 @@ Changelog: 0.6.313 修复分屏浮窗画面出现时闪烁
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=389fb1e3
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7e8d1339
 Version: 0.6.314
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -158,6 +134,32 @@ Changelog: 0.6.314 对齐通知驱动路径的场景设置下发
  自证,分屏路径实测该段执行 0 次/跳过 2 次,行为与 0.6.313 一致
  保留,分屏浮窗闪烁修复(hostScene 幂等复用)保持不变
  说明,从通知进入分屏的场景才会下发;普通分屏不下发
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=7e8d1339
+Version: 0.6.315
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1728
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.315_iphoneos-arm64e.deb
+Size: 406898
+MD5sum: f866f7b4ad1df0acfd697ca5a380367d
+SHA1: d17b4379b04c71e804ffd9b642c9e2013d0e9de2
+SHA256: c4d543121acff3ac1d0669674a25a9f14c94a2847bb078736b09a2bcd7be132e
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.315)
+Author: TrollOpenReborn
+Changelog: 0.6.315 修复从 Spotlight 跳转分屏时动画过程透明
+ 修复,应用停在边缘图标时下拉 Spotlight 点它,浮窗动画过程透明
+ 对齐,原版 sub_FE6A8/361 的封面门语义,重新建立入场态即显示封面
+ 判据,非边缘锚点恢复则出封面;暖态恢复仍不出,避免恢复时闪封面
+ 修复,浮窗复用分支未重新挂载呈现视图,可能造成窗口无内容
+ 对齐,封面置顶顺序与原版 bringSubviewToFront 一致
+ 证据,原版本仓同探针 A/B 逐态一致 封面 alpha=1 可见
  门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual
