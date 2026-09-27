@@ -97,6 +97,19 @@
         "本仓在本恢复入口**直连 164、漏了该守卫** ⇒ 全屏场景仍被占用 ⇒ 164 建出的浮窗拿不到可渲染场景 ⇒ 黑屏。",
         "（0.6.296 已修过同一守卫，但只覆盖了扇形菜单入口。）"
       ]
+    },
+    "0.6.304": {
+      "title": "0.6.304",
+      "bullets": [
+        "> 发布日期：2026-09-28 ｜ 适用：iOS 16.0+（roothide）",
+        "`-[TOJBClass012 TOJBMETHOD243:sceneHandle:reuseExistingScene:]` 真身的**第一个业务调用**是",
+        "`0xF06C8 BL sub_43C4`（插件全局 `enabled` 门）——前缀里只有 `___chkstk_darwin` 与 `objc_retain`。其后：",
+        "```",
+        "0xF06E0  MOV W21,#0   →  STR W0,[X20,#0x39C]（门返回值存槽）",
+        "0xF06EC  LDR X8,[X8,W0,UXTW#3]   派表 0x198A28，索引 = 门返回值",
+        "表[0] = 0xEF4A4 → 函数收尾：release X23/X22 → AND W0,W21,#1 → RETAB  ⇒ 返回 NO",
+        "表[1] = 0xF06F8 → 继续主链"
+      ]
     }
   },
   "com.mac.virtual": {

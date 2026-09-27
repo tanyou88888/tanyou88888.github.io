@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.303"
+                    "text": "0.6.304"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,59 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.304 243 补原版全局 enabled 门"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-27",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,原版 243 首个业务动作是读 enabled 总门,本仓此前缺失",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,门为假时按原版收尾支释放对象并返回假,不建 presenter",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 证据,sub_43C4→0xF06E0→派表 0x198A28[0]=0xEF4A4 收尾/1=0xF06F8 主链",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 一变量,只加门不改其它顺序;真机回归:浮窗与分屏均照常",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1205 缺失0 多余0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.303 修复,全屏后点边缘图标恢复浮窗黑屏"
@@ -162,45 +215,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 影响,横屏 iPhone XR 区间 -241 到 +241,不再恒为 -241",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.296 反转长按动作下选当前前台应用会开出黑屏浮窗修复"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-26",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,选中项就是当前前台应用时改为先回主屏再建浮窗(原版 sub_6298 相等支)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,补齐 sub_6298 前台相等动作(逐指令 0x82E0-0x871C 与 0x88EC-0x8900 两支汇合)",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
