@@ -123,6 +123,19 @@
         "本版实测：`hostScene` 进入 2 次但 **presenter 只建 1 个**，载体探针测得图层重绑 **1 次**。",
         "载体探针（只钩系统类）：图层重绑由多次降为 **1 次**；"
       ]
+    },
+    "0.6.314": {
+      "title": "0.6.314",
+      "bullets": [
+        "原版 243 内含一段 settings 下发（`[scene settings]` → `mutableCopy` → `setForeground:NO` →",
+        "`updateSettings:withTransitionContext:completion:`）。0.6.311 曾把它放在**普通分屏路径**无条件执行，",
+        "真机出现浮窗闪烁（图层被整体拆除重建）；0.6.312/0.6.313 因此回退了该段。",
+        "该段第三实参 **X3 = 事务上下文的消费值**（`0xE938C STR X0,[X19,#0x28]` → `0xE977C LDR X3`）；",
+        "该值的**唯一生产者**（`sub_5EFCC`，store-pending）的**唯一调用者 = 通知驱动链**",
+        "（`sub_5F910`：`UNNotificationResponse` → … → `store-pending` → `sub_5FDBC` → `TOJBMETHOD242:…reuseExistingScene:1`）；",
+        "**图标菜单「分屏启动」路径不经过该链**（真机追踪：只有 `consume-pending`、从无 `store-pending`）；",
+        "**原版 A 级（595jg）：原版冷启动从未下发 `foreground=false`**。"
+      ]
     }
   },
   "com.mac.virtual": {

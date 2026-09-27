@@ -89,31 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d4f13abd
-Version: 0.6.303
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1736
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.303_iphoneos-arm64e.deb
-Size: 405536
-MD5sum: b5b778cfff1b18e71ed1a1107bddf857
-SHA1: b6958ac96f2c93d3fd1378a14852678495010aee
-SHA256: 1e0192073bc2597813d88428316ffd37c8d7c814593b49f0818e0edfe4eee519
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.303)
-Author: TrollOpenReborn
-Changelog: 0.6.303 修复,全屏后点边缘图标恢复浮窗黑屏
- 修复,浮窗内全屏进入App后点边缘图标曾整屏黑,Home才能恢复
- 对齐,013恢复入口按原版补 sub_6298 前台相等⇒先回主屏守卫
- 证据,sub_FE544 与 0x8878/0x9B84 逐指令;与0.6.296扇形菜单入口共用同一实现
- 验收,真机A级:先回桌面+浮窗内容正常,无黑屏
- 门禁,39类 原版1205 本仓1205 缺失0 多余0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d4f13abd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=389fb1e3
 Version: 0.6.304
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -137,7 +113,7 @@ Changelog: 0.6.304 243 补原版全局 enabled 门
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d4f13abd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=389fb1e3
 Version: 0.6.313
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -157,6 +133,31 @@ Changelog: 0.6.313 修复分屏浮窗画面出现时闪烁
  对齐,原版恒 1 个 presenter 且 contextId 全程不变(A 级证据)
  验证,载体探针实测图层重绑由多次降为 1 次;真机确认不闪且启动正常
  保留,场景设置下发仍回退(三次实验与探针均证其在本仓引发图层重建)
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=389fb1e3
+Version: 0.6.314
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1728
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.314_iphoneos-arm64e.deb
+Size: 407288
+MD5sum: c65e0dc1b0a798357afc92edecd188c4
+SHA1: 87b8dacb51aad780a729d94ae9071a1428388f16
+SHA256: 535e42449d8bf296f8cc35742320390519579ce31487000d11815fb28e0fa6fb
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.314)
+Author: TrollOpenReborn
+Changelog: 0.6.314 对齐通知驱动路径的场景设置下发
+ 对齐,原版 243 的 settings 下发属通知驱动路径;本版按其条件落地
+ 条件,以事务上下文存在(消费值非空)为门,即该路径的判据
+ 自证,分屏路径实测该段执行 0 次/跳过 2 次,行为与 0.6.313 一致
+ 保留,分屏浮窗闪烁修复(hostScene 幂等复用)保持不变
+ 说明,从通知进入分屏的场景才会下发;普通分屏不下发
  门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual

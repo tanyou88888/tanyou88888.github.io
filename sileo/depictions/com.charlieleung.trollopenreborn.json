@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.313"
+                    "text": "0.6.314"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -63,6 +63,66 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.314 对齐通知驱动路径的场景设置下发"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-27",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,原版 243 的 settings 下发属通知驱动路径;本版按其条件落地",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 条件,以事务上下文存在(消费值非空)为门,即该路径的判据",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 自证,分屏路径实测该段执行 0 次/跳过 2 次,行为与 0.6.313 一致",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 保留,分屏浮窗闪烁修复(hostScene 幂等复用)保持不变",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 说明,从通知进入分屏的场景才会下发;普通分屏不下发",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1205 缺失0 多余0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.313 修复分屏浮窗画面出现时闪烁"
@@ -162,59 +222,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 一变量,只加门不改其它顺序;真机回归:浮窗与分屏均照常",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1205 缺失0 多余0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.303 修复,全屏后点边缘图标恢复浮窗黑屏"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-09-27",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,浮窗内全屏进入App后点边缘图标曾整屏黑,Home才能恢复",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,013恢复入口按原版补 sub_6298 前台相等⇒先回主屏守卫",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 证据,sub_FE544 与 0x8878/0x9B84 逐指令;与0.6.296扇形菜单入口共用同一实现",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 验收,真机A级:先回桌面+浮窗内容正常,无黑屏",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"
