@@ -40,17 +40,12 @@ Icon: https://tanyou88888.github.io/sileo/icon.png
 
 
 
-MD5Sum:
 <<<<<<< HEAD
- 84d25020b4323a1203d758b769ce132a    15806 Packages
- 481f0a77b8e7db233df24d711def6689     4739 Packages.gz
-SHA256:
- b7b98545542bee5e8c70c65965b7159cbf5c95d62e6bbdb19849ca08e8147cbe    15806 Packages
- 42e1906457cc0bc1f07a9992ccc3ee02504853112c080356ce6a58f2a26d51ca     4739 Packages.gz
 =======
- a9b030bd66312e267f49439767655faf    15687 Packages
- 17cd9b4da2a3b1647e40d24dcb92cf6f     4864 Packages.gz
-SHA256:
- ba0e25cdb8eaf7858ff74b4f56a991d3fea9f2a3623a15505d8374c63b0f2ba4    15687 Packages
- 67efef6e98b0f893fb14d727e06a6f144b753399c22a07c6b35d8d93471ade20     4864 Packages.gz
 >>>>>>> 888c6c7 (修复版本写法不一致触发日记块误删/重复插入：enrich 增加版本号归一化比对（去 epoch/+后缀），并清理重复块)
+MD5Sum:
+ f1c27f2f683f4922b24bb8d4ef5c2f7b    15806 Packages
+ 2d40ac01a9691a719f5222cce7026224     4739 Packages.gz
+SHA256:
+ 4054dbba3ba2dffa547a53a5ddcc51addafce0ed5fc5945c3100ac843b578096    15806 Packages
+ 74bcd7a5552a59fd81effaec064bcda8e555678c57930bff6411611a3726dab8     4739 Packages.gz
