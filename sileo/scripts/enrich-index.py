@@ -112,7 +112,7 @@ def head_ver(view):
     return m.group(1) if m else None
 
 
-def sync_depiction(pkg, versions, changelogs, requires=None, dates=None, size_text=None, released=None):
+def sync_depiction(pkg, versions, changelogs, requires=None, dates=None, size_text=None, released=None, dep_name=None):
     dates = dates or {}
     """把 control Changelog 同步进 depiction。versions 需已降序排列。
 
@@ -120,9 +120,20 @@ def sync_depiction(pkg, versions, changelogs, requires=None, dates=None, size_te
     - 索引中已不存在的版本（deb 被删除）：清理其日记块，不留失效残留
     - Details 的 Version 行始终同步为最新版本
     """
-    path = os.path.join(BASE, "depictions", pkg + ".json")
+    # ★ 2026-09-28：**分区专属 depiction**。同一包同时存在于 roothide 与 rootless 两个分区时，
+    #   旧实现两个 stanza 共用 `depictions/<pkg>.json` ⇒ 后处理的分区**覆盖**前一个，
+    #   于是 rootless 设备在 Sileo 详情页也看到 `Requires: … · roothide`（用户实测报障）。
+    #   ⇒ 按分区各写一份（roothide 用原名，rootless 用 `<pkg>-rootless.json`），
+    #     索引里每条 stanza 的 SileoDepiction 指向自己那份。
+    dep_name = dep_name or pkg
+    path = os.path.join(BASE, "depictions", dep_name + ".json")
     if not os.path.isfile(path):
-        return
+        base_path = os.path.join(BASE, "depictions", pkg + ".json")
+        if dep_name != pkg and os.path.isfile(base_path):
+            import shutil as _sh
+            _sh.copyfile(base_path, path)      # 以基础 depiction 为模板起步
+        else:
+            return
     d = json.load(open(path, encoding="utf-8"))
     changed = False
     vset = set(versions)
@@ -227,6 +238,14 @@ def main():
         except Exception:
             notes = {}
 
+    # ★ 2026-09-28：统计每包出现在哪些分区（用于决定是否需要分区专属 depiction）
+    zones_by_pkg = {}
+    for _f, _m in stanzas:
+        _fn = _f.get("Filename", "")
+        _z = ("roothide" if "/roothide/" in _fn
+              else "rootless" if "/rootless/" in _fn else None)
+        zones_by_pkg.setdefault(_f.get("Package", ""), set()).add(_z)
+
     # 按包聚合版本与 Changelog
     by_pkg = {}
     for fields, multi in stanzas:
@@ -317,16 +336,19 @@ def main():
                     if k in top or top in k:
                         released = v
                         break
-        sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None, dates, size_text, released)
+        dep_name = pkg
+        if zone == "rootless" and len(zones_by_pkg.get(pkg, set())) > 1:
+            dep_name = pkg + "-rootless"          # 双分区包：rootless 单独一份 depiction
+        sync_depiction(pkg, ent["versions"], ent["changelogs"], requires or None, dates, size_text, released, dep_name)
 
         # Icon：仓库内每包图标（强制覆盖，保证命名约定统一）
         if os.path.isfile(os.path.join(BASE, "icons", pkg + ".png")):
             fields["Icon"] = "%s/icons/%s.png" % (REPO_URL, pkg)
         # SileoDepiction：内容哈希做 ?v=，自动缓存破坏
-        dpath = os.path.join(BASE, "depictions", pkg + ".json")
+        dpath = os.path.join(BASE, "depictions", dep_name + ".json")
         if os.path.isfile(dpath):
             digest = hashlib.sha256(open(dpath, "rb").read()).hexdigest()[:8]
-            fields["SileoDepiction"] = "%s/depictions/%s.json?v=%s" % (REPO_URL, pkg, digest)
+            fields["SileoDepiction"] = "%s/depictions/%s.json?v=%s" % (REPO_URL, dep_name, digest)
         # 分类归一：按目录统一 Section
         if "/roothide/" in fields.get("Filename", ""):
             fields["Section"] = "roothide 插件"
