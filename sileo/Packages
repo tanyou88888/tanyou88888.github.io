@@ -89,32 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4cbbbf5a
-Version: 0.6.301
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1740
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.301_iphoneos-arm64e.deb
-Size: 405788
-MD5sum: 605d54589603e64e9b98247a618f6414
-SHA1: f78f26bda37231c1cf36942c8a18bf6e9d289aa4
-SHA256: 89aebf1d019d4f7b9aeefec00d6cb7f3415f7cf4d26cab1c2c47d08c0c8eaaf8
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.301)
-Author: TrollOpenReborn
-Changelog: 0.6.301 横屏键盘可左右拖动(修 x 偏移被压死)
- 修复,横屏外置键盘只能停在屏幕左侧,向右拖不动
- 原因,键盘偏移夹紧函数把 x 的上下界都算成了下界
- 订正,FMSUB 与 FNMSUB 互为相反数,真机指令语义实测
- 对齐,原版 x 为对称钳位 0.5*(短边-长边) 到 0.5*(长边-短边)
- 影响,横屏 iPhone XR 区间 -241 到 +241,不再恒为 -241
- 门禁,39类 原版1205 本仓1257 缺失0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4cbbbf5a
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d4f13abd
 Version: 0.6.303
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -138,7 +113,7 @@ Changelog: 0.6.303 修复,全屏后点边缘图标恢复浮窗黑屏
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=4cbbbf5a
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d4f13abd
 Version: 0.6.304
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -157,6 +132,31 @@ Changelog: 0.6.304 243 补原版全局 enabled 门
  对齐,门为假时按原版收尾支释放对象并返回假,不建 presenter
  证据,sub_43C4→0xF06E0→派表 0x198A28[0]=0xEF4A4 收尾/1=0xF06F8 主链
  一变量,只加门不改其它顺序;真机回归:浮窗与分屏均照常
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d4f13abd
+Version: 0.6.313
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1728
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.313_iphoneos-arm64e.deb
+Size: 407508
+MD5sum: 3165e8ba7787252fe78989bd8ba61ebc
+SHA1: 29c7c918469fefaac597c2595f3b67ece9bbb939
+SHA256: 110e9e2599b7e87f3d0ec2c4ddee26e1b2462fb2c697646f0607dcba40ce5c92
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.313)
+Author: TrollOpenReborn
+Changelog: 0.6.313 修复分屏浮窗画面出现时闪烁
+ 修复,长按图标→分屏启动时浮窗画面闪烁;根因为同一场景被重复挂载
+ 修复,hostScene 幂等复用:同一场景已有 presenter 时不再重建呈现视图
+ 对齐,原版恒 1 个 presenter 且 contextId 全程不变(A 级证据)
+ 验证,载体探针实测图层重绑由多次降为 1 次;真机确认不闪且启动正常
+ 保留,场景设置下发仍回退(三次实验与探针均证其在本仓引发图层重建)
  门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual
