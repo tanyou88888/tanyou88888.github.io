@@ -89,30 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=643e1bfd
-Version: 0.6.295
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1732
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.295_iphoneos-arm64e.deb
-Size: 405464
-MD5sum: bbcd29d47463e69c056a7cc36c0381a0
-SHA1: 3cc92d023935d51bcbc7ce7bd8b843cf8c10c692
-SHA256: 331d36bb1f4860a37edce8bcc2cdaa227d385fbfa491236ba678a68d53a8c73a
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.295)
-Author: TrollOpenReborn
-Changelog: 0.6.295 悬浮条可视条与热区位置不一致修复
- 修复,悬浮条画出来的条与能触发的热区位置不一致导致唤不出
- 修复,几何读取改双域口径(原为裸读Reborn域,取不到原版域几何键)
- 对齐,refreshTriggerStrip/updateDebugZoneWindow/hotZoneScreenRectSettings
- 门禁,39类 原版1205 本仓1257 缺失0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=643e1bfd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=0acb669b
 Version: 0.6.296
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -134,7 +111,7 @@ Changelog: 0.6.296 反转长按动作下选当前前台应用会开出黑屏浮�
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=643e1bfd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=0acb669b
 Version: 0.6.301
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -155,6 +132,30 @@ Changelog: 0.6.301 横屏键盘可左右拖动(修 x 偏移被压死)
  对齐,原版 x 为对称钳位 0.5*(短边-长边) 到 0.5*(长边-短边)
  影响,横屏 iPhone XR 区间 -241 到 +241,不再恒为 -241
  门禁,39类 原版1205 本仓1257 缺失0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=0acb669b
+Version: 0.6.303
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1736
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.303_iphoneos-arm64e.deb
+Size: 405536
+MD5sum: b5b778cfff1b18e71ed1a1107bddf857
+SHA1: b6958ac96f2c93d3fd1378a14852678495010aee
+SHA256: 1e0192073bc2597813d88428316ffd37c8d7c814593b49f0818e0edfe4eee519
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.303)
+Author: TrollOpenReborn
+Changelog: 0.6.303 修复,全屏后点边缘图标恢复浮窗黑屏
+ 修复,浮窗内全屏进入App后点边缘图标曾整屏黑,Home才能恢复
+ 对齐,013恢复入口按原版补 sub_6298 前台相等⇒先回主屏守卫
+ 证据,sub_FE544 与 0x8878/0x9B84 逐指令;与0.6.296扇形菜单入口共用同一实现
+ 验收,真机A级:先回桌面+浮窗内容正常,无黑屏
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual
 Name: Virtual Mac
