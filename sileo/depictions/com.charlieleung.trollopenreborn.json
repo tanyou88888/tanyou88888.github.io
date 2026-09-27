@@ -26,7 +26,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "0.6.296"
+                    "text": "0.6.301"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -41,12 +41,12 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "395 KB"
+                    "text": "396 KB"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Released",
-                    "text": "2026-09-26"
+                    "text": "2026-09-27"
                 },
                 {
                     "class": "DepictionSeparatorView"
@@ -63,6 +63,66 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "0.6.301 横屏键盘可左右拖动(修 x 偏移被压死)"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-27",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 修复,横屏外置键盘只能停在屏幕左侧,向右拖不动",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 原因,键盘偏移夹紧函数把 x 的上下界都算成了下界",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 订正,FMSUB 与 FNMSUB 互为相反数,真机指令语义实测",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 对齐,原版 x 为对称钳位 0.5*(短边-长边) 到 0.5*(长边-短边)",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 影响,横屏 iPhone XR 区间 -241 到 +241,不再恒为 -241",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "0.6.296 反转长按动作下选当前前台应用会开出黑屏浮窗修复"
@@ -134,41 +194,6 @@
                 {
                     "class": "DepictionMarkdownView",
                     "markdown": "• 对齐,refreshTriggerStrip/updateDebugZoneWindow/hotZoneScreenRectSettings",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 门禁,39类 原版1205 本仓1257 缺失0",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "0.6.294 边缘/悬浮条下半屏角点订正"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,边缘模式下左侧下半屏触发方向错(角点误返回0,应为1)",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 修复,悬浮条模式下半屏角点同错,可能导致唤出位置/命中异常",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• 对齐,原版 0x74250/0x742E0 CSINC 得 (y<半高)?3:1",
                     "useSpacing": true,
                     "useMargins": true,
                     "margins": "{0,4,10,4}"

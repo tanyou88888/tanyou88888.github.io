@@ -17,6 +17,19 @@
         "OCR 默认快速模式，含中文自动切换准确模式",
         "修复 OCR 区域越界导致误识别全屏的问题"
       ]
+    },
+    "1.2.8": {
+      "title": "1.2.8",
+      "bullets": [
+        "设置页自动跟随设备语言，支持简体中文、繁体中文和英文，无需手动切换。",
+        "配置项、服务状态、弹窗、日志导出说明及 MCP 提示词均支持多语言显示。",
+        "Settings now follows the device language, with support for Simplified Chinese, Traditional Chinese, and English. No manual language selection is needed.",
+        "Localized settings, service status, dialogs, exported log descriptions, and MCP prompt snippets.",
+        "调整重启按钮和二维码说明的布局，适配较长的多语言文案。",
+        "Adjusted the Respring button and QR-code caption layouts to accommodate longer translations.",
+        "rootful: com.witchan.ios-mcp_1.2.8_iphoneos-arm.deb",
+        "rootless: com.witchan.ios-mcp_1.2.8_iphoneos-arm64.deb"
+      ]
     }
   },
   "com.charlieleung.trollopenreborn": {
@@ -57,6 +70,19 @@
         "0x8370 [SpringBoard sharedApplication] → 0x8478 _accessibilityFrontMostApplication",
         "0x85BC bundleIdentifier                → 0x8708 X2 = 入参 bundleID → 0x870C isEqualToString:",
         "0x8718 LDR X8,[off_17B908 + W0*8]      ; W0 = 1（相等）→ sub_8724"
+      ]
+    },
+    "0.6.301": {
+      "title": "0.6.301",
+      "bullets": [
+        "> 发布日期：2026-09-27 ｜ 适用：iOS 16.0+（roothide）",
+        "长按 App 开浮窗 → 横屏点输入框：**键盘停在屏幕左侧，向右拖不动**；原版可以拖到右边。",
+        "原版键盘偏移夹紧函数 `sub_10A1C8` 的两条浮点指令：",
+        "```",
+        "0x10A2DC  FMSUB  D4, D0, D3, D1   ; D4 = Da − Dn*Dm = 0.5*短边 − 0.5*长边 = −241  → x 下界",
+        "0x10A2E0  FNMSUB D0, D0, D3, D1   ; D0 = Dn*Dm − Da = 0.5*长边 − 0.5*短边 = +241  → x 上界",
+        "```",
+        "用 Apple Silicon 内联汇编对**同一组操作数**实测：`fmsub = −17.0`、`fnmsub = +17.0` ⇒"
       ]
     }
   },

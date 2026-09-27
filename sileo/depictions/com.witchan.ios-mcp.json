@@ -28,7 +28,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "1.2.7"
+                    "text": "1.2.8"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -43,12 +43,12 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Size",
-                    "text": "22.6 MB"
+                    "text": "22.5 MB"
                 },
                 {
                     "class": "DepictionTableTextView",
                     "title": "Released",
-                    "text": "2026-09-26"
+                    "text": "2026-09-27"
                 },
                 {
                     "class": "DepictionSeparatorView"
@@ -65,6 +65,80 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "1.2.8"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-09-27",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 设置页自动跟随设备语言，支持简体中文、繁体中文和英文，无需手动切换。",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 配置项、服务状态、弹窗、日志导出说明及 MCP 提示词均支持多语言显示。",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• Settings now follows the device language, with support for Simplified Chinese, Traditional Chinese, and English. No manual language selection is needed.",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• Localized settings, service status, dialogs, exported log descriptions, and MCP prompt snippets.",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• 调整重启按钮和二维码说明的布局，适配较长的多语言文案。",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• Adjusted the Respring button and QR-code caption layouts to accommodate longer translations.",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• rootful: com.witchan.ios-mcp_1.2.8_iphoneos-arm.deb",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• rootless: com.witchan.ios-mcp_1.2.8_iphoneos-arm64.deb",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "1.2.7"
