@@ -89,55 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn-rootless.json?v=d0e84a6e
-Version: 0.6.316
-Architecture: iphoneos-arm64
-Maintainer: TrollOpenReborn
-Installed-Size: 1728
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/rootless/com.charlieleung.trollopenreborn_0.6.316_iphoneos-arm64.deb
-Size: 407242
-MD5sum: 447a17a87abdec889b3ad15ca5f6f06d
-SHA1: 0c88c48078ad6bfedd6473d611260dcad8a13468
-SHA256: 19329825cdde818019f15e8a66933bf136946ae990d6229b47e983ab5cca410f
-Section: rootless 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.316)
-Author: TrollOpenReborn
-Changelog: 0.6.316 启动封面收尾严格对齐原版
- 对齐,封面隐藏动画完成后按原版置空封面与图标引用
- 依据,原版 sub_BA8F8 逐指令 移除视图+同对象判定+双置空
- 效果,封面收尾态与原版探针读数一致 cover=nil
- 说明,纯保真对齐,视觉表现与 0.6.315 相同
- 门禁,39类 原版1205 本仓1205 缺失0 多余0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=046b202b
-Version: 0.6.316
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1728
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.316_iphoneos-arm64e.deb
-Size: 407134
-MD5sum: aad2148fe11ad961a9ec02440ca9247c
-SHA1: ecdcb40dceb6576dff93011dde975332d13f781d
-SHA256: 33d036d05f9f727afefb69e911cf30e4767d79816d71ec0cadd69ef9c332a237
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.316)
-Author: TrollOpenReborn
-Changelog: 0.6.316 启动封面收尾严格对齐原版
- 对齐,封面隐藏动画完成后按原版置空封面与图标引用
- 依据,原版 sub_BA8F8 逐指令 移除视图+同对象判定+双置空
- 效果,封面收尾态与原版探针读数一致 cover=nil
- 说明,纯保真对齐,视觉表现与 0.6.315 相同
- 门禁,39类 原版1205 本仓1205 缺失0 多余0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=046b202b
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=e0f131cc
 Version: 0.6.317
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -157,6 +109,31 @@ Changelog: 0.6.317 修复回调关闭不生效
  实现,配对记录与清除 最前台判定 浮窗可见性判定 256/254 关窗
  依据,原版逐指令 sub_5D9F4 及 5 个助手
  说明,此前该步被误判为纯日志而整体降级,现按其真实动作落地
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=e0f131cc
+Version: 0.6.318
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1744
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.318_iphoneos-arm64e.deb
+Size: 409936
+MD5sum: 0669574c21e4c968f2664660002efd19
+SHA1: 830a742e993586c899674742bf7c02ead17bfab8
+SHA256: bfe7b99e9bcd419cf591ecd944efeeb0bfeb1509b80531d6aca8f68b25b69abc
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.318)
+Author: TrollOpenReborn
+Changelog: 0.6.318 修复回调关闭实测生效
+ 修复,前台应用调用跳转浮窗授权后未自动关闭浮窗(0.6.317 未生效)
+ 根因,记录门极性写反,且取单例方式错误得 nil
+ 对齐,原版记录门:最前台且目标浮窗不可见
+ 对齐,原版用自由函数 sub_119060 取单例
+ 验证,iOS 17 真机 QQ 与微信往返实测浮窗自动关闭
  门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual
