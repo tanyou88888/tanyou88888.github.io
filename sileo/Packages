@@ -89,7 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=e0f131cc
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d3e17ec3
 Version: 0.6.317
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -114,7 +114,7 @@ Changelog: 0.6.317 修复回调关闭不生效
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=e0f131cc
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d3e17ec3
 Version: 0.6.318
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -134,6 +134,31 @@ Changelog: 0.6.318 修复回调关闭实测生效
  对齐,原版记录门:最前台且目标浮窗不可见
  对齐,原版用自由函数 sub_119060 取单例
  验证,iOS 17 真机 QQ 与微信往返实测浮窗自动关闭
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d3e17ec3
+Version: 0.6.319
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1748
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.319_iphoneos-arm64e.deb
+Size: 410680
+MD5sum: 7099c9d6d8d65bab8feb67ef78ed9776
+SHA1: b5b42f1519f59ce939eeefcc17a23a86ebff1e03
+SHA256: 2ae236ac804c7272151726f04c8adb9b6670361249f598b6e8f63f46f9f34490
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.319)
+Author: TrollOpenReborn
+Changelog: 0.6.319 新增实验性安装选项关窗
+ 新增,分屏设置底部新增实验性(非原版扩展)分组与开关
+ 新增,安装选项关闭浮窗:默认关,浏览器安装链接进浮窗后点确认即关窗
+ 说明,非原版功能,原版无此机制,不影响一对一复刻判定
+ 依据,真机取证 iOS 17 安装确认弹窗与安装开始回调
+ 修复,系统回调路径统一主队列编组,避免崩溃
  门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual
