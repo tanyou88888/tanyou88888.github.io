@@ -89,30 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=84f34ac4
-Version: 0.6.320
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1748
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.320_iphoneos-arm64e.deb
-Size: 411136
-MD5sum: c536c6647a045dfe44e8b2097c006e5a
-SHA1: b34384a608e3a198a2b4dcbd3c98a649cae930cf
-SHA256: 88bd46f497eb9e139a0d9c5362ec75bf3b4d9495cbdcba2106e22a4ba727e961
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.320)
-Author: TrollOpenReborn
-Changelog: 0.6.320 安装选项关闭浮窗支持取消
- 优化,实验性安装选项关闭浮窗现在点取消也会关窗
- 判据,真机取证 弹窗来源 appstored 与主按钮安装
- 说明,非原版扩展,默认关,不影响一对一复刻判定
- 门禁,39类 原版1205 本仓1205 缺失0 多余0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=84f34ac4
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=411f2ba6
 Version: 0.6.321
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -135,7 +112,7 @@ Changelog: 0.6.321 安装关窗改为完全关闭
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=84f34ac4
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=411f2ba6
 Version: 0.6.322
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -153,6 +130,29 @@ Changelog: 0.6.322 实验扩展服从主开关
  修复,基础开关启用关闭时实验扩展仍会动作
  行为,主开关关⇒安装选项关窗扩展一律不可用
  说明,非原版扩展,默认关,不影响一对一复刻判定
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=411f2ba6
+Version: 0.6.323
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1748
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.323_iphoneos-arm64e.deb
+Size: 409596
+MD5sum: 06a0f8b7257ada670881677e86177d09
+SHA1: a9c7181124f8e34fdec9173ba4d5e15639d422be
+SHA256: 54c6466ad46db6a8b1e9e9c6a442eac381ad7e023c5c7d6f3f69ce412bc187e9
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.323)
+Author: TrollOpenReborn
+Changelog: 0.6.323 整体撤回安装选项关窗扩展
+ 移除,浏览器安装链接流程崩溃循环,整体撤回该非原版实验扩展
+ 移除,设置页实验性分组与开关,恢复纯1对1复刻
+ 说明,崩溃报告已存档,根因排查继续,与该扩展解耦
  门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual
