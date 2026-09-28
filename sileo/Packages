@@ -89,33 +89,7 @@ Author: Charlie Leung
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d7431d17
-Version: 0.6.315
-Architecture: iphoneos-arm64e
-Maintainer: TrollOpenReborn
-Installed-Size: 1728
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
-Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.315_iphoneos-arm64e.deb
-Size: 406898
-MD5sum: f866f7b4ad1df0acfd697ca5a380367d
-SHA1: d17b4379b04c71e804ffd9b642c9e2013d0e9de2
-SHA256: c4d543121acff3ac1d0669674a25a9f14c94a2847bb078736b09a2bcd7be132e
-Section: roothide 插件
-Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.315)
-Author: TrollOpenReborn
-Changelog: 0.6.315 修复从 Spotlight 跳转分屏时动画过程透明
- 修复,应用停在边缘图标时下拉 Spotlight 点它,浮窗动画过程透明
- 对齐,原版 sub_FE6A8/361 的封面门语义,重新建立入场态即显示封面
- 判据,非边缘锚点恢复则出封面;暖态恢复仍不出,避免恢复时闪封面
- 修复,浮窗复用分支未重新挂载呈现视图,可能造成窗口无内容
- 对齐,封面置顶顺序与原版 bringSubviewToFront 一致
- 证据,原版本仓同探针 A/B 逐态一致 封面 alpha=1 可见
- 门禁,39类 原版1205 本仓1205 缺失0 多余0
-
-Package: com.charlieleung.trollopenreborn
-Name: JBOpenReborn
-Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn-rootless.json?v=80fa8d68
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn-rootless.json?v=d0e84a6e
 Version: 0.6.316
 Architecture: iphoneos-arm64
 Maintainer: TrollOpenReborn
@@ -139,7 +113,7 @@ Changelog: 0.6.316 启动封面收尾严格对齐原版
 Package: com.charlieleung.trollopenreborn
 Name: JBOpenReborn
 Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=d7431d17
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=046b202b
 Version: 0.6.316
 Architecture: iphoneos-arm64e
 Maintainer: TrollOpenReborn
@@ -158,6 +132,31 @@ Changelog: 0.6.316 启动封面收尾严格对齐原版
  依据,原版 sub_BA8F8 逐指令 移除视图+同对象判定+双置空
  效果,封面收尾态与原版探针读数一致 cover=nil
  说明,纯保真对齐,视觉表现与 0.6.315 相同
+ 门禁,39类 原版1205 本仓1205 缺失0 多余0
+
+Package: com.charlieleung.trollopenreborn
+Name: JBOpenReborn
+Icon: https://tanyou88888.github.io/sileo/icons/com.charlieleung.trollopenreborn.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.charlieleung.trollopenreborn.json?v=046b202b
+Version: 0.6.317
+Architecture: iphoneos-arm64e
+Maintainer: TrollOpenReborn
+Installed-Size: 1744
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, firmware (>= 16.0)
+Filename: debs/roothide/com.charlieleung.trollopenreborn_0.6.317_iphoneos-arm64e.deb
+Size: 409148
+MD5sum: 76a9e1efdaebf0652ee3108dc05a6f3d
+SHA1: 8540d8476068457a41df7425384c6d8e13ddf339
+SHA256: 1c06fdaeef22090627172f388ca8444a88bd2edc3215a53673b0ee789d0da553
+Section: roothide 插件
+Description: TrollOpenJB behavior-equivalent rebuild (formal release 0.6.317)
+Author: TrollOpenReborn
+Changelog: 0.6.317 修复回调关闭不生效
+ 修复,前台应用调用跳转浮窗授权后未自动关闭浮窗
+ 对齐,原版反转配对判定,两入口同位接线
+ 实现,配对记录与清除 最前台判定 浮窗可见性判定 256/254 关窗
+ 依据,原版逐指令 sub_5D9F4 及 5 个助手
+ 说明,此前该步被误判为纯日志而整体降级,现按其真实动作落地
  门禁,39类 原版1205 本仓1205 缺失0 多余0
 
 Package: com.mac.virtual
