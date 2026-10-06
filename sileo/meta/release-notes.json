@@ -289,5 +289,19 @@
         "See https://frida.re/news/ for details."
       ]
     }
+  },
+  "com.tanyou.odebug": {
+    "1.0.153": {
+      "title": "1.0.153",
+      "bullets": [
+        "roothide 越狱常驻调试服务 + frida 式 Mach 注入器。",
+        "**WLAN 直连**：设置页「WLAN 直连」开关，同网段电脑免数据线直连 `手机IP:4322`；UDP 信标（4323 端口广播）自动发现设备 IP，odebug.sh 启动即连，无需手输。",
+        "**令牌热生效**：4321 控制台新增 `!token [新令牌]`，改完立即生效免重启；首装默认令牌 `opendebug`。",
+        "**WLAN 视图树回传**：App 侧 dump 结果直连 4322 回传（base64 单行封装），USB / WLAN 下按 `5`/`6` 都能直接看到目标 App 视图树，不再依赖 idevicesyslog；`!vccl` 清缓冲只显示本次结果。",
+        "**修复**：Darwin 监听器注册从未生效（所有被注入进程现在都会注册）；`!net` 网络状态命令；odebug.sh 重复函数定义导致的每条命令 20s 卡顿。",
+        "**Sileo 兼容**：control 字段顺序 + 单行 Changelog 规则固化（多行 Changelog × 真实 payload 会触发 Bad deb）。",
+        "Sileo 添加源或直接下载 deb 安装；roothide（arm64e）包。"
+      ]
+    }
   }
 }
