@@ -34,6 +34,13 @@
       "asset_suffix": "iphoneos-arm64.deb",
       "dest": "rootless",
       "package": "re.frida.server"
+    },
+    {
+      "repo": "hejunjiea/Opendebug",
+      "private": true,
+      "asset_suffix": "iphoneos-arm64e.deb",
+      "dest": "roothide",
+      "package": "com.tanyou.odebug"
     }
   ]
 }
