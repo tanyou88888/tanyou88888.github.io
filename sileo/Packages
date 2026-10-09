@@ -352,10 +352,10 @@ Architecture: iphoneos-arm64
 Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
 Installed-Size: 53540
 Filename: debs/rootless/frida_17.23.2_iphoneos-arm64.deb
-Size: 16617244
-MD5sum: 61aed5dc71617f9cc6c3442861b541d9
-SHA1: 76eda8dd46657a8984582cb8fe82ea6ed715bcb8
-SHA256: 489bc0c8b5b16fff848e0f4468ee51957005c7938c114cda2974c04256387b91
+Size: 16617320
+MD5sum: 4138945eb3b285db0bb9eec1b7e72525
+SHA1: 768b2cb0ed6b1e06a3d86dd3dc73dee2cae0e605
+SHA256: 1f6a5c2f309f8443b5ba6c63143a572a993bef8cefc2f0426515852158740bc2
 Section: rootless 插件
 Description: Observe and reprogram running programs.
 Author: Frida Developers <oleavr@nowsecure.com>
