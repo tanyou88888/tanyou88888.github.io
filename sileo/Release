@@ -44,8 +44,8 @@ Icon: https://tanyou88888.github.io/sileo/icon.png
 =======
 >>>>>>> 888c6c7 (修复版本写法不一致触发日记块误删/重复插入：enrich 增加版本号归一化比对（去 epoch/+后缀），并清理重复块)
 MD5Sum:
- 14d2479608e2ca047447dd05f85cb4eb    16840 Packages
- 2d93b0c92d3cf67998df34cd21e21f8d     5396 Packages.gz
+ bef022708891a5f1554d5b4779e1048e    16840 Packages
+ fdf75637503331d7ac09d282aae40e42     5395 Packages.gz
 SHA256:
- 9803cedf46f2c6817e228f5965804d26f537631a7c92aa5692b818d1db82cdfc    16840 Packages
- 221b5d2f60f885cfae6cbc93bf62eceab9174cab5e532a3e83378d92abf862d6     5396 Packages.gz
+ a57d1e47651599253c21a1c0d04acda88e22ab085cf2eae68e3c59812931debe    16840 Packages
+ fdd468feab62bd1613bb66a09ee0e8d0d63c66800f7fea55ee052c4dbafa2b98     5395 Packages.gz

@@ -27,7 +27,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "17.23.2"
+                    "text": "17.23.3"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -66,6 +66,31 @@
             "views": [
                 {
                     "class": "DepictionHeaderView",
+                    "title": "17.23.3"
+                },
+                {
+                    "class": "DepictionLabelView",
+                    "text": "Updated · 2026-10-09",
+                    "fontSize": 12,
+                    "useSpacing": false,
+                    "usePadding": false,
+                    "textColor": "#8E8E93",
+                    "alignment": 0,
+                    "useBottomMargin": false,
+                    "margins": "{16,0,10,2}"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• See https://frida.re/news/ for details.",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
+                {
+                    "class": "DepictionHeaderView",
                     "title": "17.23.2"
                 },
                 {
@@ -96,31 +121,6 @@
                 {
                     "class": "DepictionLabelView",
                     "text": "Updated · 2026-10-08",
-                    "fontSize": 12,
-                    "useSpacing": false,
-                    "usePadding": false,
-                    "textColor": "#8E8E93",
-                    "alignment": 0,
-                    "useBottomMargin": false,
-                    "margins": "{16,0,10,2}"
-                },
-                {
-                    "class": "DepictionMarkdownView",
-                    "markdown": "• See https://frida.re/news/ for details.",
-                    "useSpacing": true,
-                    "useMargins": true,
-                    "margins": "{0,4,10,4}"
-                },
-                {
-                    "class": "DepictionSeparatorView"
-                },
-                {
-                    "class": "DepictionHeaderView",
-                    "title": "17.23.0"
-                },
-                {
-                    "class": "DepictionLabelView",
-                    "text": "Updated · 2026-10-07",
                     "fontSize": 12,
                     "useSpacing": false,
                     "usePadding": false,
