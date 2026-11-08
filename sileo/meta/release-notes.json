@@ -250,6 +250,12 @@
         "Creation",
         "Defaults to larger storage size for newly created Virtual Mac when iPad has sufficient remaining storage space"
       ]
+    },
+    "1.2.4": {
+      "title": "1.2.4",
+      "bullets": [
+        "Virtual Mac on iPad 1.2.4 significantly improves battery life and thermal performance with reduced background CPU usage."
+      ]
     }
   },
   "re.frida.server": {

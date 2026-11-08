@@ -158,7 +158,7 @@ Changelog: 0.6.324 修复启用关闭仍开浮窗
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=f04cd0cd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=13d1ef44
 Version: 2:1.2.3+607.91c53c84b2
 Architecture: all
 Maintainer: Virtual Mac
@@ -183,7 +183,7 @@ Tag: role::enduser
 Package: com.mac.virtual
 Name: Virtual Mac
 Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=f04cd0cd
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=13d1ef44
 Version: 2:1.2.3+607.91c53c84b2
 Architecture: all
 Maintainer: Virtual Mac
@@ -194,6 +194,31 @@ Size: 20986888
 MD5sum: 2a7498b1905fe437fc87cbbf5217bd90
 SHA1: e9a1db2fa5b4ee1de6f25d98a07dc09098b3b41d
 SHA256: 435ce1dc76b9e18b1547c77b84e2cf33ffe40a16be63e366f181d14709a41aa0
+Section: rootless 插件
+Description: People have dreamed of running macOS on iPad for more than a decade.
+ Today, that dream comes true. With Virtual Mac, iPad finally breaks free from
+ iPadOS, enabling pro apps like Xcode, Terminal, Final Cut Pro, Logic Pro, and
+ Pixelmator Pro to run directly on device.
+ Requires iPad Pro (M1, M2) or iPad Air (M1) running iPadOS 14 up to 16.3.1,
+ or iPhone 14 Pro and iPhone 14 Pro Max running iOS 16 up to 16.3.1.
+Author: Virtual Mac
+Priority: optional
+Tag: role::enduser
+
+Package: com.mac.virtual
+Name: Virtual Mac
+Icon: https://tanyou88888.github.io/sileo/icons/com.mac.virtual.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/com.mac.virtual.json?v=13d1ef44
+Version: 2:1.2.4+617.1f873e57cc
+Architecture: all
+Maintainer: Virtual Mac
+Installed-Size: 104088
+Depends: firmware (>= 14.5), firmware (<< 16.4), ellekit | org.coolstar.libhooker
+Filename: debs/rootless/VirtualMac_1.2.4.deb
+Size: 20983912
+MD5sum: dc2a4181953899239e9a9cfc08bb7368
+SHA1: 9d07b919b176a060e0442639bf89310f7e47ed97
+SHA256: d8765adda6257fa7712aeae126c7992c952f151519375b0224520ecfea50a078
 Section: rootless 插件
 Description: People have dreamed of running macOS on iPad for more than a decade.
  Today, that dream comes true. With Virtual Mac, iPad finally breaks free from

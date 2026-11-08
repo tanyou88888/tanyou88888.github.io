@@ -27,7 +27,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Version",
-                    "text": "2:1.2.3+607.91c53c84b2"
+                    "text": "2:1.2.4+617.1f873e57cc"
                 },
                 {
                     "class": "DepictionTableTextView",
@@ -47,7 +47,7 @@
                 {
                     "class": "DepictionTableTextView",
                     "title": "Released",
-                    "text": "2026-08-27"
+                    "text": "2026-11-08"
                 },
                 {
                     "class": "DepictionSeparatorView"
@@ -64,6 +64,20 @@
             "class": "DepictionStackView",
             "tabname": "Changelog",
             "views": [
+                {
+                    "class": "DepictionHeaderView",
+                    "title": "1.2.4"
+                },
+                {
+                    "class": "DepictionMarkdownView",
+                    "markdown": "• Virtual Mac on iPad 1.2.4 significantly improves battery life and thermal performance with reduced background CPU usage.",
+                    "useSpacing": true,
+                    "useMargins": true,
+                    "margins": "{0,4,10,4}"
+                },
+                {
+                    "class": "DepictionSeparatorView"
+                },
                 {
                     "class": "DepictionHeaderView",
                     "title": "1.2.3"
