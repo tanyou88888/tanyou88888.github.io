@@ -331,27 +331,7 @@ Author: 来了老弟
 Package: re.frida.server
 Name: Frida
 Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=b35da5b6
-Version: 17.27.3
-Architecture: iphoneos-arm64
-Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
-Installed-Size: 78484
-Filename: debs/rootless/frida_17.27.3_iphoneos-arm64.deb
-Size: 23550588
-MD5sum: 64f74dffd6e22cceecc55273ffd055ff
-SHA1: f1ba64b6ec601c6fdc3782562e2a01848874a63d
-SHA256: e08a26ae8450179d374028b524a82ec34e97b9eeb33d33edd3b4f78d53ef2264
-Section: rootless 插件
-Description: Observe and reprogram running programs.
-Author: Frida Developers <oleavr@nowsecure.com>
-Homepage: https://frida.re/
-Conflicts: re.frida.server64
-Priority: optional
-
-Package: re.frida.server
-Name: Frida
-Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=b35da5b6
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=3e0223ac
 Version: 17.27.4
 Architecture: iphoneos-arm64
 Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
@@ -371,7 +351,7 @@ Priority: optional
 Package: re.frida.server
 Name: Frida
 Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
-SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=b35da5b6
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=3e0223ac
 Version: 17.27.5
 Architecture: iphoneos-arm64
 Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
@@ -381,6 +361,26 @@ Size: 23556884
 MD5sum: f4e96e976437e4811ced50dbc4bed5a2
 SHA1: cafab2c8dc083cf1fce01649f3bfefe7b2125ea1
 SHA256: d83c06ce6907666a84195179595d767c05f22e9bc6577e6ec2e4f4a7b1bf6feb
+Section: rootless 插件
+Description: Observe and reprogram running programs.
+Author: Frida Developers <oleavr@nowsecure.com>
+Homepage: https://frida.re/
+Conflicts: re.frida.server64
+Priority: optional
+
+Package: re.frida.server
+Name: Frida
+Icon: https://tanyou88888.github.io/sileo/icons/re.frida.server.png
+SileoDepiction: https://tanyou88888.github.io/sileo/depictions/re.frida.server.json?v=3e0223ac
+Version: 17.27.6
+Architecture: iphoneos-arm64
+Maintainer: Ole André Vadla Ravnås <oleavr@nowsecure.com>
+Installed-Size: 78484
+Filename: debs/rootless/frida_17.27.6_iphoneos-arm64.deb
+Size: 23561164
+MD5sum: e2d199eebf74b3b825658f694224e862
+SHA1: 71852b858ea10b0d00f71a444e1e53c58083630d
+SHA256: 951c2d26ed10362279960d6e8cda26a79e71f192ae03d71cf47af8c407ac05e7
 Section: rootless 插件
 Description: Observe and reprogram running programs.
 Author: Frida Developers <oleavr@nowsecure.com>
